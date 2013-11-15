@@ -1,5 +1,6 @@
 package vehiculo;
 
+import gps.GPS;
 import posicion.Posicion;
 import vehiculo.estadoVehiculo.EstadoVehiculo;
 
@@ -8,19 +9,15 @@ public class Vehiculo {
     
     private Posicion posicion;
     private EstadoVehiculo estado;
+    private GPS GPS;
 
-    Vehiculo(EstadoVehiculo estadoASetear) {
+    public Vehiculo(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
         this.posicion = new Posicion();
+        this.GPS = new GPS();
     }
 
-   
-    public void Vehiculo(EstadoVehiculo estadoASetear) {
-        
-        this.estado = estadoASetear;
-        this.posicion = new Posicion();
-    }
-    
+     
     public Posicion getPosicion() {
         return posicion;
     }
@@ -35,6 +32,16 @@ public class Vehiculo {
 
     public EstadoVehiculo estadoActual() {
         return this.estado;
+    }
+    
+    public void sumarMovimiento( int numeroASumar){
+        GPS Gps = getGPS();
+        
+        Gps.sumarMovimiento(numeroASumar);
+    }
+    
+    private GPS getGPS(){
+        return this.GPS;
     }
     
 }
