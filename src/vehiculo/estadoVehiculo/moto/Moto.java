@@ -1,4 +1,3 @@
-
 package vehiculo.estadoVehiculo.moto;
 
 import vehiculo.estadoVehiculo.EstadoVehiculo;
@@ -15,5 +14,4 @@ public class Moto implements EstadoVehiculo{
         EstadoVehiculo estadoMoto = new Moto();
         return estadoMoto;
     }
-    
 }

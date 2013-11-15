@@ -1,15 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package vehiculo.estadoVehiculo.auto;
 
-/**
- *
- * @author Cancel
- */
-public class Auto {
+import vehiculo.estadoVehiculo.EstadoVehiculo;
+
+
+public class Auto implements EstadoVehiculo{
     
+    public void Auto (){
+              
+    }
+    
+    @Override
+    public EstadoVehiculo getEstadoVehiculo() {
+        EstadoVehiculo estadoAuto = new Auto();
+        return estadoAuto;
+    }
 }
