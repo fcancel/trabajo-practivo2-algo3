@@ -17,12 +17,12 @@ public class Posicion {
         return posicionX;
     }
 
-    void setY( int numero ) {
+    public void setY( int numero ) {
         
         this.posicionY = numero;
     }
 
-    int getY() {
+    public int getY() {
         
         return posicionY;
     }

@@ -1,15 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package vehiculo.estadoVehiculo.cuatroPorCuatro;
 
-/**
- *
- * @author Cancel
- */
-public class CuatroPorCuatro {
+import vehiculo.estadoVehiculo.EstadoVehiculo;
+
+
+public class CuatroPorCuatro implements EstadoVehiculo{
     
+    public void CuatroPorCuatro(){
+        
+    }
+    
+    @Override
+    public EstadoVehiculo getEstadoVehiculo(){
+        EstadoVehiculo estadoCuatroPorCuatro = new CuatroPorCuatro();
+        return estadoCuatroPorCuatro;      
+    }
 }
