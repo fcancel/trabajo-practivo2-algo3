@@ -3,17 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/vehiculo/estadoVehiculo/auto/Auto.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/gps/TestLasFuncionesDeGPS.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/ejemplo1/Foo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/vehiculo/Vehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/vehiculo/estadoVehiculo/cuatroPorCuatro/CuatroPorCuatro.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/vehiculo/estadoVehiculo/moto/Moto.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/vehiculo/TestLasFuncionesDelVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/posicion/Posicion.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/vehiculo/estadoVehiculo/EstadoVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/gps/GPS.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/posicion/TestLaPosicionesFuncionanComoCorresponden.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Vehiculo.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestLasFuncionesDelVehiculo.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Posicion.java</file>
         </group>
     </open-files>
 </project-private>

@@ -49,4 +49,56 @@ public class TestLasFuncionesDelVehiculo {
         
         Assert.assertEquals(estadoMoto, vehiculo.estadoActual());
     }
+    
+    @Test
+    public void testMuevoVehiculoHaciaArriba(){
+        EstadoVehiculo estadoAuto = new Auto();
+        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+        Posicion posicion = vehiculo.getPosicion();
+        
+        posicion.setY(10);
+        
+        vehiculo.moverArriba();
+        
+        Assert.assertEquals(8, vehiculo.getPosicion().getY());
+    }
+    
+    @Test
+    public void testMuevoVehiculoHaciaAbajo(){
+        EstadoVehiculo estadoAuto = new Auto();
+        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+        Posicion posicion = vehiculo.getPosicion();
+        
+        posicion.setY(10);
+        
+        vehiculo.moverAbajo();
+        
+        Assert.assertEquals(12, vehiculo.getPosicion().getY());
+    }
+    
+    @Test
+    public void testMuevoVehiculoHaciaLaDerecha(){
+        EstadoVehiculo estadoAuto = new Auto();
+        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+        Posicion posicion = vehiculo.getPosicion();
+        
+        posicion.setX(10);
+        
+        vehiculo.moverDerecha();
+        
+        Assert.assertEquals(12, vehiculo.getPosicion().getX());
+    }
+    
+    @Test
+    public void testMuevoVehiculoHaciaLaIzquierda(){
+        EstadoVehiculo estadoAuto = new Auto();
+        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+        Posicion posicion = vehiculo.getPosicion();
+        
+        posicion.setX(10);
+        
+        vehiculo.moverIzquierda();
+        
+        Assert.assertEquals(8, vehiculo.getPosicion().getX());
+    }
 }
