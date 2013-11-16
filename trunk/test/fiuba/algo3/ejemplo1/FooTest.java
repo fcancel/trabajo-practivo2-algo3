@@ -1,7 +1,10 @@
 package fiuba.algo3.ejemplo1;
 
 import junit.framework.Assert;
+
 import org.junit.Test;
+
+import fiuba.algo3.modelo.Foo;
 
 public class FooTest {
 
