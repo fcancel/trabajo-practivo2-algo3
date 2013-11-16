@@ -11,10 +11,7 @@ import fiuba.algo3.modelo.GPS;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- *
- * @author Cancel
- */
+
 public class TestLasFuncionesDeGPS {
     
     
