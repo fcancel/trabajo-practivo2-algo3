@@ -14,11 +14,12 @@ public class GPS {
     
     private static int MOVIMIENTO_INICIAL = 0;
     private boolean juegoEnCurso;
-    //private PuntuacionesAltas puntuacionesAltas;
+    private PuntuacionesAltas puntuacionesAltas;
     private int movimientos;
     
     public void GPS(){
         this.movimientos = MOVIMIENTO_INICIAL;
+        this.puntuacionesAltas = new PuntuacionesAltas();
         this.empezarJuego();
     }
     
