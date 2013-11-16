@@ -10,8 +10,7 @@ public class Vehiculo {
 
     public Vehiculo(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
-        this.posicion = new Posicion();
-        this.GPS = new GPS();
+        this.posicion = new Posicion();        
     }
 
      
@@ -41,4 +40,33 @@ public class Vehiculo {
         return this.GPS;
     }
     
+    public void setGPS(GPS gps){        
+        this.GPS = gps;
+    }
+    
+    //ACLARACION ACA NO TENDRIA QUE LLEGAR NINGUN MOVIMIENTO INVALIDO
+    //SE DEBERIA CHECKEAR EN CIUDAD CON ES VALIDA LA POSICION
+    //SEGUNDA ACLARACION SE TOMA AL MAPA CON LAS CALLES POR ESO SUMO DOS, PARA TERMINAR EN LA ESQUINA
+    //X EJE HORIZONTAL
+    //Y EJE VERTICAL
+    
+    public void moverArriba(){
+        
+        this.posicion.setY((this.posicion.getY()) - 2);
+    }
+    
+    public void moverAbajo(){
+        
+        this.posicion.setY((this.posicion.getY()) + 2);
+    }
+    
+    public void moverDerecha(){
+        
+        this.posicion.setX((this.posicion.getX()) + 2);     
+    }
+    
+    public void moverIzquierda(){
+        
+        this.posicion.setX((this.posicion.getX()) - 2);
+    }
 }
