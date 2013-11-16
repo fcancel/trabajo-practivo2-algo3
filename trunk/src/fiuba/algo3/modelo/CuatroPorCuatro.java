@@ -1,6 +1,5 @@
-package vehiculo.estadoVehiculo.cuatroPorCuatro;
+package fiuba.algo3.modelo;
 
-import vehiculo.estadoVehiculo.EstadoVehiculo;
 
 /**
  *

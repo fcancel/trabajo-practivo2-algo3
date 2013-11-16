@@ -1,5 +1,5 @@
 
-package posicion;
+package fiuba.algo3.modelo;
 
 /**
  *

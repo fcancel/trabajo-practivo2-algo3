@@ -1,6 +1,5 @@
-package vehiculo.estadoVehiculo.moto;
+package fiuba.algo3.modelo;
 
-import vehiculo.estadoVehiculo.EstadoVehiculo;
 
 /**
  *
