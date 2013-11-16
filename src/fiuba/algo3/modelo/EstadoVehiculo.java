@@ -1,4 +1,4 @@
-package vehiculo.estadoVehiculo;
+package fiuba.algo3.modelo;
 
 /**
  *

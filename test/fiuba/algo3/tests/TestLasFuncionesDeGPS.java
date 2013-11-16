@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
-package gps;
+package fiuba.algo3.tests;
+
+import fiuba.algo3.modelo.GPS;
 
 import org.junit.Assert;
 import org.junit.Test;

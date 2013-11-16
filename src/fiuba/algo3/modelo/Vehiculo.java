@@ -1,8 +1,5 @@
-package vehiculo;
+package fiuba.algo3.modelo;
 
-import gps.GPS;
-import posicion.Posicion;
-import vehiculo.estadoVehiculo.EstadoVehiculo;
 
 
 public class Vehiculo {

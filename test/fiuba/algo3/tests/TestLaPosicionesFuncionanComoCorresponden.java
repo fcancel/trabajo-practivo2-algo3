@@ -1,7 +1,10 @@
-package posicion;
+package fiuba.algo3.tests;
 
 import junit.framework.Assert;
+
 import org.junit.Test;
+
+import fiuba.algo3.modelo.Posicion;
 
 public class TestLaPosicionesFuncionanComoCorresponden {
     

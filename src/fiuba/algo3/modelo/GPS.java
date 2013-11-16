@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package gps;
+package fiuba.algo3.modelo;
 
 /**
  *

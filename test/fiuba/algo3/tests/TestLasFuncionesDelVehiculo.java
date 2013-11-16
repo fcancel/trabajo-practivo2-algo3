@@ -1,12 +1,15 @@
-package vehiculo;
+package fiuba.algo3.tests;
 
 import junit.framework.Assert;
+
 import org.junit.Test;
-import posicion.Posicion;
-import vehiculo.estadoVehiculo.EstadoVehiculo;
-import vehiculo.estadoVehiculo.auto.Auto;
-import vehiculo.estadoVehiculo.cuatroPorCuatro.CuatroPorCuatro;
-import vehiculo.estadoVehiculo.moto.Moto;
+
+import fiuba.algo3.modelo.Auto;
+import fiuba.algo3.modelo.CuatroPorCuatro;
+import fiuba.algo3.modelo.EstadoVehiculo;
+import fiuba.algo3.modelo.Moto;
+import fiuba.algo3.modelo.Posicion;
+import fiuba.algo3.modelo.Vehiculo;
 
 public class TestLasFuncionesDelVehiculo {
     
