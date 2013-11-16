@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo;
 
-public class Puntuacion {
+public class Puntuacion implements Comparable {
 
 	private int movimientos;
 	private int dimension;
@@ -24,6 +24,18 @@ public class Puntuacion {
 
 	public double getPromedio() {
 		return this.promedio;
+	}
+
+	@Override
+	public int compareTo(Object punt) {
+		
+		Puntuacion puntuacion = (Puntuacion) punt;
+		
+		if (this.promedio > puntuacion.getPromedio())
+			return -1;
+		else if(this.promedio < puntuacion.getPromedio())
+			return 1;
+		return 0;
 	}
 
 }
