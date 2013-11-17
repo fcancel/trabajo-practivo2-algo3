@@ -22,6 +22,7 @@ public class GPS {
     private int movimientos;
     private Vehiculo vehiculo;
     private Ciudad ciudad;
+    private String jugador;
 
     private void verificarJuegoIniciado() throws JuegoNoIniciado{
 		
@@ -49,12 +50,13 @@ public class GPS {
         
     }
     
-    public void empezarJuego(EstadoVehiculo estadoInicial,int dimension){
+    public void empezarJuego(EstadoVehiculo estadoInicial,int dimension,String nick){
     	
         this.juegoEnCurso = true;
         this.vehiculo = new Vehiculo(estadoInicial);
         this.vehiculo.setGPS(this);
         this.ciudad = new Ciudad(dimension,this.vehiculo,this);
+        this.jugador = nick;
         
     }
 
@@ -67,7 +69,7 @@ public class GPS {
 	public void terminarJuego() {
 		
 		int dimension = this.ciudad.getDimension();
-		Puntuacion puntuacion = new Puntuacion(this.movimientos,dimension);
+		Puntuacion puntuacion = new Puntuacion(this.movimientos,dimension,this.jugador);
 		this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.ciudad = null;
 		this.vehiculo = null;

@@ -13,7 +13,7 @@ public class TestPuntuacionesAltas {
 	@Test
 	public void alAgregarUnaPuntuacionYPedirleDeberiaObtenerla() throws NoExisteEsaPosicion {
 		
-		Puntuacion puntuacion = new Puntuacion(5,30);
+		Puntuacion puntuacion = new Puntuacion(5,30,"juan");
 		PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
 		
 		puntuacionesAltas.setPuntuacion(puntuacion);
@@ -25,18 +25,18 @@ public class TestPuntuacionesAltas {
 	@Test
 	public void alAgregarUnaPuntuacionYLuegoUnaDeMayorPromedioEsaDebeSerLaPrimera() throws NoExisteEsaPosicion {
 		
-		Puntuacion puntuacionBaja = new Puntuacion(5,30);
-		Puntuacion puntuacionAlta = new Puntuacion(2,30);
+		Puntuacion puntuacionBaja = new Puntuacion(5,30,"julieta");
+		Puntuacion puntuacionAlta = new Puntuacion(2,30,"tomas");
 		PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
 		
 		puntuacionesAltas.setPuntuacion(puntuacionBaja);
 		
-		assertTrue( puntuacionesAltas.getPuntuacion(1).getPromedio() == 6 );
+		assertEquals( puntuacionesAltas.getPuntuacion(1).getNick(), "julieta" );
 		
 		puntuacionesAltas.setPuntuacion(puntuacionAlta);
 		
-		assertTrue( puntuacionesAltas.getPuntuacion(1).getPromedio() == 15 );
-		assertTrue( puntuacionesAltas.getPuntuacion(2).getPromedio() == 6 );
+		assertEquals( puntuacionesAltas.getPuntuacion(1).getNick(), "tomas" );
+		assertEquals( puntuacionesAltas.getPuntuacion(2).getNick(), "julieta" );
 		
 	}
 	
