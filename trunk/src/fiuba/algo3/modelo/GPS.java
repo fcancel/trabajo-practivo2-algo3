@@ -7,6 +7,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.excepciones.JuegoNoIniciado;
+import fiuba.algo3.excepciones.NoExisteEsaPosicion;
 
 /**
  *
@@ -20,7 +21,13 @@ public class GPS {
     private PuntuacionesAltas puntuacionesAltas;
     private int movimientos;
     private Vehiculo vehiculo;
-    //falta ciudad
+    private Ciudad ciudad;
+
+    private void verificarJuegoIniciado() throws JuegoNoIniciado{
+		
+		if(!this.juegoEnCurso)
+			throw new JuegoNoIniciado();
+	}
     
     public GPS(){
     	
@@ -42,13 +49,12 @@ public class GPS {
         
     }
     
-    public void empezarJuego(EstadoVehiculo estadoInicial){
+    public void empezarJuego(EstadoVehiculo estadoInicial,int dimension){
     	
-    	
-    	//debe recibir la dimesion y crear ciudad
         this.juegoEnCurso = true;
         this.vehiculo = new Vehiculo(estadoInicial);
         this.vehiculo.setGPS(this);
+        this.ciudad = new Ciudad(dimension,this.vehiculo,this);
         
     }
 
@@ -60,20 +66,37 @@ public class GPS {
 
 	public void terminarJuego() {
 		
-		//falta agregar puntuacion y poner a null ciudad
+		int dimension = this.ciudad.getDimension();
+		Puntuacion puntuacion = new Puntuacion(this.movimientos,dimension);
+		this.puntuacionesAltas.setPuntuacion(puntuacion);
+		this.ciudad = null;
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
+		this.movimientos = MOVIMIENTO_INICIAL;
 		
 	}
 
 	public Vehiculo getVehiculo() throws JuegoNoIniciado {
 		
-		if(this.vehiculo == null)
-			throw new JuegoNoIniciado();
+		this.verificarJuegoIniciado();
 		
 		return this.vehiculo;
 		
 	}
+
+	public Ciudad getCiudad() throws JuegoNoIniciado{
+		
+		this.verificarJuegoIniciado();
+		
+		return this.ciudad;
+				
+	}
+
+	public Puntuacion puntuacion(int posicion) throws NoExisteEsaPosicion {
+		
+		return this.puntuacionesAltas.getPuntuacion(posicion);
+		
+	}
 	
-	//metodo getCiudad
+
 }
