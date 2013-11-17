@@ -10,7 +10,7 @@ public class CuatroPorCuatro implements EstadoVehiculo{
     /**
      *
      */
-    public void CuatroPorCuatro(){
+    public CuatroPorCuatro(){
         
     }
     
