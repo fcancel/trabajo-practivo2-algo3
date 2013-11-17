@@ -10,7 +10,7 @@ public class Auto implements EstadoVehiculo{
     /**
      *
      */
-    public void Auto (){
+    public Auto (){
               
     }
     

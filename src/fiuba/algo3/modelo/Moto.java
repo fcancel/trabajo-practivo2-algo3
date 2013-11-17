@@ -10,7 +10,7 @@ public class Moto implements EstadoVehiculo{
     /**
      *
      */
-    public void Moto(){
+    public Moto(){
         
     }
     
