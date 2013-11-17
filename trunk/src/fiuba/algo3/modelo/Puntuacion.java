@@ -5,9 +5,11 @@ public class Puntuacion implements Comparable {
 	private int movimientos;
 	private int dimension;
 	private double promedio;
+	private String nick;
 
-	public Puntuacion(int movimientos, int dimension){
+	public Puntuacion(int movimientos, int dimension, String nick){
 		
+		this.nick = nick;
 		this.movimientos = movimientos;
 		this.dimension = dimension;
 		if( (dimension == 0) | (movimientos == 0) ){
@@ -31,6 +33,11 @@ public class Puntuacion implements Comparable {
 		return this.promedio;
 	}
 
+	public String getNick() {
+		
+		return this.nick;
+	}
+	
 	@Override
 	public int compareTo(Object punt) {
 		
@@ -42,5 +49,7 @@ public class Puntuacion implements Comparable {
 			return 1;
 		return 0;
 	}
+
+
 
 }

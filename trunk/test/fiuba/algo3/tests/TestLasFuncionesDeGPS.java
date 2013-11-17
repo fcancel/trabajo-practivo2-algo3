@@ -33,7 +33,7 @@ public class TestLasFuncionesDeGPS {
 		
         GPS gps = new GPS();
         
-        gps.empezarJuego(new Moto(),7);
+        gps.empezarJuego(new Moto(),7,"jose");
         
         assertTrue(gps.juegoEnMarcha());
 		
@@ -44,7 +44,7 @@ public class TestLasFuncionesDeGPS {
 		
         GPS gps = new GPS();
         
-        gps.empezarJuego(new Moto(),6);
+        gps.empezarJuego(new Moto(),6,"tomas");
         gps.terminarJuego();
         
         assertFalse(gps.juegoEnMarcha());
@@ -59,7 +59,7 @@ public class TestLasFuncionesDeGPS {
         	
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5);
+        	gps.empezarJuego(new Moto(),5,"mercedes");
             gps.terminarJuego();
         	gps.getVehiculo();
         	
@@ -78,7 +78,7 @@ public class TestLasFuncionesDeGPS {
         	
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5);
+        	gps.empezarJuego(new Moto(),5,"maria");
             gps.terminarJuego();
         	gps.getCiudad();
         	
@@ -144,17 +144,17 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void alTerminarElJuegoLaPuntuacionDebeSerCorrecta(){
+    public void alTerminarElJuegoLaPuntuacionDebeSerAgregada(){
     	
     	try{
     		
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5);
+        	gps.empezarJuego(new Moto(),5,"tomas");
         	gps.sumarMovimiento(4);
         	gps.terminarJuego();
         	
-        	assertTrue( (gps.puntuacion(1)).getPromedio() == ((5*5)/4) );
+        	assertEquals( (gps.puntuacion(1)).getNick(), "tomas" );
         	
     	}catch (NoExisteEsaPosicion e){
     		
@@ -169,16 +169,16 @@ public class TestLasFuncionesDeGPS {
     		
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5);
+        	gps.empezarJuego(new Moto(),5,"juan");
         	gps.sumarMovimiento(4);
         	gps.terminarJuego();
         	
-        	gps.empezarJuego(new Auto(),10);
+        	gps.empezarJuego(new Auto(),10,"tomas");
         	gps.sumarMovimiento(2);
         	gps.terminarJuego();
         	
-        	assertTrue( (gps.puntuacion(1)).getPromedio() == ((10*10)/2) );
-        	assertTrue( (gps.puntuacion(2)).getPromedio() == ((5*5)/4) );
+        	assertEquals( (gps.puntuacion(1)).getNick(), "tomas" );
+        	assertEquals( (gps.puntuacion(2)).getNick(), "juan" );
         	
     	}catch (NoExisteEsaPosicion e){
     		

@@ -11,8 +11,9 @@ public class TestPuntuacion {
 	@Test
 	public void AlCrearUnaPuntuacionConSusAtributosEstosDebenSerCorrectos() {
 		
-		Puntuacion puntuacion = new Puntuacion(6,30);
+		Puntuacion puntuacion = new Puntuacion(6,30,"juan");
 		
+		assertEquals( puntuacion.getNick(),"juan" );
 		assertEquals( puntuacion.getMovimientos(),6 );
 		assertEquals( puntuacion.getDimension(),30 );
 		assertTrue( puntuacion.getPromedio() == 5 );
