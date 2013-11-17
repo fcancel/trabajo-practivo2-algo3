@@ -10,7 +10,12 @@ public class Puntuacion implements Comparable {
 		
 		this.movimientos = movimientos;
 		this.dimension = dimension;
-		this.promedio = dimension / movimientos;
+		if( (dimension == 0) | (movimientos == 0) ){
+			this.promedio = 0;
+		}else{
+			this.promedio = dimension / movimientos;
+		}
+		
 		
 	}
 
