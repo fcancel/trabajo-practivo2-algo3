@@ -23,4 +23,12 @@ public class Moto implements EstadoVehiculo{
         EstadoVehiculo estadoMoto = new Moto();
         return estadoMoto;
     }
+    
+	@Override
+	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto) {
+		
+		efecto.realizarEfecto(this, vehiculo);
+		
+	}
+    
 }

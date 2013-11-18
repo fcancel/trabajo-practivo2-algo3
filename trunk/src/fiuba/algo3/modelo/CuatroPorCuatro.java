@@ -23,4 +23,12 @@ public class CuatroPorCuatro implements EstadoVehiculo{
         EstadoVehiculo estadoCuatroPorCuatro = new CuatroPorCuatro();
         return estadoCuatroPorCuatro;      
     }
+    
+	@Override
+	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto) {
+		
+		efecto.realizarEfecto(this, vehiculo);
+		
+	}
+    
 }

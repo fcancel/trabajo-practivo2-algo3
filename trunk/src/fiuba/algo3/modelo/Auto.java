@@ -23,4 +23,12 @@ public class Auto implements EstadoVehiculo{
         EstadoVehiculo estadoAuto = new Auto();
         return estadoAuto;
     }
+    
+	@Override
+	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto) {
+		
+		efecto.realizarEfecto(this, vehiculo);
+		
+	}
+    
 }
