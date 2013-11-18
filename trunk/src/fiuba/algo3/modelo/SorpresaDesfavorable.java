@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo;
 
-public class sorpresaDesfavorable implements Efecto {
+public class SorpresaDesfavorable implements Efecto {
 
 	private void sumarMovimientos(Vehiculo vehiculo){
 		

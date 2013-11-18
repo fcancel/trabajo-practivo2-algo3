@@ -63,9 +63,6 @@ public class Ciudad {
 	
 	private void colocarVehiculo(Calle calle) {
 		calle.setVehiculo(this.vehiculo);
-//		if ((calle.tengoSorpresa) || (calle.tengoObstaculo)){
-//			
-//		}
 	}
 	
 	public int getDimension() {

@@ -80,4 +80,7 @@ public class Vehiculo {
         
         this.posicion.setX((this.posicion.getX()) - 2);
     }
+    public EstadoVehiculo getEstado(){
+    	return this.estado;
+    }
 }
