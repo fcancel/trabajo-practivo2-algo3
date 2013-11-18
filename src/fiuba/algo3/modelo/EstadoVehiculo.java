@@ -11,4 +11,7 @@ public interface EstadoVehiculo {
      * @return
      */
     public EstadoVehiculo getEstadoVehiculo();
+    
+    public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto);
+    
 }

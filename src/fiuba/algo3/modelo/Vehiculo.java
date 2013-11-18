@@ -44,6 +44,12 @@ public class Vehiculo {
         this.GPS = gps;
     }
     
+    public void aceptarEfecto(Efecto efecto){
+    	
+    	this.estado.aceptarEfecto(this,efecto);
+    	
+    }
+    
     //ACLARACION ACA NO TENDRIA QUE LLEGAR NINGUN MOVIMIENTO INVALIDO
     //SE DEBERIA CHECKEAR EN CIUDAD CON ES VALIDA LA POSICION
     //SEGUNDA ACLARACION SE TOMA AL MAPA CON LAS CALLES POR ESO SUMO DOS, PARA TERMINAR EN LA ESQUINA
