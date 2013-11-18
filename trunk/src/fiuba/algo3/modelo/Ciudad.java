@@ -14,15 +14,34 @@ public class Ciudad {
         this.gps = gps;
         this.vehiculo = vehiculo;
         this.ciudad = new ArrayList<ArrayList<Calle>>();
-        for (int i =0; i<dimension -1; i++){
+        this.cargarEscenario();
+    }
+    private void cargarEscenario() {
+        for (int i =0; i<dimension -1; i ++){
 			ArrayList<Calle> fila = new ArrayList<Calle>();
-			for (int j = 0; j < dimension-1; j++){
-				fila.add(new Calle());
+			// Como la matriz de calles debe representar un mapa, hay partes donde no habrá calles que
+			// representará las manzanas, el esquema sería algo de la manera. (m = manzana, | ó - = calle por donde se puede circular
+			// |m|m|m|
+			// |-|-|-| 	
+			// |m|m|m|	
+			// |-|-|-|
+			if ((i % 2 )== 0)
+			{
+				for (int j = 0; j < dimension-1; j= j + 2){
+					fila.add(new Calle());
+				}
+			}
+			else
+			{
+				for (int j = 0; j < dimension-1; j++){
+					fila.add(new Calle());
+				}				
 			}
 			this.ciudad.add(fila);
         }
-    }
-    public int getDimension() {
+	}
+    
+	public int getDimension() {
         return dimension;
     }
 }
