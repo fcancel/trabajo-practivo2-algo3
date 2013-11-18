@@ -81,4 +81,7 @@ public class Calle {
 //    	else
 //    			return false;
 //    }
+	public boolean calleVacia(){
+		return (this == null);
+	}
 }
