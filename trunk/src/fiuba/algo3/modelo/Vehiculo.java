@@ -50,6 +50,11 @@ public class Vehiculo {
     	
     }
     
+    public int movimientos(){
+    	
+    	return this.GPS.getMovimientos();
+    	
+    }
     //ACLARACION ACA NO TENDRIA QUE LLEGAR NINGUN MOVIMIENTO INVALIDO
     //SE DEBERIA CHECKEAR EN CIUDAD CON ES VALIDA LA POSICION
     //SEGUNDA ACLARACION SE TOMA AL MAPA CON LAS CALLES POR ESO SUMO DOS, PARA TERMINAR EN LA ESQUINA
