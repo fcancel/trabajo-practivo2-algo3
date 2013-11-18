@@ -1,7 +1,8 @@
 package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
+import fiuba.algo3.excepciones.MovimientoInvalido;
 
 
 public class Ciudad {
@@ -43,16 +44,12 @@ public class Ciudad {
         }
 	}
     
-    public boolean esValidaLaPosicionPosicion(Posicion posicion){    	
+    public void esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{    	
     	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
     	if (calleDondeQuieroMoverme.calleVacia())
-    		//Debería devolver una excepción
-    		return false;
+			throw new MovimientoInvalido();    	
     	else
-    	{
     		this.colocarVehiculo(calleDondeQuieroMoverme);
-    		return true;
-    	}
     }
     
 	private Calle calleDondeQuieroIr(Posicion posicion) {
