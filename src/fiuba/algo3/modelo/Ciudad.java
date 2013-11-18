@@ -1,6 +1,8 @@
 package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+
 
 public class Ciudad {
 
@@ -41,6 +43,31 @@ public class Ciudad {
         }
 	}
     
+    public boolean esValidaLaPosicionPosicion(Posicion posicion){    	
+    	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
+    	if (calleDondeQuieroMoverme.calleVacia())
+    		//Debería devolver una excepción
+    		return false;
+    	else
+    	{
+    		this.colocarVehiculo(calleDondeQuieroMoverme);
+    		return true;
+    	}
+    }
+    
+	private Calle calleDondeQuieroIr(Posicion posicion) {
+		ArrayList<Calle> fila = new ArrayList<Calle>();
+		fila = this.ciudad.get(posicion.getX());
+		return fila.get(posicion.getX());
+	}
+	
+	private void colocarVehiculo(Calle calle) {
+		calle.setVehiculo(this.vehiculo);
+//		if ((calle.tengoSorpresa) || (calle.tengoObstaculo)){
+//			
+//		}
+	}
+	
 	public int getDimension() {
         return dimension;
     }
