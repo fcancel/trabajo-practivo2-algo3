@@ -30,7 +30,7 @@ public class Vehiculo {
         return this.estado;
     }
     
-    public void sumarMovimiento( int numeroASumar){
+    public void sumarMovimiento( int numeroASumar ){
         GPS Gps = getGPS();
         
         Gps.sumarMovimiento(numeroASumar);
