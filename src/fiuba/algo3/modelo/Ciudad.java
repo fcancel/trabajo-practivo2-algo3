@@ -50,15 +50,9 @@ public class Ciudad {
     public void esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{    	
     	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
     	if (calleDondeQuieroMoverme.esTransitable())
-    	{
-    		System.out.println("Movimiento Valido /n");
     		this.colocarVehiculo(calleDondeQuieroMoverme);
-    	}
     	else
-    	{
-    		System.out.println("Movimiento Invalido /n");
     		throw new MovimientoInvalido();
-    	}
     }
     
 	public Calle calleDondeQuieroIr(Posicion posicion) {

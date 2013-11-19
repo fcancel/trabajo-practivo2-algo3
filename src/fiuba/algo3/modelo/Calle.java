@@ -15,6 +15,8 @@ public class Calle {
     	int objeto = (int)(rnd.nextDouble() * 7 + 1);        
     	this.crearObjetoEnLaCalle(objeto);
     	transitable = true;
+    	sorpresa = null;
+    	obstaculo = null;
     }
     
     public Calle(boolean transitable){
@@ -28,12 +30,12 @@ public class Calle {
     private void crearObjetoEnLaCalle(int objeto) {
     	switch(objeto)
     	{ 
-//    		case 2: 
-//    			{
-//    				Efecto obstaculo = new Efecto();
-//    				this.setObstaculo (obstaculo);
-//    			}
-//    		break;
+    		case 2: 
+    			{
+    				Efecto obstaculo = new Pozo();
+    				this.setObstaculo (obstaculo);
+    			}
+    		break;
 //    		case 3:
 //				{
 //					Efecto obstaculo = new Efecto();
@@ -66,14 +68,10 @@ public class Calle {
 
 	public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
-//		if (this.tengoSorpresa()) {
-//			this.sorpresa.realizarEfecto((vehiculo.getEstado(), vehiculo);
-//		}else{
-//			if (this.tengoObstaculo()){
-//				
-//			}	
-//		}
+		if (this.tengoSorpresa() || this.tengoObstaculo() )
+			vehiculo.aceptarEfecto(this.sorpresa);
     }
+	
     public void setSorpresa(Efecto sorpresa) {
         this.sorpresa = sorpresa;        
     }
