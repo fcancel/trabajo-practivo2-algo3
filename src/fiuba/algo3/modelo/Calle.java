@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Calle {
     private boolean esMeta;
+    private boolean transitable;
     private Vehiculo vehiculo;
     private Efecto sorpresa;
     private Efecto obstaculo;
@@ -13,6 +14,15 @@ public class Calle {
     //genera un número aleatorio entre 1 y 7 para decidir que agregará en la calle 
     	int objeto = (int)(rnd.nextDouble() * 7 + 1);        
     	this.crearObjetoEnLaCalle(objeto);
+    	transitable = true;
+    }
+    
+    public Calle(boolean transitable){
+    	this.transitable = transitable;
+    }
+    
+    public boolean esTransitable(){
+    	return transitable;
     }
     
     private void crearObjetoEnLaCalle(int objeto) {
@@ -90,5 +100,9 @@ public class Calle {
     }
 	public boolean calleVacia(){
 		return (this == null);
+	}
+
+	public Vehiculo getVehiculo() {
+		return vehiculo;
 	}
 }
