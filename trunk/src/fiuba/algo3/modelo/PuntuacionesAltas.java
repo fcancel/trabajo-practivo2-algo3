@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import fiuba.algo3.excepciones.NoExisteEsaPosicion;
+import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 
 public class PuntuacionesAltas {
 	

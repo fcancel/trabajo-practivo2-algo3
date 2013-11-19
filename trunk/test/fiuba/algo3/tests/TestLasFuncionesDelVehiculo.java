@@ -1,7 +1,5 @@
 package fiuba.algo3.tests;
 
-import fiuba.algo3.excepciones.JuegoNoIniciado;
-import fiuba.algo3.excepciones.MovimientoInvalido;
 import junit.framework.Assert;
 
 import org.junit.Test;
@@ -13,6 +11,8 @@ import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
+import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 public class TestLasFuncionesDelVehiculo {
     

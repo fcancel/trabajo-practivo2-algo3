@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.Puntuacion;
 import fiuba.algo3.modelo.PuntuacionesAltas;
+import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 
 public class TestPuntuacionesAltas {
 

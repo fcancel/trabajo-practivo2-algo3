@@ -1,7 +1,7 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.excepciones.JuegoNoIniciado;
-import fiuba.algo3.excepciones.MovimientoInvalido;
+import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
+import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
 

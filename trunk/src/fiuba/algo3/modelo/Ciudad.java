@@ -2,7 +2,7 @@ package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
 
-import fiuba.algo3.excepciones.MovimientoInvalido;
+import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
 public class Ciudad {
