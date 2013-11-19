@@ -10,17 +10,26 @@ public class Calle {
     private Efecto obstaculo;
 
     public Calle() {
+    	transitable = true;
+    	sorpresa = null;
+    	obstaculo = null;
     	Random rnd = new Random();
     //genera un número aleatorio entre 1 y 7 para decidir que agregará en la calle 
     	int objeto = (int)(rnd.nextDouble() * 7 + 1);        
     	this.crearObjetoEnLaCalle(objeto);
-    	transitable = true;
-    	sorpresa = null;
-    	obstaculo = null;
     }
     
     public Calle(boolean transitable){
     	this.transitable = transitable;
+    }
+    
+    //Este constructor solo es utilizado para llevar a cabo las pruebas
+    public Calle(Random rnd){
+    	transitable = true;
+    	sorpresa = null;
+    	obstaculo = null;
+    	int objeto = (int)(rnd.nextDouble() * 7 + 1);  
+    	this.crearObjetoEnLaCalle(objeto);
     }
     
     public boolean esTransitable(){
@@ -85,16 +94,10 @@ public class Calle {
     	esMeta = true;
     }
     public boolean tengoSorpresa(){
-    	if (sorpresa != null)
-    			return true;
-    	else
-    			return false;
+    	return (sorpresa != null);
     }
     public boolean tengoObstaculo(){
-    	if (obstaculo != null)
-    			return true;
-    	else
-    			return false;
+    	return (obstaculo != null);
     }
 	public boolean calleVacia(){
 		return (this == null);

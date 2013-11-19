@@ -13,7 +13,6 @@ import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class TestLasFuncionesDeLaCiudad {
