@@ -7,11 +7,11 @@
 package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
-import fiuba.algo3.excepciones.JuegoNoIniciado;
-import fiuba.algo3.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.Auto;
 import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
+import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
+import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 
 import org.junit.Assert;
 import org.junit.Test;

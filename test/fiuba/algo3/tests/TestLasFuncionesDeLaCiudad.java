@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import fiuba.algo3.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.Calle;
 import fiuba.algo3.modelo.Ciudad;
 import fiuba.algo3.modelo.EstadoVehiculo;
@@ -12,6 +11,7 @@ import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 import org.junit.Test;
 
