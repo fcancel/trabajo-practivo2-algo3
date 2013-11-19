@@ -17,9 +17,9 @@ public class Ciudad {
         this.gps = gps;
         this.vehiculo = vehiculo;
         this.ciudad = new ArrayList<ArrayList<Calle>>();
-        this.cargarEscenario();
+        this.cargarEscenario(dimension);
     }
-    private void cargarEscenario() {
+    private void cargarEscenario(int dimension) {
         for (int i =0; i<dimension -1; i ++){
 			ArrayList<Calle> fila = new ArrayList<Calle>();
 			// Como la matriz de calles debe representar un mapa, hay partes donde no habrá calles que
@@ -30,8 +30,11 @@ public class Ciudad {
 			// |-|-|-|
 			if ((i % 2 )== 0)
 			{
-				for (int j = 0; j < dimension-1; j= j + 2){
-					fila.add(new Calle());
+				for (int j = 0; j < dimension-1; j++){
+					if ((j % 2 )== 0)
+						fila.add(new Calle());
+					else
+						fila.add(new Calle(false));
 				}
 			}
 			else
@@ -46,23 +49,32 @@ public class Ciudad {
     
     public void esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{    	
     	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
-    	if (calleDondeQuieroMoverme.calleVacia())
-			throw new MovimientoInvalido();    	
-    	else
+    	if (calleDondeQuieroMoverme.esTransitable())
+    	{
+    		System.out.println("Movimiento Valido /n");
     		this.colocarVehiculo(calleDondeQuieroMoverme);
+    	}
+    	else
+    	{
+    		System.out.println("Movimiento Invalido /n");
+    		throw new MovimientoInvalido();
+    	}
     }
     
-	private Calle calleDondeQuieroIr(Posicion posicion) {
-		ArrayList<Calle> fila = new ArrayList<Calle>();
-		fila = this.ciudad.get(posicion.getX());
-		return fila.get(posicion.getX());
+	public Calle calleDondeQuieroIr(Posicion posicion) {
+		ArrayList<Calle> fila = this.ciudad.get(posicion.getX());
+		return fila.get(posicion.getY());
 	}
 	
 	private void colocarVehiculo(Calle calle) {
 		calle.setVehiculo(this.vehiculo);
 	}
 	
-	public int getDimension() {
-        return dimension;
-    }
+	public int getDimension(){
+		return dimension;
+	}
+	
+	public ArrayList<ArrayList<Calle>> getCiudad(){
+		return ciudad;
+	}
 }
