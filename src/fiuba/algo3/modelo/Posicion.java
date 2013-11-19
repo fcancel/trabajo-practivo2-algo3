@@ -1,19 +1,16 @@
-
 package fiuba.algo3.modelo;
 
-/**
- *
- * @author Cancel
- */
+
 public class Posicion {
     
     private int posicionX;
     private int posicionY;
     
-    /**
-     *
-     * @param numero
-     */
+   public void Posicion(){
+       this.posicionX = 0;
+       this.posicionY = 0;
+   }
+   
     public void setX( int numero ){
         
         this.posicionX = numero;        
