@@ -1,5 +1,7 @@
 package fiuba.algo3.tests;
 
+import fiuba.algo3.excepciones.JuegoNoIniciado;
+import fiuba.algo3.excepciones.MovimientoInvalido;
 import junit.framework.Assert;
 
 import org.junit.Test;
@@ -7,6 +9,7 @@ import org.junit.Test;
 import fiuba.algo3.modelo.Auto;
 import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.EstadoVehiculo;
+import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
@@ -51,54 +54,73 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaArriba(){
-        EstadoVehiculo estadoAuto = new Auto();
-        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+    public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido{
+        
+        GPS gps = new GPS();
+	gps.empezarJuego(new Auto(), 30, "Arriba");
+        Vehiculo vehiculo = gps.getVehiculo();
+        
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(10);
+        posicion.setY(11);
+        posicion.setX(11);
         
-        vehiculo.moverArriba();
+        vehiculo.moverArriba();     
         
-        Assert.assertEquals(8, vehiculo.getPosicion().getY());
+        Assert.assertEquals(9, vehiculo.getPosicion().getY());
     }
     
     @Test
-    public void testMuevoVehiculoHaciaAbajo(){
-        EstadoVehiculo estadoAuto = new Auto();
-        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+    public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido{
+       
+        GPS gps = new GPS();
+	gps.empezarJuego(new Auto(), 30, "Abajo");
+        Vehiculo vehiculo = gps.getVehiculo();
+        
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(10);
+        posicion.setY(11);
+        posicion.setX(11);
         
-        vehiculo.moverAbajo();
+        vehiculo.moverAbajo();     
         
-        Assert.assertEquals(12, vehiculo.getPosicion().getY());
+        Assert.assertEquals(13, vehiculo.getPosicion().getY());
     }
-    
+
+   
     @Test
-    public void testMuevoVehiculoHaciaLaDerecha(){
-        EstadoVehiculo estadoAuto = new Auto();
-        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+    public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido{
+        
+        GPS gps = new GPS();
+	gps.empezarJuego(new Auto(), 30, "Derecha");
+        Vehiculo vehiculo = gps.getVehiculo();
+        
         Posicion posicion = vehiculo.getPosicion();
         
+        posicion.setY(11);
         posicion.setX(10);
         
         vehiculo.moverDerecha();
         
         Assert.assertEquals(12, vehiculo.getPosicion().getX());
+        
     }
     
     @Test
-    public void testMuevoVehiculoHaciaLaIzquierda(){
-        EstadoVehiculo estadoAuto = new Auto();
-        Vehiculo vehiculo = new Vehiculo(estadoAuto);
+    public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido{
+        
+        GPS gps = new GPS();
+	gps.empezarJuego(new Auto(), 30, "Izquierda");
+        Vehiculo vehiculo = gps.getVehiculo();
+        
         Posicion posicion = vehiculo.getPosicion();
         
+        posicion.setY(11);
         posicion.setX(10);
         
         vehiculo.moverIzquierda();
         
         Assert.assertEquals(8, vehiculo.getPosicion().getX());
+       
     }
 }

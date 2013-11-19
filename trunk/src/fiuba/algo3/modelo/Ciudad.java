@@ -22,8 +22,8 @@ public class Ciudad {
     private void cargarEscenario(int dimension) {
         for (int i =0; i<dimension -1; i ++){
 			ArrayList<Calle> fila = new ArrayList<Calle>();
-			// Como la matriz de calles debe representar un mapa, hay partes donde no habrá calles que
-			// representará las manzanas, el esquema sería algo de la manera. (m = manzana, | ó - = calle por donde se puede circular
+			// Como la matriz de calles debe representar un mapa, hay partes donde no habrï¿½ calles que
+			// representarï¿½ las manzanas, el esquema serï¿½a algo de la manera. (m = manzana, | ï¿½ - = calle por donde se puede circular
 			// |m|m|m|
 			// |-|-|-| 	
 			// |m|m|m|	
@@ -47,12 +47,15 @@ public class Ciudad {
         }
 	}
     
-    public void esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{    	
+    public boolean esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{    	
     	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
-    	if (calleDondeQuieroMoverme.esTransitable())
+    	if (calleDondeQuieroMoverme.esTransitable()){
     		this.colocarVehiculo(calleDondeQuieroMoverme);
-    	else
+                return true;
+        }        
+        else
     		throw new MovimientoInvalido();
+                       
     }
     
 	public Calle calleDondeQuieroIr(Posicion posicion) {

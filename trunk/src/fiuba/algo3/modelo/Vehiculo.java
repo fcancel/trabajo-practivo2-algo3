@@ -1,5 +1,8 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.excepciones.JuegoNoIniciado;
+import fiuba.algo3.excepciones.MovimientoInvalido;
+
 
 
 public class Vehiculo {
@@ -61,25 +64,64 @@ public class Vehiculo {
     //X EJE HORIZONTAL
     //Y EJE VERTICAL
     
-    public void moverArriba(){
+    public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido{
         
-        this.posicion.setY((this.posicion.getY()) - 2);
+        Ciudad ciudad;
+        Posicion dondeQuieroIr;
+        
+        ciudad = this.GPS.getCiudad();
+        dondeQuieroIr = this.posicion;
+        dondeQuieroIr.setY(dondeQuieroIr.getY() - 1);
+        
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
+            this.posicion.setY(this.posicion.getY() - 1);   
+       
+        }
+        
+    
+    
+    public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido{
+        
+        Ciudad ciudad;
+        Posicion dondeQuieroIr;
+        
+        ciudad = this.GPS.getCiudad();
+        dondeQuieroIr = this.posicion;
+        dondeQuieroIr.setY(dondeQuieroIr.getY() + 1);
+        
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
+            this.posicion.setY(this.posicion.getY() + 1);
+ 
     }
     
-    public void moverAbajo(){
+    public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido{
         
-        this.posicion.setY((this.posicion.getY()) + 2);
+        Ciudad ciudad;
+        Posicion dondeQuieroIr;
+        
+        ciudad = this.GPS.getCiudad();
+        dondeQuieroIr = this.posicion;
+        dondeQuieroIr.setX(dondeQuieroIr.getX() + 1);
+        
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
+            this.posicion.setX(this.posicion.getX() + 1);
+    
     }
     
-    public void moverDerecha(){
+    public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido{
         
-        this.posicion.setX((this.posicion.getX()) + 2);     
+        Ciudad ciudad;
+        Posicion dondeQuieroIr;
+        
+        ciudad = this.GPS.getCiudad();
+        dondeQuieroIr = this.posicion;
+        dondeQuieroIr.setX(dondeQuieroIr.getX() - 1);
+        
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
+            this.posicion.setX(this.posicion.getX() - 1);
+        
     }
     
-    public void moverIzquierda(){
-        
-        this.posicion.setX((this.posicion.getX()) - 2);
-    }
     public EstadoVehiculo getEstado(){
     	return this.estado;
     }
