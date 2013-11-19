@@ -23,7 +23,7 @@ public class Ciudad {
     
     private void cargarEscenario2(int dimension){
         
-            this.ciudadnueva = new Calle[dimension][dimension];
+        this.ciudadnueva = new Calle[dimension][dimension];
         for (int i = 0; i<(dimension-1); i++){
             
             if((i%2) == 0){ //fila pares

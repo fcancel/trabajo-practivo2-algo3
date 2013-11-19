@@ -10,6 +10,7 @@ public class Vehiculo {
     private Posicion posicion;
     private EstadoVehiculo estado;
     private GPS GPS;
+    private String ultimoMovimiento;
 
     public Vehiculo(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
@@ -66,6 +67,7 @@ public class Vehiculo {
     
     public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido{
         
+    	this.ultimoMovimiento = "AR";
         Ciudad ciudad;
         Posicion dondeQuieroIr;
         
@@ -76,12 +78,13 @@ public class Vehiculo {
         if(ciudad.esValidaLaPosicion2(dondeQuieroIr))
             this.posicion.setY(this.posicion.getY() - 1);   
        
-        }
+    }
         
     
     
     public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido{
         
+    	this.ultimoMovimiento = "AB";
         Ciudad ciudad;
         Posicion dondeQuieroIr;
         
@@ -96,6 +99,7 @@ public class Vehiculo {
     
     public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido{
         
+    	this.ultimoMovimiento = "DE";
         Ciudad ciudad;
         Posicion dondeQuieroIr;
         
@@ -110,6 +114,7 @@ public class Vehiculo {
     
     public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido{
         
+    	this.ultimoMovimiento = "IZ";
         Ciudad ciudad;
         Posicion dondeQuieroIr;
         
@@ -125,4 +130,41 @@ public class Vehiculo {
     public EstadoVehiculo getEstado(){
     	return this.estado;
     }
+    
+    public void retroceder(){
+    	
+    	try{
+    		
+    	switch(this.ultimoMovimiento)
+    	{ 
+    		case "AR": 
+    			{ 			
+						this.moverAbajo();
+					
+    			}
+    		break;
+    		case "AB": 
+			{ 			
+					this.moverArriba();
+				
+			}
+		break;
+    		case "IZ": 
+			{ 			
+					this.moverDerecha();
+				
+			}
+		break;
+    		case "DE": 
+			{ 			
+					this.moverIzquierda();
+				
+			}
+		break;
+    	}
+    	
+    	}catch (JuegoNoIniciado | MovimientoInvalido e) {}
+    	
+    }
+    
 }
