@@ -11,7 +11,7 @@ public class Ciudad {
     private int dimension;
 
     public Ciudad(int dimension, Vehiculo vehiculo, GPS gps) {
-        this.dimension = dimension * dimension;
+        this.dimension = dimension;
         this.gps = gps;
         this.vehiculo = vehiculo;        
         this.cargarEscenario(dimension);	
@@ -19,36 +19,43 @@ public class Ciudad {
     }
     
     private void establecerMetayVehiculo(Vehiculo vehiculo, int dimension) {
-    	Posicion posicionVehiculo = this.posicionAleatoriaValida(dimension);
+    	// el 1 para que este en la segunda columna
+    	Posicion posicionVehiculo = this.posicionValida(1);
     	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
-    	calleVehiculo.inicializarCalle();
+    	vehiculo.setPosicion(posicionVehiculo);// le asigno la posicion al vehiculo
+    	//calleVehiculo.inicializarCalle(); si es una esquina no hace falta inicializarla
     	calleVehiculo.setVehiculo(vehiculo);
-    	Posicion posicionMeta = this.posicionAleatoriaValida(dimension);
+    	// el dimension-1 para que este en la ultima columna
+    	Posicion posicionMeta = this.posicionValida(this.dimension-1);
     	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
     	calleMeta.inicializarCalle();
     	calleMeta.meta();
     }
 
-	private Posicion posicionAleatoriaValida(int dimension) {
-    	//Genera una posición aleatoria
-    	Random rnd = new Random(); 
-    	Posicion posicionAleatoriaValida = new Posicion();
-    	do {
-    		int fila = (int)(rnd.nextDouble() * (dimension -1) + 0);
-    		posicionAleatoriaValida.setX(fila);
-    		int columna = (int)(rnd.nextDouble() * (dimension - 1) + 0);
-    		posicionAleatoriaValida.setY(columna);
-    	}while (!(this.calleEnUnaPosicion(posicionAleatoriaValida).esTransitable()));
-    	return posicionAleatoriaValida;
+	private Posicion posicionValida(int coordenadaX) {
+		
+		// la primer posicion del vehiculo es (1, (this.dimension-1)/2(impar) )
+		// la meta es (this.dimension-1 ,(this.dimension-1)/2(impar) )
+		int x=coordenadaX;
+		int y= (int)(this.dimension-1)/2;
+		if(y%2 == 0){
+			y--;
+		}
+		Posicion posicion = new Posicion();
+		posicion.setX(x);
+		posicion.setY(y);
+		
+		return posicion;
+    	
 	}
 
 	private void cargarEscenario(int dimension){
         
         this.ciudad = new Calle[dimension][dimension];
-        for (int i = 0; i<(dimension-1); i++){
+        for (int i = 0; i<(dimension); i++){
             
             if((i%2) == 0){ //fila pares
-                for (int j = 0; j<(dimension-1); j++){
+                for (int j = 0; j<(dimension); j++){
                     if ((j%2) == 0)
                         this.ciudad[i][j] = new Calle(false);
                     else
@@ -56,8 +63,12 @@ public class Ciudad {
                 }
             }
             else{
-                for (int j = 0; j<(dimension-1); j++){
+            	for (int j = 0; j<(dimension); j++){
+                    if ((j%2) == 0)
                         this.ciudad[i][j] = new Calle();
+                    else
+                    	//Para que sea una esquina, sin obstaculos y sorpresas
+                        this.ciudad[i][j] = new Calle(true);
                 }
             }
         }        
@@ -67,7 +78,7 @@ public class Ciudad {
     	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
     	if (calleDondeQuieroMoverme.esTransitable()){
     		this.colocarVehiculo(calleDondeQuieroMoverme);
-                return true;
+    		return true;
         }        
         else
     		throw new MovimientoInvalido();                       
