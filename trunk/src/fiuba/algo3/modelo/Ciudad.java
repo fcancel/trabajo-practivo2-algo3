@@ -1,8 +1,6 @@
 package fiuba.algo3.modelo;
 
-import java.util.ArrayList;
 import java.util.Random;
-
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
@@ -17,41 +15,30 @@ public class Ciudad {
         this.gps = gps;
         this.vehiculo = vehiculo;        
         this.cargarEscenario(dimension);	
-    	this.establecerMetayVehiculo(vehiculo);
+    	this.establecerMetayVehiculo(vehiculo, dimension);
     }
     
-    private void establecerMetayVehiculo(Vehiculo vehiculo) {
-    	Posicion posicionMeta = this.posicionAleatoriaValida();
-    	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
-    	calleMeta.inicializarCalle();
-    	calleMeta.meta();
-    	Posicion posicionVehiculo = this.posicionAleatoriaVehiculo(posicionMeta);
+    private void establecerMetayVehiculo(Vehiculo vehiculo, int dimension) {
+    	Posicion posicionVehiculo = this.posicionAleatoriaValida(dimension);
     	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
     	calleVehiculo.inicializarCalle();
     	calleVehiculo.setVehiculo(vehiculo);
-   	}
+    	Posicion posicionMeta = this.posicionAleatoriaValida(dimension);
+    	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
+    	calleMeta.inicializarCalle();
+    	calleMeta.meta();
+    }
 
-	private Posicion posicionAleatoriaVehiculo(Posicion posicionMeta) {
-		Posicion posicionOpuestaALaMeta = new Posicion();
-		posicionOpuestaALaMeta.setX((this.dimension - posicionMeta.getX()));
-		posicionOpuestaALaMeta.setY((this.dimension - posicionMeta.getY()));
-		return posicionOpuestaALaMeta;
-	}
-
-	private Posicion posicionAleatoriaValida() {
-    	//Genera una posición aleatoria para ubicar la meta
+	private Posicion posicionAleatoriaValida(int dimension) {
+    	//Genera una posición aleatoria
     	Random rnd = new Random(); 
-
     	Posicion posicionAleatoriaValida = new Posicion();
-    	int fila = (int)(rnd.nextDouble() * dimension + 0);
-    	if ((fila%2) == 0)
-    		fila = fila + 1;
-    	posicionAleatoriaValida.setX(fila);
-    	
-    	int columna = (int)(rnd.nextDouble() * dimension + 0);
-    	if ((columna%2) == 0)
-    		columna = columna + 1;
-    	posicionAleatoriaValida.setY(columna);
+    	do {
+    		int fila = (int)(rnd.nextDouble() * (dimension -1) + 0);
+    		posicionAleatoriaValida.setX(fila);
+    		int columna = (int)(rnd.nextDouble() * (dimension - 1) + 0);
+    		posicionAleatoriaValida.setY(columna);
+    	}while (!(this.calleEnUnaPosicion(posicionAleatoriaValida).esTransitable()));
     	return posicionAleatoriaValida;
 	}
 
@@ -70,10 +57,7 @@ public class Ciudad {
             }
             else{
                 for (int j = 0; j<(dimension-1); j++){
-                    if ((j%2) == 0)
                         this.ciudad[i][j] = new Calle();
-                    else
-                        this.ciudad[i][j] = new Calle(true);
                 }
             }
         }        
