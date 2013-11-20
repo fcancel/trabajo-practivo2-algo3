@@ -63,23 +63,32 @@ public class Calle {
 					Efecto sorpresa = new SorpresaDesfavorable();
 					this.setSorpresa(sorpresa);
 				}
+                break;
     		case 6:
 				{
 					Efecto sorpresa = new SorpresaCambioDeVehiculo();
 					this.setSorpresa(sorpresa);
 				}
+                break;
     		case 7:
 				{
 					Efecto sorpresa = new SorpresaFavorable();
 					this.setSorpresa(sorpresa);
 				}
+                break;
+                default:
+                                {       Efecto obstaculo = new CalleVacia();
+                                        this.setObstaculo(obstaculo);
+                                }
     	};
     }
 
 	public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
-		if (this.tengoSorpresa() || this.tengoObstaculo() )
+		if (this.tengoSorpresa())
 			vehiculo.aceptarEfecto(this.sorpresa);
+                if(this.tengoObstaculo())
+                        vehiculo.aceptarEfecto(this.obstaculo);
     }
 	
     public void setSorpresa(Efecto sorpresa) {
