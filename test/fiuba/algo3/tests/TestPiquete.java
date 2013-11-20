@@ -65,17 +65,26 @@ public class TestPiquete {
 		GPS gps = new GPS();
 		gps.empezarJuego(new CuatroPorCuatro(), 10, "juan");
 		Vehiculo cuatroPorCuatro = gps.getVehiculo();
+		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
+		
+		Posicion posicionDestino = new Posicion();
+		posicionDestino.setX(2);
+		posicionDestino.setY(3);
+		
+		Calle calleDestino = ciudad.calleEnUnaPosicion(posicionDestino);
+		
+		calleDestino.setObstaculo(piquete);
+		calleDestino.setSorpresa(null);
 		
 		// El vehiculo se ubicara en la posicion (1,3)
 		Posicion posicion = cuatroPorCuatro.getPosicion();
 		
+		//verifico posicion inicial
 		assertEquals(1,posicion.getX());
 		assertEquals(3,posicion.getY());
 		
 		cuatroPorCuatro.moverDerecha();
-		
-		cuatroPorCuatro.aceptarEfecto(piquete);
 		
 		// la 4X4 retrocede una posicion
 		assertEquals(1,posicion.getX());

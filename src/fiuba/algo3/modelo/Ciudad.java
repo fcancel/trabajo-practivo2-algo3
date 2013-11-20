@@ -6,16 +6,12 @@ import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
-
-
-
 public class Ciudad {
     private Calle[][] ciudad;
     private GPS gps;
     private Vehiculo vehiculo;
     private int dimension;
     private Posicion posicionMeta;
-    
     
     public Ciudad(int dimension, Vehiculo vehiculo, GPS gps) {
         this.dimension = dimension;
@@ -132,4 +128,5 @@ public class Ciudad {
 		}
 		
 	}
+
 }
