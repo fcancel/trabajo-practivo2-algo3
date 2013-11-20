@@ -2,7 +2,7 @@ package fiuba.algo3.modelo;
 
 import java.util.Random;
 
- public class ProbabilidadEquipotencial implements Probabilidad{
+ public class ProbabilidadEquiprobable implements Probabilidad{
 
 	@Override
 	public double calcularProbabilidad() {

@@ -47,7 +47,7 @@ public class Calle {
     		break;
     		case 3:
 				{
-					Probabilidad probabilidad = new ProbabilidadEquipotencial();
+					Probabilidad probabilidad = new ProbabilidadEquiprobable();
 					Efecto obstaculo = new ControlPolicial(probabilidad);
 					this.setObstaculo (obstaculo);
 				}
