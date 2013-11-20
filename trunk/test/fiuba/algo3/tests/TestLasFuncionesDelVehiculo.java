@@ -57,34 +57,34 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido{
         
         GPS gps = new GPS();
-	gps.empezarJuego(new Auto(), 30, "Arriba");
+	gps.empezarJuego(new Moto(), 30, "Arriba");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(11);
-        posicion.setX(11);
+        posicion.setY(3);
+        posicion.setX(3);
         
         vehiculo.moverArriba();     
         
-        Assert.assertEquals(9, vehiculo.getPosicion().getY());
+        Assert.assertEquals(2, vehiculo.getPosicion().getY());
     }
     
     @Test
     public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido{
        
         GPS gps = new GPS();
-	gps.empezarJuego(new Auto(), 30, "Abajo");
+	gps.empezarJuego(new CuatroPorCuatro(), 30, "Abajo");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(11);
-        posicion.setX(11);
+        posicion.setY(3);
+        posicion.setX(3);
         
         vehiculo.moverAbajo();     
         
-        Assert.assertEquals(13, vehiculo.getPosicion().getY());
+        Assert.assertEquals(4, vehiculo.getPosicion().getY());
     }
 
    
@@ -97,12 +97,12 @@ public class TestLasFuncionesDelVehiculo {
         
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(11);
-        posicion.setX(10);
+        posicion.setY(3);
+        posicion.setX(3);
         
         vehiculo.moverDerecha();
         
-        Assert.assertEquals(12, vehiculo.getPosicion().getX());
+        Assert.assertEquals(4, vehiculo.getPosicion().getX());
         
     }
     
@@ -115,12 +115,12 @@ public class TestLasFuncionesDelVehiculo {
         
         Posicion posicion = vehiculo.getPosicion();
         
-        posicion.setY(11);
-        posicion.setX(10);
+        posicion.setY(3);
+        posicion.setX(3);
         
         vehiculo.moverIzquierda();
         
-        Assert.assertEquals(8, vehiculo.getPosicion().getX());
+        Assert.assertEquals(2, vehiculo.getPosicion().getX());
        
     }
 }
