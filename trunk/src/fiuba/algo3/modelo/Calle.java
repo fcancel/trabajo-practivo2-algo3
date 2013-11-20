@@ -76,10 +76,6 @@ public class Calle {
 					this.setSorpresa(sorpresa);
 				}
                 break;
-                default:
-                                {       Efecto obstaculo = new CalleVacia();
-                                        this.setObstaculo(obstaculo);
-                                }
     	};
     }
 
