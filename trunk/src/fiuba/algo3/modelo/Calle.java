@@ -14,7 +14,7 @@ public class Calle {
     	sorpresa = null;
     	obstaculo = null;
     	Random rnd = new Random();
-    //genera un n�mero aleatorio entre 1 y 7 para decidir que agregar� en la calle 
+    //genera un numero aleatorio entre 1 y 7 para decidir que agregar� en la calle 
     	int objeto = (int)(rnd.nextDouble() * 7 + 1);        
     	this.crearObjetoEnLaCalle(objeto);
     }
@@ -45,18 +45,19 @@ public class Calle {
     				this.setObstaculo (obstaculo);
     			}
     		break;
-//    		case 3:
-//				{
-//					Efecto obstaculo = new Efecto();
-//					this.setObstaculo (obstaculo);
-//				}
-//    		break;
-//    		case 4:
-//				{
-//					Efecto obstaculo = new Efecto();
-//					this.setObstaculo (obstaculo);
-//				}
-//    		break;
+    		case 3:
+				{
+					Probabilidad probabilidad = new ProbabilidadEquipotencial();
+					Efecto obstaculo = new ControlPolicial(probabilidad);
+					this.setObstaculo (obstaculo);
+				}
+    		break;
+    		case 4:
+				{
+					Efecto obstaculo = new Piquete();
+					this.setObstaculo (obstaculo);
+				}
+    		break;
     		case 5:
 				{
 					Efecto sorpresa = new SorpresaDesfavorable();
@@ -102,8 +103,11 @@ public class Calle {
 	public boolean calleVacia(){
 		return (this == null);
 	}
-
 	public Vehiculo getVehiculo() {
 		return vehiculo;
+	}
+	public void inicializarCalle(){
+    	sorpresa = null;
+    	obstaculo = null;
 	}
 }

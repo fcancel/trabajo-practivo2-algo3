@@ -75,7 +75,7 @@ public class Vehiculo {
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setY(dondeQuieroIr.getY() - 1);
         
-        if(ciudad.esValidaLaPosicion2(dondeQuieroIr))
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
             this.posicion.setY(this.posicion.getY() - 1);   
        
     }
@@ -92,7 +92,7 @@ public class Vehiculo {
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setY(dondeQuieroIr.getY() + 1);
         
-        if(ciudad.esValidaLaPosicion2(dondeQuieroIr))
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
             this.posicion.setY(this.posicion.getY() + 1);
  
     }
@@ -107,7 +107,7 @@ public class Vehiculo {
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setX(dondeQuieroIr.getX() + 1);
         
-        if(ciudad.esValidaLaPosicion2(dondeQuieroIr))
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
             this.posicion.setX(this.posicion.getX() + 1);
     
     }
@@ -122,7 +122,7 @@ public class Vehiculo {
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setX(dondeQuieroIr.getX() - 1);
         
-        if(ciudad.esValidaLaPosicion2(dondeQuieroIr))
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr))
             this.posicion.setX(this.posicion.getX() - 1);
         
     }
