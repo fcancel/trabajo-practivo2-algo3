@@ -1,13 +1,13 @@
 package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
 public class Ciudad {
-    private Calle[][] ciudadnueva;
-    private ArrayList<ArrayList<Calle>> ciudad;
+    private Calle[][] ciudad;
     private GPS gps;
     private Vehiculo vehiculo;
     private int dimension;
@@ -16,83 +16,81 @@ public class Ciudad {
         this.dimension = dimension * dimension;
         this.gps = gps;
         this.vehiculo = vehiculo;        
-        this.ciudad = new ArrayList<ArrayList<Calle>>();
-        this.cargarEscenario(dimension);
-        this.cargarEscenario2(dimension);
+        this.cargarEscenario(dimension);	
+    	this.establecerMetayVehiculo(vehiculo);
     }
     
-    private void cargarEscenario2(int dimension){
+    private void establecerMetayVehiculo(Vehiculo vehiculo) {
+    	Posicion posicionMeta = this.posicionAleatoriaValida();
+    	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
+    	calleMeta.inicializarCalle();
+    	calleMeta.meta();
+    	Posicion posicionVehiculo = this.posicionAleatoriaVehiculo(posicionMeta);
+    	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
+    	calleVehiculo.inicializarCalle();
+    	calleVehiculo.setVehiculo(vehiculo);
+   	}
+
+	private Posicion posicionAleatoriaVehiculo(Posicion posicionMeta) {
+		Posicion posicionOpuestaALaMeta = new Posicion();
+		posicionOpuestaALaMeta.setX((this.dimension - posicionMeta.getX()));
+		posicionOpuestaALaMeta.setY((this.dimension - posicionMeta.getY()));
+		return posicionOpuestaALaMeta;
+	}
+
+	private Posicion posicionAleatoriaValida() {
+    	//Genera una posición aleatoria para ubicar la meta
+    	Random rnd = new Random(); 
+
+    	Posicion posicionAleatoriaValida = new Posicion();
+    	int fila = (int)(rnd.nextDouble() * dimension + 0);
+    	if ((fila%2) == 0)
+    		fila = fila + 1;
+    	posicionAleatoriaValida.setX(fila);
+    	
+    	int columna = (int)(rnd.nextDouble() * dimension + 0);
+    	if ((columna%2) == 0)
+    		columna = columna + 1;
+    	posicionAleatoriaValida.setY(columna);
+    	return posicionAleatoriaValida;
+	}
+
+	private void cargarEscenario(int dimension){
         
-        this.ciudadnueva = new Calle[dimension][dimension];
+        this.ciudad = new Calle[dimension][dimension];
         for (int i = 0; i<(dimension-1); i++){
             
             if((i%2) == 0){ //fila pares
                 for (int j = 0; j<(dimension-1); j++){
                     if ((j%2) == 0)
-                        this.ciudadnueva[i][j] = new Calle(false);
+                        this.ciudad[i][j] = new Calle(false);
                     else
-                        this.ciudadnueva[i][j] = new Calle();
+                        this.ciudad[i][j] = new Calle();
                 }
             }
             else{
                 for (int j = 0; j<(dimension-1); j++){
                     if ((j%2) == 0)
-                        this.ciudadnueva[i][j] = new Calle();
+                        this.ciudad[i][j] = new Calle();
                     else
-                        this.ciudadnueva[i][j] = new Calle(true);
+                        this.ciudad[i][j] = new Calle(true);
                 }
             }
-        }
-        
-        
-    }
-    
-    private void cargarEscenario(int dimension) {
-        for (int i =0; i<dimension -1; i ++){
-			ArrayList<Calle> fila = new ArrayList<Calle>();
-			// Como la matriz de calles debe representar un mapa, hay partes donde no habrï¿½ calles que
-			// representarï¿½ las manzanas, el esquema serï¿½a algo de la manera. (m = manzana, | ï¿½ - = calle por donde se puede circular
-			// |m|m|m|
-			// |-|-|-| 	
-			// |m|m|m|	
-			// |-|-|-|
-			if ((i % 2 )== 0)
-			{
-				for (int j = 0; j < dimension-1; j++){
-					if ((j % 2 )== 0)
-						fila.add(new Calle());
-					else
-						fila.add(new Calle(false));
-				}
-			}
-			else
-			{
-				for (int j = 0; j < dimension-1; j++){
-					fila.add(new Calle());
-				}				
-			}
-			this.ciudad.add(fila);
-        }
-	}
-    
-    public boolean esValidaLaPosicion2(Posicion posicion){
-        return this.ciudadnueva[posicion.getX()][posicion.getY()].esTransitable();
+        }        
     }
     
     public boolean esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{ 
-    	Calle calleDondeQuieroMoverme = this.calleDondeQuieroIr(posicion);
+    	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
     	if (calleDondeQuieroMoverme.esTransitable()){
     		this.colocarVehiculo(calleDondeQuieroMoverme);
                 return true;
         }        
         else
-    		throw new MovimientoInvalido();
-                       
+    		throw new MovimientoInvalido();                       
     }
     
-	public Calle calleDondeQuieroIr(Posicion posicion) {
-		ArrayList<Calle> fila = this.ciudad.get(posicion.getX());
-		return fila.get(posicion.getY());
+	public Calle calleEnUnaPosicion(Posicion posicion) {
+		return this.ciudad[posicion.getX()][posicion.getY()];
 	}
 	
 	private void colocarVehiculo(Calle calle) {
@@ -103,7 +101,7 @@ public class Ciudad {
 		return dimension;
 	}
 	
-	public ArrayList<ArrayList<Calle>> getCiudad(){
+	public Calle[][] getCiudad(){
 		return ciudad;
 	}
 }

@@ -2,8 +2,6 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-
 import fiuba.algo3.modelo.Calle;
 import fiuba.algo3.modelo.Ciudad;
 import fiuba.algo3.modelo.EstadoVehiculo;
@@ -19,18 +17,6 @@ import org.junit.Test;
 public class TestLasFuncionesDeLaCiudad {
 
 	@Test
-    public void alCrearLaCiudadSeCreaUnEscenarioCuadrado(){
-		int dimension = 4;
-		GPS gps = new GPS();
-        EstadoVehiculo estado = new Moto();
-        Vehiculo vehiculo = new Vehiculo(estado);
-        Ciudad ciudad = new Ciudad(dimension,vehiculo,gps);		
-        ArrayList<ArrayList<Calle>> callesHorizontales = ciudad.getCiudad();
-        ArrayList<Calle> callesVerticales = callesHorizontales.get(1);
-        assertTrue((callesHorizontales.size()== dimension-1) && (callesVerticales.size() == dimension-1));
-    }
-
-	@Test
     public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido{
 		int dimension = 10;
 		Posicion posicion = new Posicion();
@@ -40,9 +26,9 @@ public class TestLasFuncionesDeLaCiudad {
         EstadoVehiculo estado = new Moto();
         Vehiculo vehiculo = new Vehiculo(estado);
         Ciudad ciudad = new Ciudad(dimension,vehiculo,gps);		
-        Assert.assertEquals(true, ciudad.esValidaLaPosicion2(posicion));
-        //Calle calle = ciudad.calleDondeQuieroIr(posicion);
-        //assertTrue(calle.getVehiculo() == vehiculo);
+        Assert.assertEquals(true, ciudad.esValidaLaPosicion(posicion));
+        Calle calle = ciudad.calleEnUnaPosicion(posicion);
+        assertTrue(calle.getVehiculo() == vehiculo);
     }
 	
 	@Test
@@ -51,7 +37,7 @@ public class TestLasFuncionesDeLaCiudad {
     		int dimension = 4;
     		Posicion posicion = new Posicion();
     		posicion.setX(0);
-    		posicion.setY(1);
+    		posicion.setY(0);
     		GPS gps = new GPS();
             EstadoVehiculo estado = new Moto();
             Vehiculo vehiculo = new Vehiculo(estado);
