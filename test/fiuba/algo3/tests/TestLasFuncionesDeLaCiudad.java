@@ -64,4 +64,19 @@ public class TestLasFuncionesDeLaCiudad {
         }
     }
 	
+	@Test
+    public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado{
+		
+		GPS gps = new GPS();
+		gps.empezarJuego(new Auto(), 10, "juan");
+		Vehiculo auto = gps.getVehiculo();
+		Ciudad ciudad = gps.getCiudad();
+		Posicion posicionDeMeta = ciudad.posicionDeMeta();
+		
+		ciudad.esValidaLaPosicion(posicionDeMeta);
+		
+		assertFalse(gps.juegoEnMarcha());
+    }
+
+	
 }

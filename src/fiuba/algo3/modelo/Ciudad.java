@@ -9,7 +9,9 @@ public class Ciudad {
     private GPS gps;
     private Vehiculo vehiculo;
     private int dimension;
-
+    private Posicion posicionMeta;
+    
+    
     public Ciudad(int dimension, Vehiculo vehiculo, GPS gps) {
         this.dimension = dimension;
         this.gps = gps;
@@ -26,7 +28,7 @@ public class Ciudad {
     	//calleVehiculo.inicializarCalle(); si es una esquina no hace falta inicializarla
     	calleVehiculo.setVehiculo(vehiculo);
     	// el dimension-1 para que este en la ultima columna
-    	Posicion posicionMeta = this.posicionValida(this.dimension-1);
+    	posicionMeta = this.posicionValida(this.dimension-1);
     	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
     	calleMeta.inicializarCalle();
     	calleMeta.meta();
@@ -76,12 +78,18 @@ public class Ciudad {
     
     public boolean esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{ 
     	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
+    	
     	if (calleDondeQuieroMoverme.esTransitable()){
     		this.colocarVehiculo(calleDondeQuieroMoverme);
+    		if(calleDondeQuieroMoverme.sosMeta()){
+    			this.gps.terminarJuego();
+    		}
     		return true;
         }        
-        else
-    		throw new MovimientoInvalido();                       
+        else{
+        	throw new MovimientoInvalido();
+        }
+                          
     }
     
 	public Calle calleEnUnaPosicion(Posicion posicion) {
@@ -98,5 +106,11 @@ public class Ciudad {
 	
 	public Calle[][] getCiudad(){
 		return ciudad;
+	}
+
+	public Posicion posicionDeMeta() {
+		
+		return this.posicionMeta;
+		
 	}
 }
