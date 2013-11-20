@@ -50,6 +50,7 @@ public class TestLasFuncionesDeLaCalle {
 		Calle calle1= new Calle();    	
 		Efecto sorpresa= new SorpresaCambioDeVehiculo();
 		calle1.setSorpresa(sorpresa);
+		calle1.setObstaculo(null);
 		calle1.setVehiculo(vehiculo);
 		assertTrue(vehiculo.getEstado() != estado );
 	}
