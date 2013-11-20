@@ -56,6 +56,7 @@ public class GPS {
         this.vehiculo = new Vehiculo(estadoInicial);
         this.vehiculo.setGPS(this);
         this.ciudad = new Ciudad(dimension,this.vehiculo,this);
+        this.vehiculo.setCiudad(this.ciudad);
         this.jugador = nick;
         
     }

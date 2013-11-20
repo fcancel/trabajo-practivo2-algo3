@@ -14,6 +14,7 @@ import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Piquete;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
@@ -35,7 +36,7 @@ public class TestPiquete {
 	}
 	
 	@Test
-	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido{
+	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
 		gps.empezarJuego(new Auto(), 10, "juan");
@@ -59,7 +60,7 @@ public class TestPiquete {
 	}
 	
 	@Test
-	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido{
+	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
 		gps.empezarJuego(new CuatroPorCuatro(), 10, "juan");

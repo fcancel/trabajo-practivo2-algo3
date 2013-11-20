@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
@@ -11,6 +12,7 @@ public class Vehiculo {
     private EstadoVehiculo estado;
     private GPS GPS;
     private String ultimoMovimiento;
+	private Ciudad ciudad;
 
     public Vehiculo(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
@@ -29,6 +31,12 @@ public class Vehiculo {
     public void cambiarDeEstado(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
     }
+	
+    public void setCiudad(Ciudad ciudad) {
+
+		this.ciudad = ciudad;
+		
+	}
 
     public EstadoVehiculo estadoActual() {
         return this.estado;
@@ -65,65 +73,74 @@ public class Vehiculo {
     //X EJE HORIZONTAL
     //Y EJE VERTICAL
     
-    public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido{
+    public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
     	this.ultimoMovimiento = "AR";
-        Ciudad ciudad;
+    	
         Posicion dondeQuieroIr;
         
-        ciudad = this.GPS.getCiudad();
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setY(dondeQuieroIr.getY() - 1);
         
-        ciudad.esValidaLaPosicion(dondeQuieroIr);
-          //  this.posicion.setY(this.posicion.getY() - 1);   
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
+        	ciudad.colocarVehiculo(dondeQuieroIr);
+        }  
        
     }
         
     
     
-    public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido{
+    public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
     	this.ultimoMovimiento = "AB";
-        Ciudad ciudad;
+
         Posicion dondeQuieroIr;
         
-        ciudad = this.GPS.getCiudad();
+
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setY(dondeQuieroIr.getY() + 1);
         
-        ciudad.esValidaLaPosicion(dondeQuieroIr);
-          //  this.posicion.setY(this.posicion.getY() + 1);
+        
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
+        	ciudad.colocarVehiculo(dondeQuieroIr);
+        }
+
  
     }
     
-    public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido{
+    public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
     	this.ultimoMovimiento = "DE";
-        Ciudad ciudad;
+
         Posicion dondeQuieroIr;
         
-        ciudad = this.GPS.getCiudad();
+
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setX(dondeQuieroIr.getX() + 1);
         
-        ciudad.esValidaLaPosicion(dondeQuieroIr);
-         //   this.posicion.setX(this.posicion.getX() + 1);
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
+        	ciudad.colocarVehiculo(dondeQuieroIr);
+        }
+        
+
     
     }
     
-    public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido{
+    public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
     	this.ultimoMovimiento = "IZ";
-        Ciudad ciudad;
+
         Posicion dondeQuieroIr;
         
-        ciudad = this.GPS.getCiudad();
+
         dondeQuieroIr = this.posicion;
         dondeQuieroIr.setX(dondeQuieroIr.getX() - 1);
         
-        ciudad.esValidaLaPosicion(dondeQuieroIr);
-          //  this.posicion.setX(this.posicion.getX() - 1);
+        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
+        	ciudad.colocarVehiculo(dondeQuieroIr);
+        }
+        
+
         
     }
     
@@ -163,7 +180,7 @@ public class Vehiculo {
 		break;
     	}
     	
-    	}catch (JuegoNoIniciado | MovimientoInvalido e) {}
+    	}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
     	
     }
     

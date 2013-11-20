@@ -1,7 +1,12 @@
 package fiuba.algo3.modelo;
 
 import java.util.Random;
+
+import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
+
+
+
 
 
 public class Ciudad {
@@ -24,8 +29,8 @@ public class Ciudad {
     	// el 1 para que este en la segunda columna
     	Posicion posicionVehiculo = this.posicionValida(1);
     	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
-    	vehiculo.setPosicion(posicionVehiculo);// le asigno la posicion al vehiculo
-    	//calleVehiculo.inicializarCalle(); si es una esquina no hace falta inicializarla
+    	// le asigno la posicion al vehiculo
+    	vehiculo.setPosicion(posicionVehiculo);
     	calleVehiculo.setVehiculo(vehiculo);
     	// el dimension-1 para que este en la ultima columna
     	posicionMeta = this.posicionValida(this.dimension-1);
@@ -80,14 +85,14 @@ public class Ciudad {
     	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
     	
     	if (calleDondeQuieroMoverme.esTransitable()){
-    		this.colocarVehiculo(calleDondeQuieroMoverme);
-    		if(calleDondeQuieroMoverme.sosMeta()){
-    			this.gps.terminarJuego();
-    		}
+    		
     		return true;
+    		
         }        
         else{
+        	
         	throw new MovimientoInvalido();
+        	
         }
                           
     }
@@ -111,6 +116,20 @@ public class Ciudad {
 	public Posicion posicionDeMeta() {
 		
 		return this.posicionMeta;
+		
+	}
+
+	public void colocarVehiculo(Posicion dondeQuieroIr) throws JuegoFinalizado {
+
+		if(!gps.juegoEnMarcha())
+			throw new JuegoFinalizado();
+		
+		Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(dondeQuieroIr);
+		this.colocarVehiculo(calleDondeQuieroMoverme);
+		
+		if(calleDondeQuieroMoverme.sosMeta()){
+			this.gps.terminarJuego();
+		}
 		
 	}
 }

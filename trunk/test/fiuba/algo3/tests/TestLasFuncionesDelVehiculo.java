@@ -11,6 +11,7 @@ import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
@@ -54,7 +55,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido{
+    public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
 	gps.empezarJuego(new Moto(), 30, "Arriba");
@@ -71,7 +72,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido{
+    public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
        
         GPS gps = new GPS();
 	gps.empezarJuego(new Moto(), 30, "Abajo");
@@ -89,7 +90,7 @@ public class TestLasFuncionesDelVehiculo {
 
    
     @Test
-    public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido{
+    public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
 	gps.empezarJuego(new Moto(), 30, "Derecha");
@@ -107,7 +108,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido{
+    public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
 	gps.empezarJuego(new Moto(), 30, "Izquierda");
