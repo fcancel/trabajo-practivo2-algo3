@@ -27,7 +27,7 @@ public class CuatroPorCuatro implements EstadoVehiculo{
 	@Override
 	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto) {
 		
-		efecto.realizarEfecto(this, vehiculo);
+		efecto.realizarEfecto((CuatroPorCuatro) vehiculo.getEstado(), vehiculo);
 		
 	}
     
