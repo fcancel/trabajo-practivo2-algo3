@@ -9,14 +9,20 @@ import fiuba.algo3.modelo.Puntuacion;
 public class TestPuntuacion {
 
 	@Test
-	public void AlCrearUnaPuntuacionConSusAtributosEstosDebenSerCorrectos() {
+	public void AlCrearUnaPuntuacionConElNickEsCorrecto() {
 		
-		Puntuacion puntuacion = new Puntuacion(6,30,"juan");
+		Puntuacion puntuacion = new Puntuacion("juan",20);
 		
 		assertEquals( puntuacion.getNick(),"juan" );
-		assertEquals( puntuacion.getMovimientos(),6 );
-		assertEquals( puntuacion.getDimension(),30 );
-		assertTrue( puntuacion.getPromedio() == 5 );
+		
+	}
+	
+	@Test
+	public void AlCrearUnaPuntuacionConLosPuntosSonCorrectos() {
+		
+		Puntuacion puntuacion = new Puntuacion("pedro",50);
+		
+		assertEquals( puntuacion.getPuntos(),50 );
 		
 	}
 

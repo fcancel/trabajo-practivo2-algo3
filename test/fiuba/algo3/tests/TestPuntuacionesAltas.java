@@ -13,20 +13,20 @@ public class TestPuntuacionesAltas {
 	@Test
 	public void alAgregarUnaPuntuacionYPedirleDeberiaObtenerla() throws NoExisteEsaPosicion {
 		
-		Puntuacion puntuacion = new Puntuacion(5,30,"juan");
+		Puntuacion puntuacion = new Puntuacion("juan",50);
 		PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
 		
 		puntuacionesAltas.setPuntuacion(puntuacion);
 		
-		assertTrue( puntuacionesAltas.getPuntuacion(1).getPromedio() == 6 );
+		assertEquals( puntuacionesAltas.getPuntuacion(1).getPuntos(),50 );
 		
 	}
 	
 	@Test
 	public void alAgregarUnaPuntuacionYLuegoUnaDeMayorPromedioEsaDebeSerLaPrimera() throws NoExisteEsaPosicion {
 		
-		Puntuacion puntuacionBaja = new Puntuacion(5,30,"julieta");
-		Puntuacion puntuacionAlta = new Puntuacion(2,30,"tomas");
+		Puntuacion puntuacionBaja = new Puntuacion("julieta",30);
+		Puntuacion puntuacionAlta = new Puntuacion("tomas",50);
 		PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
 		
 		puntuacionesAltas.setPuntuacion(puntuacionBaja);

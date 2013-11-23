@@ -70,8 +70,8 @@ public class GPS {
 	public void terminarJuego() {
 		
 		int dimension = this.ciudad.getDimension();
-		Puntuacion puntuacion = new Puntuacion(this.movimientos,dimension,this.jugador);
-		this.puntuacionesAltas.setPuntuacion(puntuacion);
+		//Puntuacion puntuacion = new Puntuacion(this.jugador,50/*va la puntuacion calculada*/);
+		//this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.ciudad = null;
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
