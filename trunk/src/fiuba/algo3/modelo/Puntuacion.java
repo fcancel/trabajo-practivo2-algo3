@@ -2,35 +2,14 @@ package fiuba.algo3.modelo;
 
 public class Puntuacion implements Comparable {
 
-	private int movimientos;
-	private int dimension;
-	private double promedio;
+	private int puntos;
 	private String nick;
 
-	public Puntuacion(int movimientos, int dimension, String nick){
+	public Puntuacion(String nick, int puntos){
 		
 		this.nick = nick;
-		this.movimientos = movimientos;
-		this.dimension = dimension;
-		if( (dimension == 0) | (movimientos == 0) ){
-			this.promedio = 0;
-		}else{
-			this.promedio = dimension / movimientos;
-		}
+		this.puntos = puntos;
 		
-		
-	}
-
-	public int getMovimientos() {
-		return this.movimientos;
-	}
-
-	public int getDimension() {
-		return this.dimension;
-	}
-
-	public double getPromedio() {
-		return this.promedio;
 	}
 
 	public String getNick() {
@@ -38,14 +17,19 @@ public class Puntuacion implements Comparable {
 		return this.nick;
 	}
 	
+	public int getPuntos() {
+		
+		return this.puntos;
+	}
+	
 	@Override
 	public int compareTo(Object punt) {
 		
 		Puntuacion puntuacion = (Puntuacion) punt;
 		
-		if (this.promedio > puntuacion.getPromedio())
+		if (this.puntos > puntuacion.getPuntos())
 			return -1;
-		else if(this.promedio < puntuacion.getPromedio())
+		else if(this.puntos < puntuacion.getPuntos())
 			return 1;
 		return 0;
 	}
