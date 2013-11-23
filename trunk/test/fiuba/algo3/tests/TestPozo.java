@@ -19,7 +19,7 @@ public class TestPozo {
     public void testAlCaerUnaMotoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), 30, "ArmandoBarreda");
+        gps.empezarJuegoFacil(new Moto(),"ArmandoBarreda");
         Vehiculo moto = gps.getVehiculo();
         Efecto pozo = new Pozo();        
                
@@ -34,7 +34,7 @@ public class TestPozo {
     public void testAlCaerUnAutoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Auto(), 30, "Schwarzenegger");
+        gps.empezarJuegoFacil(new Auto(),"Schwarzenegger");
         Vehiculo auto = gps.getVehiculo();
         Efecto pozo = new Pozo();
         
@@ -49,7 +49,7 @@ public class TestPozo {
     public void testAlCaerUnaCuatroPorCuatroEnUnPozoSusMovimientosNoSonAfectados() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new CuatroPorCuatro(), 30, "Rojo");
+        gps.empezarJuegoFacil(new CuatroPorCuatro(),"Rojo");
         Vehiculo cuatroPorCuatro = gps.getVehiculo();
         Efecto pozo = new Pozo();
         

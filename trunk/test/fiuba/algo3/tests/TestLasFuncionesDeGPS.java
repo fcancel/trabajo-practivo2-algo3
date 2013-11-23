@@ -8,6 +8,7 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 import fiuba.algo3.modelo.Auto;
+import fiuba.algo3.modelo.EstadoVehiculo;
 import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
@@ -33,7 +34,7 @@ public class TestLasFuncionesDeGPS {
 		
         GPS gps = new GPS();
         
-        gps.empezarJuego(new Moto(),7,"jose");
+        gps.empezarJuegoFacil(new Moto(),"jose");
         
         assertTrue(gps.juegoEnMarcha());
 		
@@ -44,7 +45,7 @@ public class TestLasFuncionesDeGPS {
 		
         GPS gps = new GPS();
         
-        gps.empezarJuego(new Moto(),6,"tomas");
+        gps.empezarJuegoFacil(new Moto(),"tomas");
         gps.terminarJuego();
         
         assertFalse(gps.juegoEnMarcha());
@@ -59,7 +60,7 @@ public class TestLasFuncionesDeGPS {
         	
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5,"mercedes");
+        	gps.empezarJuegoFacil(new Moto(),"pedro");
             gps.terminarJuego();
         	gps.getVehiculo();
         	
@@ -78,7 +79,7 @@ public class TestLasFuncionesDeGPS {
         	
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5,"maria");
+        	gps.empezarJuegoFacil(new Moto(),"tomas");
             gps.terminarJuego();
         	gps.getCiudad();
         	
@@ -143,46 +144,120 @@ public class TestLasFuncionesDeGPS {
         Assert.assertEquals(4, gps.getMovimientos());
     }
     
+    
+    //Faltan definir los limite de movimientos
     @Test
-    public void alTerminarElJuegoLaPuntuacionDebeSerAgregada(){
+    public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer80(){
+        
+    	GPS gps = new GPS();
+        gps.empezarJuegoFacil(new Moto(),"Rofwaldo");
+        
+        assertEquals(80, gps.getLimiteDeMovimientos());
+        
+        
+    }
+    
+    @Test
+    public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer60(){
+        
+    	GPS gps = new GPS();
+        gps.empezarJuegoModerado(new Moto(),"Rofwaldo");
+        
+        assertEquals(60, gps.getLimiteDeMovimientos());
+        
+        
+    }
+    
+    @Test
+    public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer40(){
+        
+    	GPS gps = new GPS();
+        gps.empezarJuegoDificil(new Moto(),"Rofwaldo");
+        
+        assertEquals(40, gps.getLimiteDeMovimientos());
+        
+        
+    }
+    
+    @Test
+    public void testAlTerminarUnaPartidaEnFacilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+        
+    	GPS gps = new GPS();
     	
-    	try{
+    	gps.empezarJuegoFacil(new Moto(),"tomas");
+    	gps.sumarMovimiento(4);
+    	gps.terminarJuego();
+    	
+    	// (80-4)*1 = 76
+    	assertEquals( (gps.puntuacion(1)).getPuntos(), 76 );
+        
+        
+    }
+    
+    @Test
+    public void testAlTerminarUnaPartidaEnModeradoLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+        
+    	GPS gps = new GPS();
+    	
+    	gps.empezarJuegoModerado(new Moto(),"tomas");
+    	gps.sumarMovimiento(10);
+    	gps.terminarJuego();
+    	
+    	// (60-10)*3 = 100
+    	assertEquals( (gps.puntuacion(1)).getPuntos(), 100 );
+        
+        
+    }
+    
+    @Test
+    public void testAlTerminarUnaPartidaEnDificilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+        
+    	GPS gps = new GPS();
+    	
+    	gps.empezarJuegoDificil(new Moto(),"tomas");
+    	gps.sumarMovimiento(8);
+    	gps.terminarJuego();
+    	
+    	// (40-8)*3 = 96
+    	assertEquals( (gps.puntuacion(1)).getPuntos(), 96 );
+        
+        
+    }
+    
+    @Test
+    public void alTerminarElJuegoLaPuntuacionDebeSerAgregada() throws NoExisteEsaPosicion{
+
     		
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5,"tomas");
+        	gps.empezarJuegoFacil(new Moto(),"tomas");
         	gps.sumarMovimiento(4);
         	gps.terminarJuego();
         	
         	assertEquals( (gps.puntuacion(1)).getNick(), "tomas" );
-        	
-    	}catch (NoExisteEsaPosicion e){
-    		
-    	}
+        	assertEquals( (gps.puntuacion(1)).getPuntos(), 76 );
+
     	
     }
     
     @Test
-    public void alJugarDosPartidasDeboTenerDosPuntuaciones(){
-    	
-    	try{
+    public void alJugarDosPartidasDeboTenerDosPuntuaciones() throws NoExisteEsaPosicion{
     		
         	GPS gps = new GPS();
         	
-        	gps.empezarJuego(new Moto(),5,"juan");
+        	gps.empezarJuegoFacil(new Moto(),"juan");
         	gps.sumarMovimiento(4);
         	gps.terminarJuego();
         	
-        	gps.empezarJuego(new Auto(),10,"tomas");
-        	gps.sumarMovimiento(2);
+        	gps.empezarJuegoDificil(new Auto(),"tomas");
+        	gps.sumarMovimiento(10);
         	gps.terminarJuego();
         	
         	assertEquals( (gps.puntuacion(1)).getNick(), "tomas" );
+        	assertEquals( (gps.puntuacion(1)).getPuntos(), 90 );
         	assertEquals( (gps.puntuacion(2)).getNick(), "juan" );
+        	assertEquals( (gps.puntuacion(2)).getPuntos(), 76 );
         	
-    	}catch (NoExisteEsaPosicion e){
-    		
-    	}
     	
     }
     

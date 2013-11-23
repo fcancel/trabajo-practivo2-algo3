@@ -58,7 +58,7 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-	gps.empezarJuego(new Moto(), 30, "Arriba");
+        gps.empezarJuegoFacil(new Moto(),"Arriba");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -75,7 +75,7 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
        
         GPS gps = new GPS();
-	gps.empezarJuego(new Moto(), 30, "Abajo");
+        gps.empezarJuegoFacil(new Moto(),"Abajo");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -93,7 +93,7 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-	gps.empezarJuego(new Moto(), 30, "Derecha");
+        gps.empezarJuegoFacil(new Moto(),"Derecha");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -111,7 +111,7 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-	gps.empezarJuego(new Moto(), 30, "Izquierda");
+        gps.empezarJuegoFacil(new Moto(),"Izquierda");
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();

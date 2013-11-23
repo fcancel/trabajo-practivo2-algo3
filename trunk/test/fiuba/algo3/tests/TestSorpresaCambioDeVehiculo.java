@@ -21,7 +21,7 @@ public class TestSorpresaCambioDeVehiculo {
 	public void alCaerUnaMotoEnCambioDeVehiculoDebeCambiarAAuto() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), 5, "juan");
+		gps.empezarJuegoFacil(new Moto(),"juan");
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.8));
@@ -44,7 +44,7 @@ public class TestSorpresaCambioDeVehiculo {
 		
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), 5, "juan");
+		gps.empezarJuegoFacil(new Auto(),"juan");
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.5));
@@ -66,7 +66,7 @@ public class TestSorpresaCambioDeVehiculo {
 	public void alCaerUnaCuatroPorCuatroEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new CuatroPorCuatro(), 5, "juan");
+		gps.empezarJuegoFacil(new CuatroPorCuatro(),"tomas");
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.5));
