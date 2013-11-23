@@ -24,7 +24,7 @@ public class TestPiquete {
 	public void alCaerUnaMotoEnUnPiqueteDebeSumarDosMovimientos() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), 5, "juan");
+		gps.empezarJuegoFacil(new Moto(),"juan");
 		Vehiculo moto = gps.getVehiculo();
 		Efecto piquete = new Piquete();
 		
@@ -39,23 +39,33 @@ public class TestPiquete {
 	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), 10, "juan");
+		gps.empezarJuegoFacil(new Auto(),"juan");
 		Vehiculo auto = gps.getVehiculo();
+		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
 		
-		// El vehiculo se ubicara en la posicion (1,3)
+		Posicion posicionDestino = new Posicion();
+		posicionDestino.setX(2);
+		posicionDestino.setY(7);
+		
+		Calle calleDestino = ciudad.calleEnUnaPosicion(posicionDestino);
+		
+		calleDestino.setObstaculo(piquete);
+		calleDestino.setSorpresa(null);
+		
+		// El vehiculo se ubicara en la posicion  (1,7)
 		Posicion posicion = auto.getPosicion();
 		
+		//verifico posicion inicial
 		assertEquals(1,posicion.getX());
-		assertEquals(3,posicion.getY());
-		
+		assertEquals(7,posicion.getY());
+				
 		auto.moverDerecha();
-		
-		auto.aceptarEfecto(piquete);
-		
-		// el auto retrocede una posicion
+				
+		// la auto retrocede una posicion
 		assertEquals(1,posicion.getX());
-		assertEquals(3,posicion.getY());
+		assertEquals(7,posicion.getY());
+		
 		
 	}
 	
@@ -63,32 +73,32 @@ public class TestPiquete {
 	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new CuatroPorCuatro(), 10, "juan");
+		gps.empezarJuegoFacil(new CuatroPorCuatro(),"diego");
 		Vehiculo cuatroPorCuatro = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
 		
 		Posicion posicionDestino = new Posicion();
 		posicionDestino.setX(2);
-		posicionDestino.setY(3);
+		posicionDestino.setY(7);
 		
 		Calle calleDestino = ciudad.calleEnUnaPosicion(posicionDestino);
 		
 		calleDestino.setObstaculo(piquete);
 		calleDestino.setSorpresa(null);
 		
-		// El vehiculo se ubicara en la posicion (1,3)
+		// El vehiculo se ubicara en la posicion  (1,7)
 		Posicion posicion = cuatroPorCuatro.getPosicion();
 		
 		//verifico posicion inicial
 		assertEquals(1,posicion.getX());
-		assertEquals(3,posicion.getY());
+		assertEquals(7,posicion.getY());
 		
 		cuatroPorCuatro.moverDerecha();
 		
 		// la 4X4 retrocede una posicion
 		assertEquals(1,posicion.getX());
-		assertEquals(3,posicion.getY());
+		assertEquals(7,posicion.getY());
 		
 	}
 

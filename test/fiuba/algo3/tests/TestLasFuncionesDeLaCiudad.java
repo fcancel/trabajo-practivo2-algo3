@@ -38,7 +38,7 @@ public class TestLasFuncionesDeLaCiudad {
     public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), 5, "juan");
+		gps.empezarJuegoFacil(new Moto(),"juan");
 		Vehiculo auto = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Posicion posicion = auto.getPosicion();
@@ -70,7 +70,7 @@ public class TestLasFuncionesDeLaCiudad {
     public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), 10, "juan");
+		gps.empezarJuegoFacil(new Moto(),"juan");
 		Ciudad ciudad = gps.getCiudad();
 		Posicion posicionDeMeta = ciudad.posicionDeMeta();
 		
@@ -86,7 +86,7 @@ public class TestLasFuncionesDeLaCiudad {
 		try{
 			
 			GPS gps = new GPS();
-			gps.empezarJuego(new Auto(), 10, "juan");
+			gps.empezarJuegoFacil(new Moto(),"juan");
 			Vehiculo auto= gps.getVehiculo();
 			Ciudad ciudad = gps.getCiudad();
 			Posicion posicionDeMeta = ciudad.posicionDeMeta();
