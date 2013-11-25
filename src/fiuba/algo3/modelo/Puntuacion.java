@@ -1,7 +1,13 @@
 package fiuba.algo3.modelo;
 
-public class Puntuacion implements Comparable {
+import java.io.Serializable;
 
+public class Puntuacion implements Comparable, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1644432881082646123L;
 	private int puntos;
 	private String nick;
 

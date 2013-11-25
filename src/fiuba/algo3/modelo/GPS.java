@@ -6,6 +6,8 @@
 
 package fiuba.algo3.modelo;
 
+import java.io.File;
+
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 
@@ -26,6 +28,7 @@ public class GPS {
     private static int MULTIPLICADOR_FACIL = 1;
     private static int MULTIPLICADOR_MODERADO = 2;
     private static int MULTIPLICADOR_DIFICIL = 3;
+    
     private boolean juegoEnCurso;
     private PuntuacionesAltas puntuacionesAltas;
     private int movimientos;
@@ -34,6 +37,7 @@ public class GPS {
     private String jugador;
     private int limiteDeMovimientos;
 	private int multiplicador;
+	private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 
     private void verificarJuegoIniciado() throws JuegoNoIniciado{
 		
@@ -41,10 +45,19 @@ public class GPS {
 			throw new JuegoNoIniciado();
 	}
     
+    private void cargarPuntuaciones(){
+    	File fichero = new File(archivo);
+		if(fichero.exists()){
+			this.puntuacionesAltas = PuntuacionesAltas.Recuperar(archivo);
+		}else{
+			this.puntuacionesAltas = new PuntuacionesAltas();
+		}
+    }
+    
     public GPS(){
     	
         this.movimientos = MOVIMIENTO_INICIAL;
-        this.puntuacionesAltas = new PuntuacionesAltas();
+        this.cargarPuntuaciones();
         this.juegoEnCurso = false;
         
     }
@@ -72,6 +85,7 @@ public class GPS {
 		int puntuacionTotal = (this.limiteDeMovimientos - this.movimientos)* this.multiplicador;
 		Puntuacion puntuacion = new Puntuacion(this.jugador,puntuacionTotal);
 		this.puntuacionesAltas.setPuntuacion(puntuacion);
+		this.puntuacionesAltas.persistir(archivo);
 		this.ciudad = null;
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
