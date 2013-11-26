@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Auto;
+
 import fiuba.algo3.modelo.Efecto;
+import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
-import fiuba.algo3.modelo.SorpresaFavorable;
 import fiuba.algo3.modelo.Vehiculo;
 import fiuba.algo3.modelo.SorpresaDesfavorable;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
@@ -20,7 +20,7 @@ public class TestSorpresaDesfavorable {
 		
 		
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Moto(),"juan");
+		gps.empezarJuego(new Moto(), new Facil(),"juan");
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto sorpresaDesfavorable = new SorpresaDesfavorable();
 		vehiculo.sumarMovimiento(10);

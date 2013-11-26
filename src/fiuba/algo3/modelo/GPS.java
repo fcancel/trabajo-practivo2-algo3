@@ -19,7 +19,7 @@ import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 public class GPS {
     
     private static int MOVIMIENTO_INICIAL = 0;
-    private static int MOVIMIENTOS_FACIL = 80;
+    /*private static int MOVIMIENTOS_FACIL = 80;
     private static int MOVIMIENTOS_MODERADO = 60;
     private static int MOVIMIENTOS_DIFICIL = 40;
     private static int FILASYCOLUMNAS_FACIL = 15;
@@ -27,16 +27,15 @@ public class GPS {
     private static int FILASYCOLUMNAS_DIFICIL = 25;
     private static int MULTIPLICADOR_FACIL = 1;
     private static int MULTIPLICADOR_MODERADO = 2;
-    private static int MULTIPLICADOR_DIFICIL = 3;
+    private static int MULTIPLICADOR_DIFICIL = 3;*/
     
+    private Dificultad dificultad;
     private boolean juegoEnCurso;
     private PuntuacionesAltas puntuacionesAltas;
     private int movimientos;
     private Vehiculo vehiculo;
     private Ciudad ciudad;
     private String jugador;
-    private int limiteDeMovimientos;
-	private int multiplicador;
 	private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 
     private void verificarJuegoIniciado() throws JuegoNoIniciado{
@@ -82,7 +81,10 @@ public class GPS {
 
 	public void terminarJuego() {
 		
-		int puntuacionTotal = (this.limiteDeMovimientos - this.movimientos)* this.multiplicador;
+		int limiteDeMovimientos = this.dificultad.getMaximoDeMovimientos();
+		int multipilcador = this.dificultad.getMultiplicador();
+		
+		int puntuacionTotal = (limiteDeMovimientos - this.movimientos)* multipilcador;
 		Puntuacion puntuacion = new Puntuacion(this.jugador,puntuacionTotal);
 		this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.puntuacionesAltas.persistir(archivo);
@@ -115,7 +117,25 @@ public class GPS {
 		
 	}
 
-	public void empezarJuegoFacil(EstadoVehiculo estadoInicial, String nick) {
+	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,String nick){
+		
+		this.dificultad = dificultad;
+		this.jugador = nick;
+		this.inicializarJuego(estadoInicial,dificultad.getFilas(),dificultad.getColumnas());
+
+	}
+	
+	private void inicializarJuego(EstadoVehiculo estadoInicial, int filas, int columnas) {
+		
+		this.juegoEnCurso = true;
+        this.vehiculo = new Vehiculo(estadoInicial);
+        this.vehiculo.setGPS(this);
+		this.ciudad = new Ciudad(filas,this.vehiculo,this);
+        this.vehiculo.setCiudad(this.ciudad);
+		
+	}
+
+	/*public void empezarJuegoFacil(EstadoVehiculo estadoInicial, String nick) {
 		
 		
         this.inicializarJuego(estadoInicial,FILASYCOLUMNAS_FACIL,nick);
@@ -136,9 +156,9 @@ public class GPS {
 		this.inicializarJuego(estadoInicial,FILASYCOLUMNAS_DIFICIL,nick);
 		this.limiteDeMovimientos = MOVIMIENTOS_DIFICIL;
 		this.multiplicador = MULTIPLICADOR_DIFICIL;
-	}
+	}*/
 	
-	private void inicializarJuego(EstadoVehiculo estadoInicial,int filasYColumnas,String nick) {
+	/*private void inicializarJuego(EstadoVehiculo estadoInicial,int filasYColumnas,String nick) {
 		
 		this.juegoEnCurso = true;
         this.vehiculo = new Vehiculo(estadoInicial);
@@ -147,11 +167,11 @@ public class GPS {
         this.vehiculo.setCiudad(this.ciudad);
         this.jugador = nick;
 		
-	}
+	}*/
 
 	public int getLimiteDeMovimientos() {
 		
-		return this.limiteDeMovimientos;
+		return this.dificultad.getMaximoDeMovimientos();
 	}
 
 
