@@ -3,6 +3,7 @@ package fiuba.algo3.tests;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.junit.Test;
 
@@ -23,9 +24,9 @@ public class TestJugadores {
 		
 		jugadores.agregarNuevoJugador(jugador);
 		
-		ArrayList<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
+		Iterator<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
 
-		assertTrue(jugadoresObtenidos.get(0).equals("Pedro"));
+		assertTrue(jugadoresObtenidos.next().equals("Pedro"));
 	
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 	
@@ -66,10 +67,10 @@ public class TestJugadores {
 
 		jugadores.agregarNuevoJugador(juan);
 		
-		ArrayList<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
+		Iterator<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
 
-		assertEquals(pedro,jugadoresObtenidos.get(0));
-		assertEquals(juan,jugadoresObtenidos.get(1));
+		assertEquals(pedro,jugadoresObtenidos.next());
+		assertEquals(juan,jugadoresObtenidos.next());
 
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 
@@ -87,9 +88,9 @@ public class TestJugadores {
 
 		Jugadores jugadoresRecuperados = new Jugadores();
 		
-		ArrayList<Jugador> listaDeJugadores = jugadoresRecuperados.listaDeJugadores();
+		Iterator<Jugador> listaDeJugadores = jugadoresRecuperados.listaDeJugadores();
 		
-		assertTrue(listaDeJugadores.get(0).equals("Juan"));
+		assertTrue(listaDeJugadores.next().equals("Juan"));
 		
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 

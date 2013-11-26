@@ -9,7 +9,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
 
 
 
@@ -53,9 +55,11 @@ public class Jugadores implements Serializable {
 		
 	}
 
-	public ArrayList<Jugador> listaDeJugadores() {
+	public Iterator<Jugador> listaDeJugadores() {
 		
-		return this.jugadores;
+		Iterator<Jugador> iterable = this.jugadores.iterator();
+		
+		return iterable;
 		
 	}
 	
