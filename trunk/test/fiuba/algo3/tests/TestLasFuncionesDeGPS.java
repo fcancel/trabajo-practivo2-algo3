@@ -23,14 +23,7 @@ import org.junit.Test;
 
 public class TestLasFuncionesDeGPS {
     
-    
-	public void eliminarArchivo(){
-		
-		String archivo = "puntuaciones\\puntuacionesAltas.dat";
-    	File fichero = new File(archivo);
-		fichero.delete();
-		
-	}
+
 	
 	@Test
     public void alCrearGPSElJuegoNoEstaEnMarcha(){
@@ -43,23 +36,31 @@ public class TestLasFuncionesDeGPS {
 	@Test
 	public void alEmpezarJuegoElJuegoEstaEnMarcha(){
 		
+		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
+		
         GPS gps = new GPS();
         
         gps.empezarJuegoFacil(new Moto(),"jose");
         
         assertTrue(gps.juegoEnMarcha());
+        
+        eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 		
 	}
 	
 	@Test
     public void alTerminarElJuegoEsteNoEstaEnMarcha(){
 		
-        GPS gps = new GPS();
+		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
+		
+		GPS gps = new GPS();
         
         gps.empezarJuegoFacil(new Moto(),"tomas");
         gps.terminarJuego();
         
         assertFalse(gps.juegoEnMarcha());
+        
+        eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
 	
 	
@@ -69,13 +70,16 @@ public class TestLasFuncionesDeGPS {
 			
         try{
         	
-        	this.eliminarArchivo();
+        	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
         	
         	GPS gps = new GPS();
         	
         	gps.empezarJuegoFacil(new Moto(),"pedro");
             gps.terminarJuego();
-        	gps.getVehiculo();
+        	
+            eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
+            
+            gps.getVehiculo();
         	
         	assertTrue( false );
         	
@@ -90,12 +94,15 @@ public class TestLasFuncionesDeGPS {
 			
         try{
         	
-        	this.eliminarArchivo();
+        	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
         	
         	GPS gps = new GPS();
         	
         	gps.empezarJuegoFacil(new Moto(),"tomas");
             gps.terminarJuego();
+            
+            eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
+            
         	gps.getCiudad();
         	
         	assertTrue( false );
@@ -164,46 +171,46 @@ public class TestLasFuncionesDeGPS {
     @Test
     public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer80(){
         
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
         gps.empezarJuegoFacil(new Moto(),"Rofwaldo");
         
         assertEquals(80, gps.getLimiteDeMovimientos());
         
-        
+        eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer60(){
         
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
         gps.empezarJuegoModerado(new Moto(),"Rofwaldo");
         
         assertEquals(60, gps.getLimiteDeMovimientos());
         
-        
+        eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer40(){
         
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
         gps.empezarJuegoDificil(new Moto(),"Rofwaldo");
         
         assertEquals(40, gps.getLimiteDeMovimientos());
         
-        
+        eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void testAlTerminarUnaPartidaEnFacilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
         
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
     	
@@ -214,13 +221,13 @@ public class TestLasFuncionesDeGPS {
     	// (80-4)*1 = 76
     	assertEquals( (gps.puntuacion(1)).getPuntos(), 76 );
         
-        
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void testAlTerminarUnaPartidaEnModeradoLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
         
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
     	
@@ -231,13 +238,13 @@ public class TestLasFuncionesDeGPS {
     	// (60-10)*3 = 100
     	assertEquals( (gps.puntuacion(1)).getPuntos(), 100 );
         
-        
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
 
     @Test
     public void testAlTerminarUnaPartidaEnDificilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
 
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
 
@@ -248,14 +255,14 @@ public class TestLasFuncionesDeGPS {
     	// (40-8)*3 = 96
     	assertEquals( (gps.puntuacion(1)).getPuntos(), 96 );
 
-
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void alTerminarElJuegoLaPuntuacionDebeSerAgregada() throws NoExisteEsaPosicion{
 
 
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 
     	GPS gps = new GPS();
 
@@ -266,13 +273,13 @@ public class TestLasFuncionesDeGPS {
     	assertEquals( (gps.puntuacion(1)).getNick(), "tomas" );
     	assertEquals( (gps.puntuacion(1)).getPuntos(), 76 );
 
-
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void alJugarDosPartidasDeboTenerDosPuntuaciones() throws NoExisteEsaPosicion{
     		
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
         	
@@ -289,13 +296,13 @@ public class TestLasFuncionesDeGPS {
        	assertEquals( (gps.puntuacion(2)).getNick(), "juan" );
        	assertEquals( (gps.puntuacion(2)).getPuntos(), 76 );
         	
-    	
+       	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
     @Test
     public void alIniciarUnGPSTerminarloYCrearUnoNuevoLasPuntuacionesDebenPersistir() throws NoExisteEsaPosicion{
 		
-    	this.eliminarArchivo();
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gpsInicial = new GPS();
     	
@@ -313,6 +320,8 @@ public class TestLasFuncionesDeGPS {
     	assertEquals( (gps.puntuacion(1)).getPuntos(), 90 );
     	assertEquals( (gps.puntuacion(2)).getNick(), "juan" );
     	assertEquals( (gps.puntuacion(2)).getPuntos(), 76 );
+    	
+    	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     }
     
 }

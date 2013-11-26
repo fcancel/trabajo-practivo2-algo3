@@ -26,7 +26,12 @@ public class Jugadores implements Serializable {
 	
 	public Jugadores(){
 		
-		this.jugadores = new ArrayList<Jugador>();
+		File fichero = new File(archivo);
+		if(fichero.exists()){
+			this.recuperar();
+		}else{
+			this.jugadores = new ArrayList<Jugador>();
+		}
 		
 	}
 	
@@ -34,6 +39,7 @@ public class Jugadores implements Serializable {
 
 		this.buscarJugador(jugador);
 		this.jugadores.add(jugador);
+		this.persistir();
 		
 	}
 
@@ -47,22 +53,46 @@ public class Jugadores implements Serializable {
 		
 	}
 
-	public Jugador getJugador(String nombre) {
-		
-		for(Jugador jugador: this.jugadores ){
-			if( jugador.esTuNombre(nombre) ){
-				return jugador;
-			}
-		}
-		
-		return null;	
-		
-	}
-
 	public ArrayList<Jugador> listaDeJugadores() {
 		
 		return this.jugadores;
 		
+	}
+	
+	public void persistir() {
+		
+		try {
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.archivo));
+			oos.writeObject(this);
+			oos.close();
+		
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void recuperar() {
+		
+		try {
+
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo));
+			Jugadores jugadoresRecuperados = (Jugadores) ois.readObject();
+			ois.close();	
+
+			this.jugadores = jugadoresRecuperados.jugadores;
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}	
+	
 	}
 	
 }

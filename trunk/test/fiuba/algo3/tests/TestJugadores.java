@@ -15,12 +15,20 @@ public class TestJugadores {
 	@Test
 	public void alAgregarUnJugadorEsteDebeExistirEnLaListaDeJugadores() throws JugadorExistente {
 
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+
+		
 		Jugador jugador= new Jugador("Pedro");
 		Jugadores jugadores = new Jugadores();
 		
 		jugadores.agregarNuevoJugador(jugador);
+		
+		ArrayList<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
 
-		assertEquals(jugador,jugadores.getJugador("Pedro"));
+		assertTrue(jugadoresObtenidos.get(0).esTuNombre("Pedro"));
+	
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+	
 	}
 
 	@Test
@@ -28,9 +36,13 @@ public class TestJugadores {
 
 		try{
 			
+			eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+
 			Jugadores jugadores = new Jugadores();
 			
 			jugadores.agregarNuevoJugador(new Jugador("Pedro"));
+
+			eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 			
 			jugadores.agregarNuevoJugador(new Jugador("Pedro"));
 			
@@ -43,6 +55,8 @@ public class TestJugadores {
 
 	@Test
 	public void alAgregarDosJugadoresYPedirListaDeNombresEstosDebenSerCorrectos() throws JugadorExistente {
+
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 
 		Jugadores jugadores = new Jugadores();
 		Jugador pedro= new Jugador("Pedro");
@@ -57,6 +71,29 @@ public class TestJugadores {
 		assertEquals(pedro,jugadoresObtenidos.get(0));
 		assertEquals(juan,jugadoresObtenidos.get(1));
 
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+
+	}
+	
+	@Test
+	public void alPersistirUnJugadorYRecuperarloDebeSerCorrectoSusDatos() throws JugadorExistente {
+
+		
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+		
+		Jugadores jugadores = new Jugadores();
+		
+		jugadores.agregarNuevoJugador(new Jugador("Juan"));
+
+		Jugadores jugadoresRecuperados = new Jugadores();
+		
+		ArrayList<Jugador> listaDeJugadores = jugadoresRecuperados.listaDeJugadores();
+		
+		assertTrue(listaDeJugadores.get(0).esTuNombre("Juan"));
+		
+		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
+
+		
 	}
 
 }
