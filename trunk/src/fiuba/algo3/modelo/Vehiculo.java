@@ -11,12 +11,13 @@ public class Vehiculo {
     private Posicion posicion;
     private EstadoVehiculo estado;
     private GPS GPS;
-    private String ultimoMovimiento;
+    private Retroceder retroceder;
 	private Ciudad ciudad;
 
     public Vehiculo(EstadoVehiculo estadoASetear) {
         this.estado = estadoASetear;
-        this.posicion = new Posicion();        
+        this.posicion = new Posicion();
+        this.retroceder = new Retroceder();
     }
 
      
@@ -75,7 +76,7 @@ public class Vehiculo {
     
     public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
-    	this.ultimoMovimiento = "AR";
+    	this.retroceder.getUltimaAccion(new Arriba(this));
     	
         Posicion dondeQuieroIr;
         
@@ -92,7 +93,7 @@ public class Vehiculo {
     
     public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
-    	this.ultimoMovimiento = "AB";
+    	this.retroceder.getUltimaAccion(new Abajo(this));
 
         Posicion dondeQuieroIr;
         
@@ -110,7 +111,7 @@ public class Vehiculo {
     
     public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
-    	this.ultimoMovimiento = "DE";
+    	this.retroceder.getUltimaAccion(new Derecha(this));
 
         Posicion dondeQuieroIr;
         
@@ -128,7 +129,7 @@ public class Vehiculo {
     
     public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
-    	this.ultimoMovimiento = "IZ";
+    	this.retroceder.getUltimaAccion(new Izquierda(this));
 
         Posicion dondeQuieroIr;
         
@@ -152,33 +153,7 @@ public class Vehiculo {
     	
     	try{
     		
-    	switch(this.ultimoMovimiento)
-    	{ 
-    		case "AR": 
-    			{ 			
-						this.moverAbajo();
-					
-    			}
-    		break;
-    		case "AB": 
-			{ 			
-					this.moverArriba();
-				
-			}
-		break;
-    		case "IZ": 
-			{ 			
-					this.moverDerecha();
-				
-			}
-		break;
-    		case "DE": 
-			{ 			
-					this.moverIzquierda();
-				
-			}
-		break;
-    	}
+    		this.retroceder.realizar();
     	
     	}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
     	
