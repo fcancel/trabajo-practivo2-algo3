@@ -19,15 +19,6 @@ import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 public class GPS {
     
     private static int MOVIMIENTO_INICIAL = 0;
-    /*private static int MOVIMIENTOS_FACIL = 80;
-    private static int MOVIMIENTOS_MODERADO = 60;
-    private static int MOVIMIENTOS_DIFICIL = 40;
-    private static int FILASYCOLUMNAS_FACIL = 15;
-    private static int FILASYCOLUMNAS_MODERADO = 19;
-    private static int FILASYCOLUMNAS_DIFICIL = 25;
-    private static int MULTIPLICADOR_FACIL = 1;
-    private static int MULTIPLICADOR_MODERADO = 2;
-    private static int MULTIPLICADOR_DIFICIL = 3;*/
     
     private Dificultad dificultad;
     private boolean juegoEnCurso;
@@ -134,40 +125,6 @@ public class GPS {
         this.vehiculo.setCiudad(this.ciudad);
 		
 	}
-
-	/*public void empezarJuegoFacil(EstadoVehiculo estadoInicial, String nick) {
-		
-		
-        this.inicializarJuego(estadoInicial,FILASYCOLUMNAS_FACIL,nick);
-		this.limiteDeMovimientos = MOVIMIENTOS_FACIL;
-		this.multiplicador = MULTIPLICADOR_FACIL;
-		
-	}
-
-	public void empezarJuegoModerado(EstadoVehiculo estadoInicial, String nick) {
-		
-		this.inicializarJuego(estadoInicial,FILASYCOLUMNAS_MODERADO,nick);
-		this.limiteDeMovimientos = MOVIMIENTOS_MODERADO;
-		this.multiplicador = MULTIPLICADOR_MODERADO;
-	}
-
-	public void empezarJuegoDificil(EstadoVehiculo estadoInicial, String nick) {
-
-		this.inicializarJuego(estadoInicial,FILASYCOLUMNAS_DIFICIL,nick);
-		this.limiteDeMovimientos = MOVIMIENTOS_DIFICIL;
-		this.multiplicador = MULTIPLICADOR_DIFICIL;
-	}*/
-	
-	/*private void inicializarJuego(EstadoVehiculo estadoInicial,int filasYColumnas,String nick) {
-		
-		this.juegoEnCurso = true;
-        this.vehiculo = new Vehiculo(estadoInicial);
-        this.vehiculo.setGPS(this);
-		this.ciudad = new Ciudad(filasYColumnas,this.vehiculo,this);
-        this.vehiculo.setCiudad(this.ciudad);
-        this.jugador = nick;
-		
-	}*/
 
 	public int getLimiteDeMovimientos() {
 		
