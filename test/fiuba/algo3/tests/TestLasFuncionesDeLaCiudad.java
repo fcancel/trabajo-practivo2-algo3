@@ -72,7 +72,7 @@ public class TestLasFuncionesDeLaCiudad {
 		GPS gps = new GPS();
 		gps.empezarJuegoFacil(new Moto(),"juan");
 		Ciudad ciudad = gps.getCiudad();
-		Posicion posicionDeMeta = ciudad.posicionDeMeta();
+		Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
 		
 		//ciudad.esValidaLaPosicion(posicionDeMeta);
 		ciudad.colocarVehiculo(posicionDeMeta);
@@ -89,7 +89,7 @@ public class TestLasFuncionesDeLaCiudad {
 			gps.empezarJuegoFacil(new Moto(),"juan");
 			Vehiculo auto= gps.getVehiculo();
 			Ciudad ciudad = gps.getCiudad();
-			Posicion posicionDeMeta = ciudad.posicionDeMeta();
+			Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
 			
 			ciudad.colocarVehiculo(posicionDeMeta);
 			

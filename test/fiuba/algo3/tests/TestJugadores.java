@@ -25,7 +25,7 @@ public class TestJugadores {
 		
 		ArrayList<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
 
-		assertTrue(jugadoresObtenidos.get(0).esTuNombre("Pedro"));
+		assertTrue(jugadoresObtenidos.get(0).equals("Pedro"));
 	
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 	
@@ -89,7 +89,7 @@ public class TestJugadores {
 		
 		ArrayList<Jugador> listaDeJugadores = jugadoresRecuperados.listaDeJugadores();
 		
-		assertTrue(listaDeJugadores.get(0).esTuNombre("Juan"));
+		assertTrue(listaDeJugadores.get(0).equals("Juan"));
 		
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 

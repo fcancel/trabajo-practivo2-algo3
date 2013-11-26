@@ -59,7 +59,7 @@ public class PuntuacionesAltas implements Serializable{
 		
 	}
 
-	public static PuntuacionesAltas Recuperar(String archivo) {
+	public static PuntuacionesAltas recuperar(String archivo) {
 		
 		try {
 

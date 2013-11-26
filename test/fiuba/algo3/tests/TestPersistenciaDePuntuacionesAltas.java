@@ -24,7 +24,7 @@ public class TestPersistenciaDePuntuacionesAltas {
 		String archivo = "puntuaciones\\puntuacionesAltas.dat";
 		puntuacionesAPersistir.persistir(archivo);
 		
-		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.Recuperar(archivo);
+		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.recuperar(archivo);
 		
 		Puntuacion puntuacionAltaRecuperada = puntuacionesARecuperar.getPuntuacion(1);
 		
@@ -50,7 +50,7 @@ public class TestPersistenciaDePuntuacionesAltas {
 		String archivo = "puntuaciones\\puntuacionesAltas.dat";
 		puntuacionesAPersistir.persistir(archivo);
 		
-		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.Recuperar(archivo);
+		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.recuperar(archivo);
 		
 		Puntuacion puntuacionAltaRecuperada = puntuacionesARecuperar.getPuntuacion(1);
 		Puntuacion puntuacionBajaRecuperada = puntuacionesARecuperar.getPuntuacion(2);
