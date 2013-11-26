@@ -109,7 +109,7 @@ public class Ciudad {
 		return ciudad;
 	}
 
-	public Posicion posicionDeMeta() {
+	public Posicion getPosicionDeMeta() {
 		
 		return this.posicionMeta;
 		

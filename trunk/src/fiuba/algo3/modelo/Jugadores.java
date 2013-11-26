@@ -37,16 +37,16 @@ public class Jugadores implements Serializable {
 	
 	public void agregarNuevoJugador(Jugador jugador) throws JugadorExistente {
 
-		this.buscarJugador(jugador);
+		this.verificarQueElJugadorNoEste(jugador);
 		this.jugadores.add(jugador);
 		this.persistir();
 		
 	}
 
-	private void buscarJugador(Jugador jugadorABuscar) throws JugadorExistente {
+	private void verificarQueElJugadorNoEste(Jugador jugadorABuscar) throws JugadorExistente {
 
 		for(Jugador jugador: this.jugadores ){
-			if( jugador.nombre() == jugadorABuscar.nombre() ){
+			if( jugador.equals(jugadorABuscar) ){
 				throw new JugadorExistente();
 			}
 		}

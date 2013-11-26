@@ -48,7 +48,7 @@ public class GPS {
     private void cargarPuntuaciones(){
     	File fichero = new File(archivo);
 		if(fichero.exists()){
-			this.puntuacionesAltas = PuntuacionesAltas.Recuperar(archivo);
+			this.puntuacionesAltas = PuntuacionesAltas.recuperar(archivo);
 		}else{
 			this.puntuacionesAltas = new PuntuacionesAltas();
 		}
