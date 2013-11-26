@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.Auto;
 import fiuba.algo3.modelo.ControlPolicial;
 import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.Efecto;
+import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.ProbabilidadEstatica;
@@ -20,7 +21,7 @@ public class TestControlPolicial{
 	public void alCaerUnAutoEnElControlPolicialConProbabilidad5DebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Auto(),"tomas");
+		gps.empezarJuego(new Auto(), new Facil(),"tomas");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.5));
 		
@@ -36,7 +37,7 @@ public class TestControlPolicial{
 	public void alCaerUnAutoEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Auto(),"juan");
+		gps.empezarJuego(new Auto(), new Facil(),"juan");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.7));
 		
@@ -52,7 +53,7 @@ public class TestControlPolicial{
 	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad3DebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new CuatroPorCuatro(),"pedro");
+		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),"pedro");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.3));
 		
@@ -68,7 +69,7 @@ public class TestControlPolicial{
 	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new CuatroPorCuatro(),"lautaro");
+		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),"lautaro");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.7));
 		
@@ -84,7 +85,7 @@ public class TestControlPolicial{
 	public void alCaerUnaMotoEnElControlPolicialConProbabilidad8DebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Moto(),"tomas");
+		gps.empezarJuego(new Moto(), new Facil(),"tomas");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.8));
 		
@@ -99,7 +100,7 @@ public class TestControlPolicial{
 	public void alCaerUnaMotoEnElControlPolicialConProbabilidad9NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
 
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Moto(),"jose");
+		gps.empezarJuego(new Moto(), new Facil(),"jose");
 		Vehiculo auto = gps.getVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.9));
 		

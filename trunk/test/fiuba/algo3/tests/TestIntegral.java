@@ -6,8 +6,8 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Auto;
 import fiuba.algo3.modelo.Ciudad;
+import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
-import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Vehiculo;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
@@ -19,7 +19,7 @@ public class TestIntegral {
 	public void ganarJuegoSinObstaculos() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuegoFacil(new Auto(),"juan");
+		gps.empezarJuego(new Auto(), new Facil(),"juan");
 		
 		Vehiculo auto = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
