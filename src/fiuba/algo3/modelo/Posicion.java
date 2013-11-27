@@ -43,5 +43,14 @@ public class Posicion {
         return posicionY;
     }
 
+	public Posicion obtenerCopia() {
+		
+		Posicion posicion = new Posicion();
+		posicion.posicionX = this.posicionX;
+		posicion.posicionY = this.posicionY;
+		return posicion;
+		
+	}
+
    
 }

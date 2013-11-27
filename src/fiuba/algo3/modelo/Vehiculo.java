@@ -1,12 +1,14 @@
 package fiuba.algo3.modelo;
 
+import java.util.Observable;
+
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
 
-public class Vehiculo {
+public class Vehiculo extends Observable {
     
     private Posicion posicion;
     private EstadoVehiculo estado;
@@ -86,6 +88,8 @@ public class Vehiculo {
         if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
         	ciudad.colocarVehiculo(dondeQuieroIr);
         }  
+        
+        ActualizarObservadores();
        
     }
         
@@ -106,7 +110,8 @@ public class Vehiculo {
         	ciudad.colocarVehiculo(dondeQuieroIr);
         }
 
- 
+        ActualizarObservadores();
+        
     }
     
     public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
@@ -123,7 +128,7 @@ public class Vehiculo {
         	ciudad.colocarVehiculo(dondeQuieroIr);
         }
         
-
+        ActualizarObservadores();
     
     }
     
@@ -141,7 +146,7 @@ public class Vehiculo {
         	ciudad.colocarVehiculo(dondeQuieroIr);
         }
         
-
+        ActualizarObservadores();
         
     }
     
@@ -154,9 +159,15 @@ public class Vehiculo {
     	try{
     		
     		this.retroceder.realizar();
-    	
+    		ActualizarObservadores();
+    		
     	}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
     	
     }
+    
+    public void ActualizarObservadores() {
+		setChanged();
+		notifyObservers();
+	}
     
 }
