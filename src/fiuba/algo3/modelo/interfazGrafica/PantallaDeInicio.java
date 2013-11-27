@@ -44,6 +44,11 @@ public class PantallaDeInicio extends javax.swing.JFrame {
 
         botonYaTengoUsuario.setFont(new java.awt.Font("Tahoma", 1, 29)); // NOI18N
         botonYaTengoUsuario.setText("Jugador ya existente");
+        botonYaTengoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonYaTengoUsuarioActionPerformed(evt);
+            }
+        });
 
         tituloDelJuego.setFont(new java.awt.Font("Ravie", 0, 31)); // NOI18N
         tituloDelJuego.setText("GPS Challenge");
@@ -84,10 +89,18 @@ public class PantallaDeInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCrearNuevoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearNuevoJugadorActionPerformed
-        CrearJugador creoJugador = new CrearJugador();
+        PantallaCrearJugador creoJugador = new PantallaCrearJugador();
         this.show(false);
         creoJugador.show();
     }//GEN-LAST:event_botonCrearNuevoJugadorActionPerformed
+
+    private void botonYaTengoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYaTengoUsuarioActionPerformed
+
+        PantallaJugadorYaExistente pantallaJugadorExistente = new PantallaJugadorYaExistente();
+        this.show(false);
+        pantallaJugadorExistente.show(true);
+        
+    }//GEN-LAST:event_botonYaTengoUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
