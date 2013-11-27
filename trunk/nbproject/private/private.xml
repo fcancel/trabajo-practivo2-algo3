@@ -3,20 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/CalleVacia.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Posicion.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestLasFuncionesDelVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Efecto.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Calle.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Auto.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestPiquete.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/GPS.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Piquete.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Vehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Pozo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Moto.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/CuatroPorCuatro.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Ciudad.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaDeInicio.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/CrearJugador.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Jugadores.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/eliminarArchivosDePruebas.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/Jugador.java</file>
         </group>
     </open-files>
 </project-private>
