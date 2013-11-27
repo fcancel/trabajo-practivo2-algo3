@@ -7,6 +7,7 @@ import org.junit.Test;
 import fiuba.algo3.modelo.Efecto;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.SorpresaFavorable;
 import fiuba.algo3.modelo.Vehiculo;
@@ -19,7 +20,8 @@ public class TestSorpresaFavorable {
 		
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), new Facil(),"tomas");
+		Jugador jugador = new Jugador("tomas");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto sorpresaFavorable = new SorpresaFavorable();

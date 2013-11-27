@@ -5,6 +5,7 @@ import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.Efecto;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Pozo;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Vehiculo;
@@ -20,7 +21,8 @@ public class TestPozo {
     public void testAlCaerUnaMotoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), new Facil(),"ArmandoBarreda");
+        Jugador jugador = new Jugador("ArmandoBarreda");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         Vehiculo moto = gps.getVehiculo();
         Efecto pozo = new Pozo();        
                
@@ -35,7 +37,8 @@ public class TestPozo {
     public void testAlCaerUnAutoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Auto(), new Facil(),"Schwarzenegger");
+        Jugador jugador = new Jugador("Schwarzenegger");
+        gps.empezarJuego(new Auto(), new Facil(),jugador);
         Vehiculo auto = gps.getVehiculo();
         Efecto pozo = new Pozo();
         
@@ -50,7 +53,8 @@ public class TestPozo {
     public void testAlCaerUnaCuatroPorCuatroEnUnPozoSusMovimientosNoSonAfectados() throws JuegoNoIniciado {
         
         GPS gps = new GPS();
-        gps.empezarJuego(new CuatroPorCuatro(), new Facil(),"Rojo");
+        Jugador jugador = new Jugador("Rojo");
+        gps.empezarJuego(new CuatroPorCuatro(), new Facil(),jugador);
         Vehiculo cuatroPorCuatro = gps.getVehiculo();
         Efecto pozo = new Pozo();
         

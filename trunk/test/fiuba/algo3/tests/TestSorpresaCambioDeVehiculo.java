@@ -10,6 +10,7 @@ import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.Efecto;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.ProbabilidadEstatica;
 import fiuba.algo3.modelo.SorpresaCambioDeVehiculo;
@@ -22,7 +23,8 @@ public class TestSorpresaCambioDeVehiculo {
 	public void alCaerUnaMotoEnCambioDeVehiculoDebeCambiarAAuto() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.8));
@@ -45,7 +47,8 @@ public class TestSorpresaCambioDeVehiculo {
 		
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Auto(), new Facil(),jugador);
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.5));
@@ -67,7 +70,8 @@ public class TestSorpresaCambioDeVehiculo {
 	public void alCaerUnaCuatroPorCuatroEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),"tomas");
+		Jugador jugador = new Jugador("tomas");
+		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),jugador);
 		Vehiculo vehiculo = gps.getVehiculo();
 		Efecto cambioDeVehiculo = new SorpresaCambioDeVehiculo();
 		Efecto controlPolicial = new ControlPolicial(new ProbabilidadEstatica(0.5));

@@ -8,12 +8,14 @@ import fiuba.algo3.modelo.Dificil;
 import fiuba.algo3.modelo.EstadoVehiculo;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
+
 
 
 
@@ -43,7 +45,8 @@ public class TestLasFuncionesDeLaCiudad {
     public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		Vehiculo auto = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Posicion posicion = auto.getPosicion();
@@ -76,7 +79,8 @@ public class TestLasFuncionesDeLaCiudad {
     public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		Ciudad ciudad = gps.getCiudad();
 		Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
 		ciudad.colocarVehiculo(posicionDeMeta);
@@ -90,7 +94,8 @@ public class TestLasFuncionesDeLaCiudad {
 		try{
 			
 			GPS gps = new GPS();
-			gps.empezarJuego(new Moto(), new Facil(),"juan");
+			Jugador jugador = new Jugador("juan");
+			gps.empezarJuego(new Moto(), new Facil(),jugador);
 			Vehiculo auto= gps.getVehiculo();
 			Ciudad ciudad = gps.getCiudad();
 			Posicion posicionDeMeta = ciudad.getPosicionDeMeta();

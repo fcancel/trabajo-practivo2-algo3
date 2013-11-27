@@ -18,7 +18,7 @@ public class Jugador implements Serializable{
 		
 	}
 
-	public String nombre() {
+	public String getNombre() {
 		
 		return this.nombre;
 	}
