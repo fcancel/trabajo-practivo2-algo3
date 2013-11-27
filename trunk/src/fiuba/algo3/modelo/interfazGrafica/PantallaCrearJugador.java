@@ -12,12 +12,12 @@ import fiuba.algo3.modelo.excepciones.JugadorExistente;
 import java.util.logging.Level;
 import java.util.logging.Logger;
         
-public class CrearJugador extends javax.swing.JFrame {
+public class PantallaCrearJugador extends javax.swing.JFrame {
 
     /**
      * Creates new form CrearJugador
      */
-    public CrearJugador() {
+    public PantallaCrearJugador() {
         initComponents();
     }
 
@@ -49,7 +49,6 @@ public class CrearJugador extends javax.swing.JFrame {
 
         guardarNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         guardarNombre.setText("Guardar nombre");
-        guardarNombre.setActionCommand("Guardar nombre");
         guardarNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardarNombreActionPerformed(evt);
@@ -121,6 +120,10 @@ public class CrearJugador extends javax.swing.JFrame {
         Jugadores jugadorAAgregar = new Jugadores();
         try {
             jugadorAAgregar.agregarNuevoJugador(jugadorNuevo);
+            PantallaJugadorIniciado pantallaJugadorIniciado = new PantallaJugadorIniciado();
+            pantallaJugadorIniciado.setNombreDelJugador(jugadorNuevo.getNombre());
+            this.show(false);
+            pantallaJugadorIniciado.show(true);
         } catch (JugadorExistente ex) {
             // Si el nombre ya existe le aviso por pantalla y espero a que ponga otro
             mensajeJugadorYaExistente.setText("Nombre de jugador ya existente");
