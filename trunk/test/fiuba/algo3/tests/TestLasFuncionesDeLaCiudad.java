@@ -25,14 +25,15 @@ public class TestLasFuncionesDeLaCiudad {
 
 	@Test
     public void validarPosicion() throws MovimientoInvalido{
-		int dimension = 10;
+		int filas = 10;
+		int columnas = 10;
 		Posicion posicion = new Posicion();
 		posicion.setX(1);
 		posicion.setY(1);
 		GPS gps = new GPS();
         EstadoVehiculo estado = new Moto();
         Vehiculo vehiculo = new Vehiculo(estado);
-        Ciudad ciudad = new Ciudad(dimension,vehiculo,gps);
+        Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
         Calle calle = ciudad.calleEnUnaPosicion(posicion);
         calle.inicializarCalle();
         assertTrue(ciudad.esValidaLaPosicion(posicion) == true);
@@ -54,14 +55,15 @@ public class TestLasFuncionesDeLaCiudad {
 	@Test
     public void alMovermeAUnLugarInvalidoReciboExcepcionMovimientoInvalido(){
         try{
-    		int dimension = 4;
+    		int filas = 6;
+    		int columnas = 10;
     		Posicion posicion = new Posicion();
     		posicion.setX(0);
     		posicion.setY(0);
     		GPS gps = new GPS();
     		EstadoVehiculo estado = new Moto();
     		Vehiculo vehiculo = new Vehiculo(estado);
-    		Ciudad ciudad = new Ciudad(dimension,vehiculo,gps);
+    		Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
     		ciudad.esValidaLaPosicion(posicion);
         	assertTrue( false );
         	
@@ -77,8 +79,6 @@ public class TestLasFuncionesDeLaCiudad {
 		gps.empezarJuego(new Moto(), new Facil(),"juan");
 		Ciudad ciudad = gps.getCiudad();
 		Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
-		
-		//ciudad.esValidaLaPosicion(posicionDeMeta);
 		ciudad.colocarVehiculo(posicionDeMeta);
 		
 		assertFalse(gps.juegoEnMarcha());
