@@ -16,6 +16,7 @@ import fiuba.algo3.modelo.Dificultad;
 import fiuba.algo3.modelo.EstadoVehiculo;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moderado;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
@@ -43,8 +44,8 @@ public class TestLasFuncionesDeGPS {
 		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 		
         GPS gps = new GPS();
-        
-        gps.empezarJuego(new Moto(), new Facil(),"jose");
+        Jugador jugador = new Jugador("jose");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         
         assertTrue(gps.juegoEnMarcha());
         
@@ -58,8 +59,8 @@ public class TestLasFuncionesDeGPS {
 		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 		
 		GPS gps = new GPS();
-        
-		gps.empezarJuego(new Moto(), new Facil(),"tomas");
+		Jugador jugador = new Jugador("tomas");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		
         gps.terminarJuego();
         
@@ -78,8 +79,8 @@ public class TestLasFuncionesDeGPS {
         	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
         	
         	GPS gps = new GPS();
-        	
-        	gps.empezarJuego(new Moto(), new Facil(),"pedro");
+        	Jugador jugador = new Jugador("pedro");
+        	gps.empezarJuego(new Moto(), new Facil(),jugador);
             gps.terminarJuego();
         	
             eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
@@ -102,8 +103,8 @@ public class TestLasFuncionesDeGPS {
         	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
         	
         	GPS gps = new GPS();
-        	
-        	gps.empezarJuego(new Moto(), new Facil(),"tomas");
+        	Jugador jugador = new Jugador("tomas");
+        	gps.empezarJuego(new Moto(), new Facil(),jugador);
             gps.terminarJuego();
             
             eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
@@ -179,7 +180,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-    	gps.empezarJuego(new Moto(), new Facil(),"Rofwaldo");
+    	Jugador jugador = new Jugador("Rofwaldo");
+    	gps.empezarJuego(new Moto(), new Facil(),jugador);
         
         assertEquals(80, gps.getLimiteDeMovimientos());
         
@@ -192,8 +194,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-    	
-    	gps.empezarJuego(new Moto(), new Moderado(),"Rofwaldo");
+    	Jugador jugador = new Jugador("Rofwaldo");
+    	gps.empezarJuego(new Moto(), new Moderado(),jugador);
         
         assertEquals(60, gps.getLimiteDeMovimientos());
         
@@ -206,7 +208,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-    	gps.empezarJuego(new Moto(), new Dificil(),"Rofwaldo");
+    	Jugador jugador = new Jugador("Rofwaldo");
+    	gps.empezarJuego(new Moto(), new Dificil(),jugador);
 
         
         assertEquals(40, gps.getLimiteDeMovimientos());
@@ -220,8 +223,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-    	
-    	gps.empezarJuego(new Moto(), new Facil(),"tomas");
+    	Jugador jugador = new Jugador("Rofwaldo");
+    	gps.empezarJuego(new Moto(), new Facil(),jugador);
     	gps.sumarMovimiento(4);
     	gps.terminarJuego();
     	
@@ -237,8 +240,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-    	
-    	gps.empezarJuego(new Moto(), new Moderado(),"tomas");
+    	Jugador jugador = new Jugador("tomas");
+    	gps.empezarJuego(new Moto(), new Moderado(),jugador);
     	gps.sumarMovimiento(10);
     	gps.terminarJuego();
     	
@@ -254,8 +257,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-
-    	gps.empezarJuego(new Moto(), new Dificil(),"tomas");
+    	Jugador jugador = new Jugador("tomas");
+    	gps.empezarJuego(new Moto(), new Dificil(),jugador);
     	gps.sumarMovimiento(8);
     	gps.terminarJuego();
 
@@ -272,8 +275,8 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 
     	GPS gps = new GPS();
-
-    	gps.empezarJuego(new Moto(), new Facil(),"tomas");
+    	Jugador jugador = new Jugador("tomas");
+    	gps.empezarJuego(new Moto(), new Facil(),jugador);
     	gps.sumarMovimiento(4);
     	gps.terminarJuego();
 
@@ -289,12 +292,13 @@ public class TestLasFuncionesDeGPS {
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
     	GPS gps = new GPS();
-        	
-    	gps.empezarJuego(new Moto(), new Facil(),"juan");
+    	Jugador juan = new Jugador("juan");
+    	gps.empezarJuego(new Moto(), new Facil(),juan);
        	gps.sumarMovimiento(4);
        	gps.terminarJuego();
        	
-    	gps.empezarJuego(new Auto(), new Dificil(),"tomas");
+       	Jugador tomas = new Jugador("tomas");
+    	gps.empezarJuego(new Auto(), new Dificil(),tomas);
        	gps.sumarMovimiento(10);
        	gps.terminarJuego();
         	
@@ -313,11 +317,13 @@ public class TestLasFuncionesDeGPS {
     	
     	GPS gpsInicial = new GPS();
     	
-    	gpsInicial.empezarJuego(new Moto(), new Facil(),"juan");
+    	Jugador juan = new Jugador("juan");
+    	gpsInicial.empezarJuego(new Moto(), new Facil(),juan);
     	gpsInicial.sumarMovimiento(4);
     	gpsInicial.terminarJuego();
     	
-    	gpsInicial.empezarJuego(new Auto(), new Dificil(),"tomas");
+    	Jugador tomas = new Jugador("tomas");
+    	gpsInicial.empezarJuego(new Auto(), new Dificil(),tomas);
     	gpsInicial.sumarMovimiento(10);
     	gpsInicial.terminarJuego();
     	

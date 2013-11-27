@@ -11,6 +11,7 @@ import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.Efecto;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Piquete;
 import fiuba.algo3.modelo.Posicion;
@@ -25,7 +26,8 @@ public class TestPiquete {
 	public void alCaerUnaMotoEnUnPiqueteDebeSumarDosMovimientos() throws JuegoNoIniciado {
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Moto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		Vehiculo moto = gps.getVehiculo();
 		Efecto piquete = new Piquete();
 		
@@ -40,7 +42,8 @@ public class TestPiquete {
 	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new Auto(), new Facil(),"juan");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Auto(), new Facil(),jugador);
 		Vehiculo auto = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
@@ -74,7 +77,8 @@ public class TestPiquete {
 	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 		
 		GPS gps = new GPS();
-		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),"diego");
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new CuatroPorCuatro(), new Facil(),jugador);
 		Vehiculo cuatroPorCuatro = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();

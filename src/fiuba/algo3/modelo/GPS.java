@@ -26,7 +26,8 @@ public class GPS {
     private int movimientos;
     private Vehiculo vehiculo;
     private Ciudad ciudad;
-    private String jugador;
+    private Jugador jugador;
+    private String nick;
 	private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 
     private void verificarJuegoIniciado() throws JuegoNoIniciado{
@@ -76,7 +77,7 @@ public class GPS {
 		int multipilcador = this.dificultad.getMultiplicador();
 		
 		int puntuacionTotal = (limiteDeMovimientos - this.movimientos)* multipilcador;
-		Puntuacion puntuacion = new Puntuacion(this.jugador,puntuacionTotal);
+		Puntuacion puntuacion = new Puntuacion(this.nick,puntuacionTotal);
 		this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.puntuacionesAltas.persistir(archivo);
 		this.ciudad = null;
@@ -108,10 +109,11 @@ public class GPS {
 		
 	}
 
-	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,String nick){
+	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador){
 		
+		this.jugador=jugador;
 		this.dificultad = dificultad;
-		this.jugador = nick;
+		this.nick = this.jugador.getNombre();
 		this.inicializarJuego(estadoInicial,dificultad.getFilas(),dificultad.getColumnas());
 
 	}

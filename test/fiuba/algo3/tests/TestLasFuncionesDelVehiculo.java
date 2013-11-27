@@ -9,6 +9,7 @@ import fiuba.algo3.modelo.CuatroPorCuatro;
 import fiuba.algo3.modelo.EstadoVehiculo;
 import fiuba.algo3.modelo.Facil;
 import fiuba.algo3.modelo.GPS;
+import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.Moto;
 import fiuba.algo3.modelo.Posicion;
 import fiuba.algo3.modelo.Vehiculo;
@@ -59,7 +60,8 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), new Facil(),"Arriba");
+        Jugador jugador = new Jugador("Arriba");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -76,7 +78,8 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
        
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), new Facil(),"Abajo");
+        Jugador jugador = new Jugador("Abajo");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -94,7 +97,8 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), new Facil(),"Derecha");
+        Jugador jugador = new Jugador("Derecha");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
@@ -112,7 +116,8 @@ public class TestLasFuncionesDelVehiculo {
     public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
         
         GPS gps = new GPS();
-        gps.empezarJuego(new Moto(), new Facil(),"Izquierda");
+        Jugador jugador = new Jugador("Izquierda");
+        gps.empezarJuego(new Moto(), new Facil(),jugador);
         Vehiculo vehiculo = gps.getVehiculo();
         
         Posicion posicion = vehiculo.getPosicion();
