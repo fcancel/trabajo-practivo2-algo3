@@ -26,7 +26,7 @@ public class TestJugadores {
 		
 		Iterator<Jugador> jugadoresObtenidos = jugadores.listaDeJugadores();
 
-		assertTrue(jugadoresObtenidos.next().equals("Pedro"));
+		assertTrue(jugadoresObtenidos.next().equals(jugador));
 	
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 	
@@ -84,13 +84,15 @@ public class TestJugadores {
 		
 		Jugadores jugadores = new Jugadores();
 		
-		jugadores.agregarNuevoJugador(new Jugador("Juan"));
+		Jugador jugador = new Jugador("Juan");
+		
+		jugadores.agregarNuevoJugador(jugador);
 
 		Jugadores jugadoresRecuperados = new Jugadores();
 		
 		Iterator<Jugador> listaDeJugadores = jugadoresRecuperados.listaDeJugadores();
 		
-		assertTrue(listaDeJugadores.next().equals("Juan"));
+		assertTrue(listaDeJugadores.next().equals(jugador));
 		
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 

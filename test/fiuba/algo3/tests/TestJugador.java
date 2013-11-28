@@ -13,7 +13,7 @@ public class TestJugador {
 
 		Jugador jugador = new Jugador("Juan");
 		
-		assertTrue(jugador.equals("Juan"));
+		assertTrue(jugador.equals(jugador));
 		
 	}
 

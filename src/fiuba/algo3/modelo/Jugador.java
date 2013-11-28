@@ -23,15 +23,20 @@ public class Jugador implements Serializable{
 		return this.nombre;
 	}
 
-	public boolean equals(String nombre) {
+	/*public boolean equals(String nombre) {
 		
 		return this.nombre.equals(nombre);
-	}
+	}*/
 	
 
-	public boolean equals(Jugador jugador) {
+	@Override
+	public boolean equals(Object jugador) {
 		
-		return this.nombre.equals(jugador.nombre);
+		if(!jugador.getClass().equals(Jugador.class))
+			return false;
+		if(!((Jugador)jugador).getNombre().equals(this.nombre))
+			return false;
+		return true;
 	}
 	
 }
