@@ -3,13 +3,13 @@ import static org.junit.Assert.*;
 
 import java.util.Random;
 
-import fiuba.algo3.modelo.Calle;
-import fiuba.algo3.modelo.Efecto;
-import fiuba.algo3.modelo.EstadoVehiculo;
-import fiuba.algo3.modelo.Moto;
-import fiuba.algo3.modelo.Pozo;
-import fiuba.algo3.modelo.SorpresaCambioDeVehiculo;
-import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
+import fiuba.algo3.modelo.efectosYSorpresas.Pozo;
+import fiuba.algo3.modelo.efectosYSorpresas.SorpresaCambioDeVehiculo;
+import fiuba.algo3.modelo.mapa.Calle;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Moto;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 import java.util.ArrayList;
 

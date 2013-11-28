@@ -10,17 +10,17 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 
-import fiuba.algo3.modelo.Auto;
-import fiuba.algo3.modelo.Dificil;
-import fiuba.algo3.modelo.Dificultad;
-import fiuba.algo3.modelo.EstadoVehiculo;
-import fiuba.algo3.modelo.Facil;
-import fiuba.algo3.modelo.GPS;
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Moderado;
-import fiuba.algo3.modelo.Moto;
+import fiuba.algo3.modelo.dificultad.Dificil;
+import fiuba.algo3.modelo.dificultad.Dificultad;
+import fiuba.algo3.modelo.dificultad.Facil;
+import fiuba.algo3.modelo.dificultad.Moderado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Moto;
 
 import org.junit.Assert;
 import org.junit.Test;

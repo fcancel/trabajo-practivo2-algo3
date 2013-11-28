@@ -4,17 +4,17 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Auto;
-import fiuba.algo3.modelo.Ciudad;
-import fiuba.algo3.modelo.Facil;
-import fiuba.algo3.modelo.GPS;
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Jugadores;
-import fiuba.algo3.modelo.Vehiculo;
+import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.JugadorExistente;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
+import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.juego.Jugadores;
+import fiuba.algo3.modelo.mapa.Ciudad;
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class TestIntegral {
 

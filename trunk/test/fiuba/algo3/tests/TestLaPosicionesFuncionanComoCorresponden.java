@@ -4,7 +4,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Posicion;
+import fiuba.algo3.modelo.vehiculo.Posicion;
 
 public class TestLaPosicionesFuncionanComoCorresponden {
     

@@ -6,10 +6,12 @@
 
 package fiuba.algo3.modelo.interfazGrafica;
 
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Jugadores;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.juego.Jugadores;
+
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import javax.swing.ComboBoxModel;
 
 /**

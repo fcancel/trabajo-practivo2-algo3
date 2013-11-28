@@ -6,14 +6,21 @@ import org.junit.Test;
 
 
 
-import fiuba.algo3.modelo.Efecto;
-import fiuba.algo3.modelo.Facil;
-import fiuba.algo3.modelo.GPS;
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Moto;
-import fiuba.algo3.modelo.Vehiculo;
-import fiuba.algo3.modelo.SorpresaDesfavorable;
+
+
+
+
+
+
+
+import fiuba.algo3.modelo.dificultad.Facil;
+import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
+import fiuba.algo3.modelo.efectosYSorpresas.SorpresaDesfavorable;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
+import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.vehiculo.Moto;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class TestSorpresaDesfavorable {
 

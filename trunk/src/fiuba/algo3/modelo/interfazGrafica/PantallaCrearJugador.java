@@ -6,9 +6,10 @@
 
 package fiuba.algo3.modelo.interfazGrafica;
 
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Jugadores;
 import fiuba.algo3.modelo.excepciones.JugadorExistente;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.juego.Jugadores;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
         

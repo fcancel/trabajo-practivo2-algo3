@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Jugador;
+import fiuba.algo3.modelo.juego.Jugador;
 
 public class TestJugador {
 

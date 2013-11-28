@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Puntuacion;
+import fiuba.algo3.modelo.juego.Puntuacion;
 
 public class TestPuntuacion {
 
