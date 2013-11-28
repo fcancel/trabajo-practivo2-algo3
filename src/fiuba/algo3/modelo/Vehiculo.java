@@ -9,165 +9,131 @@ import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
 
 public class Vehiculo extends Observable {
-    
-    private Posicion posicion;
-    private EstadoVehiculo estado;
-    private GPS GPS;
-    private Retroceder retroceder;
+
+	private Posicion posicion;
+	private EstadoVehiculo estado;
+	private GPS GPS;
+	private Retroceder retroceder;
 	private Ciudad ciudad;
 
-    public Vehiculo(EstadoVehiculo estadoASetear) {
-        this.estado = estadoASetear;
-        this.posicion = new Posicion();
-        this.retroceder = new Retroceder();
-    }
+	public Vehiculo(EstadoVehiculo estadoASetear) {
+		this.estado = estadoASetear;
+		this.posicion = new Posicion();
+		this.retroceder = new Retroceder();
+	}
 
-     
-    public Posicion getPosicion() {
-        return posicion;
-    }
 
-    public void setPosicion(Posicion posicionASetear) {
-        this.posicion = posicionASetear;
-    }
+	public Posicion getPosicion() {
+		return posicion;
+	}
 
-    public void cambiarDeEstado(EstadoVehiculo estadoASetear) {
-        this.estado = estadoASetear;
-    }
-	
-    public void setCiudad(Ciudad ciudad) {
+	public void setPosicion(Posicion posicionASetear) {
+		this.posicion = posicionASetear;
+	}
+
+	public void cambiarDeEstado(EstadoVehiculo estadoASetear) {
+		this.estado = estadoASetear;
+	}
+
+	public void setCiudad(Ciudad ciudad) {
 
 		this.ciudad = ciudad;
-		
+
 	}
 
-    public EstadoVehiculo estadoActual() {
-        return this.estado;
-    }
-    
-    public void sumarMovimiento( int numeroASumar ){
-        GPS Gps = getGPS();
-        
-        Gps.sumarMovimiento(numeroASumar);
-    }
-    
-    private GPS getGPS(){
-        return this.GPS;
-    }
-    
-    public void setGPS(GPS gps){        
-        this.GPS = gps;
-    }
-    
-    public void aceptarEfecto(Efecto efecto){
-    	
-    	this.estado.aceptarEfecto(this,efecto);
-    	
-    }
-    
-    public int movimientos(){
-    	
-    	return this.GPS.getMovimientos();
-    	
-    }
-    //ACLARACION ACA NO TENDRIA QUE LLEGAR NINGUN MOVIMIENTO INVALIDO
-    //SE DEBERIA CHECKEAR EN CIUDAD CON ES VALIDA LA POSICION
-    //SEGUNDA ACLARACION SE TOMA AL MAPA CON LAS CALLES POR ESO SUMO DOS, PARA TERMINAR EN LA ESQUINA
-    //X EJE HORIZONTAL
-    //Y EJE VERTICAL
-    
-    public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
-        
-    	this.retroceder.getUltimaAccion(new Arriba(this));
-    	
-        Posicion dondeQuieroIr;
-        
-        dondeQuieroIr = this.posicion;
-        dondeQuieroIr.setY(dondeQuieroIr.getY() - 1);
-        
-        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
-        	ciudad.colocarVehiculo(dondeQuieroIr);
-        }  
-        
-        ActualizarObservadores();
-       
-    }
-        
-    
-    
-    public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
-        
-    	this.retroceder.getUltimaAccion(new Abajo(this));
-
-        Posicion dondeQuieroIr;
-        
-
-        dondeQuieroIr = this.posicion;
-        dondeQuieroIr.setY(dondeQuieroIr.getY() + 1);
-        
-        
-        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
-        	ciudad.colocarVehiculo(dondeQuieroIr);
-        }
-
-        ActualizarObservadores();
-        
-    }
-    
-    public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
-        
-    	this.retroceder.getUltimaAccion(new Derecha(this));
-
-        Posicion dondeQuieroIr;
-        
-
-        dondeQuieroIr = this.posicion;
-        dondeQuieroIr.setX(dondeQuieroIr.getX() + 1);
-        
-        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
-        	ciudad.colocarVehiculo(dondeQuieroIr);
-        }
-        
-        ActualizarObservadores();
-    
-    }
-    
-    public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
-        
-    	this.retroceder.getUltimaAccion(new Izquierda(this));
-
-        Posicion dondeQuieroIr;
-        
-
-        dondeQuieroIr = this.posicion;
-        dondeQuieroIr.setX(dondeQuieroIr.getX() - 1);
-        
-        if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
-        	ciudad.colocarVehiculo(dondeQuieroIr);
-        }
-        
-        ActualizarObservadores();
-        
-    }
-    
-    public EstadoVehiculo getEstado(){
-    	return this.estado;
-    }
-    
-    public void retroceder(){
-    	
-    	try{
-    		
-    		this.retroceder.realizar();
-    		ActualizarObservadores();
-    		
-    	}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
-    	
-    }
-    
-    public void ActualizarObservadores() {
-		setChanged();
-		notifyObservers();
+	public EstadoVehiculo estadoActual() {
+		return this.estado;
 	}
-    
+
+	public void sumarMovimiento( int numeroASumar ){
+		GPS Gps = getGPS();
+
+		Gps.sumarMovimiento(numeroASumar);
+	}
+
+	private GPS getGPS(){
+		return this.GPS;
+	}
+
+	public void setGPS(GPS gps){        
+		this.GPS = gps;
+	}
+
+	public void aceptarEfecto(Efecto efecto){
+
+		this.estado.aceptarEfecto(this,efecto);
+
+	}
+
+	public int movimientos(){
+
+		return this.GPS.getMovimientos();
+
+	}
+
+	//ACLARACION 
+	//X EJE HORIZONTAL
+	//Y EJE VERTICAL
+
+	public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+
+		this.retroceder.getUltimaAccion(new Arriba(this));
+
+		this.moverme(Direccion.ARRIBA);
+
+	}
+
+
+
+	public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+
+		this.retroceder.getUltimaAccion(new Abajo(this));
+
+		this.moverme(Direccion.ABAJO);
+
+	}
+
+	public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+
+		this.retroceder.getUltimaAccion(new Derecha(this));
+
+		this.moverme(Direccion.DERECHA);
+
+	}
+
+	public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+
+		this.retroceder.getUltimaAccion(new Izquierda(this));
+
+		this.moverme(Direccion.IZQUIERDA);
+
+	}
+
+	private void moverme(Direccion direccion) throws MovimientoInvalido, JuegoFinalizado{
+
+		Posicion dondeQuieroIr= this.posicion.obtenerCopia();
+		dondeQuieroIr.moverX(direccion);
+		dondeQuieroIr.moverY(direccion);
+
+		if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
+			ciudad.colocarVehiculo(dondeQuieroIr);
+			this.posicion = dondeQuieroIr;
+		}
+
+	}
+
+	public EstadoVehiculo getEstado(){
+		return this.estado;
+	}
+
+	public void retroceder(){
+
+		try{
+
+			this.retroceder.realizar();
+
+		}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
+
+	}
+
 }

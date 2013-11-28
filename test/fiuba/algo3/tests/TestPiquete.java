@@ -48,6 +48,8 @@ public class TestPiquete {
 		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
 		
+		ciudad.eliminarObstaculosYSorpresas();
+		
 		Posicion posicionDestino = new Posicion();
 		posicionDestino.setX(2);
 		posicionDestino.setY(7);
@@ -82,11 +84,13 @@ public class TestPiquete {
 		Vehiculo cuatroPorCuatro = gps.getVehiculo();
 		Ciudad ciudad = gps.getCiudad();
 		Efecto piquete = new Piquete();
+			
+		ciudad.eliminarObstaculosYSorpresas();
 		
 		Posicion posicionDestino = new Posicion();
 		posicionDestino.setX(2);
 		posicionDestino.setY(7);
-		
+
 		Calle calleDestino = ciudad.calleEnUnaPosicion(posicionDestino);
 		
 		calleDestino.setObstaculo(piquete);

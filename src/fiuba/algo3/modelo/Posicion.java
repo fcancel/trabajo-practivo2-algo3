@@ -52,5 +52,22 @@ public class Posicion {
 		
 	}
 
+	public void moverX(Direccion direccion) {
+		
+		if(direccion == Direccion.DERECHA)
+			this.posicionX++;
+		if(direccion == Direccion.IZQUIERDA)
+			this.posicionX--;
+	}
+
+	public void moverY(Direccion direccion) {
+		
+		if(direccion == Direccion.ABAJO)
+			this.posicionY++;
+		if(direccion == Direccion.ARRIBA)
+			this.posicionY--;
+		
+	}
+
    
 }
