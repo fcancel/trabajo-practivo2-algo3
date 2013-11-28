@@ -4,10 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Dificil;
-import fiuba.algo3.modelo.Dificultad;
-import fiuba.algo3.modelo.Facil;
-import fiuba.algo3.modelo.Moderado;
+import fiuba.algo3.modelo.dificultad.Dificil;
+import fiuba.algo3.modelo.dificultad.Dificultad;
+import fiuba.algo3.modelo.dificultad.Facil;
+import fiuba.algo3.modelo.dificultad.Moderado;
 
 public class TestsDificultades {
 

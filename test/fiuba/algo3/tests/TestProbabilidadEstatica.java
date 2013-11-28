@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Probabilidad;
-import fiuba.algo3.modelo.ProbabilidadEstatica;
+import fiuba.algo3.modelo.efectosYSorpresas.Probabilidad;
+import fiuba.algo3.modelo.efectosYSorpresas.ProbabilidadEstatica;
 
 public class TestProbabilidadEstatica {
 

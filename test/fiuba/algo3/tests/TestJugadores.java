@@ -7,9 +7,9 @@ import java.util.Iterator;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Jugadores;
 import fiuba.algo3.modelo.excepciones.JugadorExistente;
+import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.juego.Jugadores;
 
 public class TestJugadores {
 
