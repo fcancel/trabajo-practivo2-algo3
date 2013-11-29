@@ -64,9 +64,9 @@ public class PuntuacionesAltas implements Serializable{
 		try {
 
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo));
-			PuntuacionesAltas putuacionesAltas = (PuntuacionesAltas) ois.readObject();
+			PuntuacionesAltas puntuacionesAltas = (PuntuacionesAltas) ois.readObject();
 			ois.close();
-			return putuacionesAltas;
+			return puntuacionesAltas;
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
