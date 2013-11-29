@@ -6,6 +6,10 @@
 
 package fiuba.algo3.modelo.interfazGrafica;
 
+import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Cancel
@@ -31,6 +35,8 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         botonCrearNuevoJugador = new javax.swing.JButton();
         botonYaTengoUsuario = new javax.swing.JButton();
         tituloDelJuego = new javax.swing.JLabel();
+        botonExit = new javax.swing.JButton();
+        botonPuntuacionesAltas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,37 +59,66 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         tituloDelJuego.setFont(new java.awt.Font("Ravie", 0, 31)); // NOI18N
         tituloDelJuego.setText("GPS Challenge");
 
+        botonExit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        botonExit.setText("Salir");
+        botonExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonExitActionPerformed(evt);
+            }
+        });
+
+        botonPuntuacionesAltas.setFont(new java.awt.Font("Tahoma", 1, 29)); // NOI18N
+        botonPuntuacionesAltas.setText("Máximas Puntuaciones");
+        botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPuntuacionesAltasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(263, 263, 263)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonCrearNuevoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonYaTengoUsuario))
-                .addContainerGap(268, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(tituloDelJuego)
                 .addGap(321, 321, 321))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(263, 263, 263)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(botonPuntuacionesAltas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                        .addComponent(botonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonCrearNuevoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonYaTengoUsuario))
+                        .addContainerGap())))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botonCrearNuevoJugador, botonYaTengoUsuario});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botonCrearNuevoJugador, botonPuntuacionesAltas, botonYaTengoUsuario});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloDelJuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(109, 109, 109)
+                .addGap(18, 18, 18)
                 .addComponent(botonCrearNuevoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGap(18, 18, 18)
                 .addComponent(botonYaTengoUsuario)
-                .addGap(71, 71, 71))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(botonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonPuntuacionesAltas)
+                        .addContainerGap())))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botonCrearNuevoJugador, botonYaTengoUsuario});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botonCrearNuevoJugador, botonPuntuacionesAltas, botonYaTengoUsuario});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,6 +136,21 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         pantallaJugadorExistente.show(true);
         
     }//GEN-LAST:event_botonYaTengoUsuarioActionPerformed
+
+    private void botonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_botonExitActionPerformed
+
+    private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
+        PantallaMaximasPuntuaciones pantallaMaximasPuntuaciones;
+        try {
+            pantallaMaximasPuntuaciones = new PantallaMaximasPuntuaciones();
+            this.show(false);
+            pantallaMaximasPuntuaciones.show(true);
+        } catch (NoExisteEsaPosicion ex) {
+            Logger.getLogger(PantallaDeInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }        
+    }//GEN-LAST:event_botonPuntuacionesAltasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,6 +189,8 @@ public class PantallaDeInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCrearNuevoJugador;
+    private javax.swing.JButton botonExit;
+    private javax.swing.JButton botonPuntuacionesAltas;
     private javax.swing.JButton botonYaTengoUsuario;
     private javax.swing.JLabel tituloDelJuego;
     // End of variables declaration//GEN-END:variables

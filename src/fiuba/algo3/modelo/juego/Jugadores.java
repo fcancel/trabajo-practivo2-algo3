@@ -26,7 +26,7 @@ public class Jugadores implements Serializable {
 	 */
 	private static final long serialVersionUID = 136608738905107904L;
 	private ArrayList<Jugador> jugadores;
-	private String archivo= "jugadores\\jugadores.dat";
+	private String archivo = "jugadores\\jugadores.dat";
 	
 	public Jugadores(){
 		
