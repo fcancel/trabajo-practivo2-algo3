@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+import java.io.File;
 
 public class PuntuacionesAltas implements Serializable{
 	
@@ -20,11 +21,18 @@ public class PuntuacionesAltas implements Serializable{
 	 */
 	private static final long serialVersionUID = 181082646L;
 	private List<Puntuacion> puntuaciones;
+        private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 	
 
 	public PuntuacionesAltas(){
 		
-		this.puntuaciones = new ArrayList<Puntuacion>();
+            File fichero = new File(this.archivo);
+		if(fichero.exists()){
+			this.recuperar();
+		}else{
+			this.puntuaciones = new ArrayList<Puntuacion>();
+		}
+		
 		
 	}
 
@@ -43,11 +51,11 @@ public class PuntuacionesAltas implements Serializable{
 		return this.puntuaciones.get(posicion-1);
 	}
 	
-	public void persistir(String archivo) {
+	public void persistir() {
 		
 		try {
 			
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(archivo));
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.archivo));
 			oos.writeObject(this);
 			oos.close();
 		
@@ -59,15 +67,16 @@ public class PuntuacionesAltas implements Serializable{
 		
 	}
 
-	public static PuntuacionesAltas recuperar(String archivo) {
+	public void recuperar() {
 		
 		try {
 
-			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo));
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.archivo));
 			PuntuacionesAltas puntuacionesAltas = (PuntuacionesAltas) ois.readObject();
 			ois.close();
-			return puntuacionesAltas;
 
+                        this.puntuaciones = puntuacionesAltas.puntuaciones;
+                        
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -76,7 +85,6 @@ public class PuntuacionesAltas implements Serializable{
 			e.printStackTrace();
 		}
 		
-		return null;
-	
+			
 	}
 }

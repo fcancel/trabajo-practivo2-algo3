@@ -22,11 +22,11 @@ public class TestPersistenciaDePuntuacionesAltas {
 
 		
 		String archivo = "puntuaciones\\puntuacionesAltas.dat";
-		puntuacionesAPersistir.persistir(archivo);
+		puntuacionesAPersistir.persistir();
 		
-		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.recuperar(archivo);
 		
-		Puntuacion puntuacionAltaRecuperada = puntuacionesARecuperar.getPuntuacion(1);
+		
+		Puntuacion puntuacionAltaRecuperada = puntuacionesAPersistir.getPuntuacion(1);
 		
 		assertEquals(puntuacionAltaRecuperada.getNick(),"juan");
 		assertEquals(puntuacionAltaRecuperada.getPuntos(),20);
@@ -48,12 +48,12 @@ public class TestPersistenciaDePuntuacionesAltas {
 		puntuacionesAPersistir.setPuntuacion(puntuacionAlta);
 		
 		String archivo = "puntuaciones\\puntuacionesAltas.dat";
-		puntuacionesAPersistir.persistir(archivo);
+		puntuacionesAPersistir.persistir();
 		
-		PuntuacionesAltas puntuacionesARecuperar = PuntuacionesAltas.recuperar(archivo);
 		
-		Puntuacion puntuacionAltaRecuperada = puntuacionesARecuperar.getPuntuacion(1);
-		Puntuacion puntuacionBajaRecuperada = puntuacionesARecuperar.getPuntuacion(2);
+		
+		Puntuacion puntuacionAltaRecuperada = puntuacionesAPersistir.getPuntuacion(1);
+		Puntuacion puntuacionBajaRecuperada = puntuacionesAPersistir.getPuntuacion(2);
 		
 		assertEquals(puntuacionAltaRecuperada.getNick(),"Pedro");
 		assertEquals(puntuacionAltaRecuperada.getPuntos(),50);
