@@ -21,7 +21,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
     public PantallaMaximasPuntuaciones() throws NoExisteEsaPosicion {
         initComponents();
         PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
-        puntuacionesAltas.recuperar("puntuaciones\\puntuacionesAltas.dat");
+       
         //this.jugadorMaximo1.setText();
     }
 

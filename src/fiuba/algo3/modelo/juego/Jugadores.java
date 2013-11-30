@@ -30,7 +30,7 @@ public class Jugadores implements Serializable {
 	
 	public Jugadores(){
 		
-		File fichero = new File(archivo);
+		File fichero = new File(this.archivo);
 		if(fichero.exists()){
 			this.recuperar();
 		}else{
@@ -85,7 +85,7 @@ public class Jugadores implements Serializable {
 		
 		try {
 
-			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo));
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.archivo));
 			Jugadores jugadoresRecuperados = (Jugadores) ois.readObject();
 			ois.close();	
 
