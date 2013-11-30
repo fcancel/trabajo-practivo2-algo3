@@ -64,6 +64,11 @@ public class Jugadores implements Serializable {
 		return iterable;
 		
 	}
+        
+        public Jugador getJugadorEnPosicion(int posicion){
+            
+            return this.jugadores.get(posicion);
+        }
 	
 	public void persistir() {
 		

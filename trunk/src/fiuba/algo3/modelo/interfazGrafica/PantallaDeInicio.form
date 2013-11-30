@@ -118,7 +118,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="29" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="M&#xe1;ximas Puntuaciones"/>
+        <Property name="text" type="java.lang.String" value="M&#xe1;ximas puntuaciones"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPuntuacionesAltasActionPerformed"/>

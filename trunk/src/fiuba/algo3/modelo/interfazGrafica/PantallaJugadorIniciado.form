@@ -29,9 +29,21 @@
               <Component id="tituloDelJuego" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="325" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="botonAtras" min="-2" pref="67" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="botonAtras" min="-2" pref="67" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="411" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botonContinuarPartida" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonNuevaPartida" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonPuntuacionesAltas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -43,7 +55,13 @@
                   <Component id="labelNombreJugador" min="-2" max="-2" attributes="0"/>
                   <Component id="tituloDelJuego" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="394" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+              <Component id="botonNuevaPartida" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonContinuarPartida" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonPuntuacionesAltas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="203" max="32767" attributes="0"/>
               <Component id="botonAtras" min="-2" pref="64" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -74,6 +92,21 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAtrasActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonNuevaPartida">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nueva partida"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonContinuarPartida">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Continuar partida"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonPuntuacionesAltas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M&#xe1;ximas puntuaciones"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -35,7 +35,12 @@ public class PuntuacionesAltas implements Serializable{
 		
 		
 	}
-
+        
+        public boolean estaVacia(){
+            
+            return this.puntuaciones.isEmpty();
+        }
+        
 	public void setPuntuacion(Puntuacion puntuacionAlta) {
 		
 		this.puntuaciones.add(puntuacionAlta);
