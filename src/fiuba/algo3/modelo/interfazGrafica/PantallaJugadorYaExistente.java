@@ -20,9 +20,8 @@ import javax.swing.ComboBoxModel;
  */
 public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PantallaJugadorYaExistente
-     */
+    private Jugadores jugadores;
+    
     public PantallaJugadorYaExistente() {
         initComponents();
     }
@@ -42,9 +41,9 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Jugadores jugadores = new Jugadores();
+        this.jugadores = new Jugadores();
         jugadores.recuperar();
-        Iterator<Jugador> listaDeJugadores = jugadores.listaDeJugadores();
+        Iterator<Jugador> listaDeJugadores = this.jugadores.listaDeJugadores();
         ArrayList<String> cadenaJugadores = new ArrayList<String>();
         while (listaDeJugadores.hasNext()){
             cadenaJugadores.add( (listaDeJugadores.next().getNombre()) );
@@ -65,6 +64,11 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
         botonElegirJugador.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         botonElegirJugador.setText("Seleccionar jugador");
+        botonElegirJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonElegirJugadorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +107,21 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
         this.show(false);
         inicio.show();
     }//GEN-LAST:event_botonAtrasActionPerformed
+
+    private void botonElegirJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonElegirJugadorActionPerformed
+       
+        int opcionElegida = comboBoxJugadoresASeleccionar.getSelectedIndex();
+        
+        if (opcionElegida > 0 ){
+            
+            
+                       
+            PantallaJugadorIniciado pantallaJugadorIniciado = new PantallaJugadorIniciado();
+            pantallaJugadorIniciado.setNombreDelJugador(this.jugadores.getJugadorEnPosicion(opcionElegida).getNombre());
+            this.show(false);
+            pantallaJugadorIniciado.show(true);
+        }
+    }//GEN-LAST:event_botonElegirJugadorActionPerformed
 
    
 

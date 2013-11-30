@@ -56,7 +56,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxJugadoresASeleccionarActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Jugadores jugadores = new Jugadores();&#xa;jugadores.recuperar();&#xa;Iterator&lt;Jugador&gt; listaDeJugadores = jugadores.listaDeJugadores();&#xa;ArrayList&lt;String&gt; cadenaJugadores = new ArrayList&lt;String&gt;();&#xa;while (listaDeJugadores.hasNext()){&#xa;    cadenaJugadores.add( (listaDeJugadores.next().getNombre()) );&#xa;}&#xa;comboBoxJugadoresASeleccionar = new javax.swing.JComboBox(cadenaJugadores.toArray());"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="this.jugadores = new Jugadores();&#xa;jugadores.recuperar();&#xa;Iterator&lt;Jugador&gt; listaDeJugadores = this.jugadores.listaDeJugadores();&#xa;ArrayList&lt;String&gt; cadenaJugadores = new ArrayList&lt;String&gt;();&#xa;while (listaDeJugadores.hasNext()){&#xa;    cadenaJugadores.add( (listaDeJugadores.next().getNombre()) );&#xa;}&#xa;comboBoxJugadoresASeleccionar = new javax.swing.JComboBox(cadenaJugadores.toArray());"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="botonAtras">
@@ -74,6 +74,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Seleccionar jugador"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonElegirJugadorActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

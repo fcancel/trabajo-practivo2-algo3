@@ -31,6 +31,9 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
         labelNombreJugador = new javax.swing.JLabel();
         tituloDelJuego = new javax.swing.JLabel();
         botonAtras = new javax.swing.JButton();
+        botonNuevaPartida = new javax.swing.JButton();
+        botonContinuarPartida = new javax.swing.JButton();
+        botonPuntuacionesAltas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +50,12 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
             }
         });
 
+        botonNuevaPartida.setText("Nueva partida");
+
+        botonContinuarPartida.setText("Continuar partida");
+
+        botonPuntuacionesAltas.setText("Máximas puntuaciones");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -57,8 +66,16 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
                 .addComponent(tituloDelJuego)
                 .addGap(0, 325, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(411, 411, 411)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonContinuarPartida)
+                            .addComponent(botonNuevaPartida)
+                            .addComponent(botonPuntuacionesAltas))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -67,7 +84,13 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNombreJugador)
                     .addComponent(tituloDelJuego))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 394, Short.MAX_VALUE)
+                .addGap(80, 80, 80)
+                .addComponent(botonNuevaPartida)
+                .addGap(18, 18, 18)
+                .addComponent(botonContinuarPartida)
+                .addGap(18, 18, 18)
+                .addComponent(botonPuntuacionesAltas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
                 .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -89,6 +112,9 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
+    private javax.swing.JButton botonContinuarPartida;
+    private javax.swing.JButton botonNuevaPartida;
+    private javax.swing.JButton botonPuntuacionesAltas;
     private javax.swing.JLabel labelNombreJugador;
     private javax.swing.JLabel tituloDelJuego;
     // End of variables declaration//GEN-END:variables
