@@ -7,16 +7,15 @@ import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
-
 import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
-
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -136,9 +135,24 @@ public class TestLasFuncionesDeLaCiudad {
 				jaxbMarshaller.marshal(ciudad, file);
 				jaxbMarshaller.marshal(ciudad, System.out);
 		 
-			      } catch (JAXBException e) {
-				e.printStackTrace();
-			      }
+		  }catch (JAXBException e) {
+			    	  e.printStackTrace();
+		  		}
+	}
+	
+	@Test
+	public void sePruebaLaDesSerializacionDeLaCiudad(){
+		  try {
+				File file = new File("C:\\file.xml");
+				JAXBContext jaxbContext = JAXBContext.newInstance(Ciudad.class);
 		 
-			}
+				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+				Ciudad customer = (Ciudad) jaxbUnmarshaller.unmarshal(file);
+				System.out.println(customer);
+		 
+		  }catch (JAXBException e) {
+			  e.printStackTrace();
+		  } 
+	}
 }
+
