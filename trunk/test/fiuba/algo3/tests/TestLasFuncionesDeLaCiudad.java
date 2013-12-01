@@ -1,28 +1,30 @@
 package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
-import fiuba.algo3.modelo.dificultad.Dificil;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+import fiuba.algo3.modelo.mapa.Calle;
+import fiuba.algo3.modelo.mapa.Ciudad;
+
+import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 
-
-
-
-
-import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
-import fiuba.algo3.modelo.mapa.Calle;
-import fiuba.algo3.modelo.mapa.Ciudad;
-import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
-import org.junit.Assert;
 import org.junit.Test;
+
 
 public class TestLasFuncionesDeLaCiudad {
 
@@ -83,7 +85,7 @@ public class TestLasFuncionesDeLaCiudad {
 		Jugador jugador = new Jugador("juan");
 		gps.empezarJuego(new Moto(), new Facil(),jugador);
 		Ciudad ciudad = gps.getCiudad();
-		Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
+		Posicion posicionDeMeta = ciudad.getPosicionMeta();
 		ciudad.colocarVehiculo(posicionDeMeta);
 		
 		assertFalse(gps.juegoEnMarcha());
@@ -99,7 +101,7 @@ public class TestLasFuncionesDeLaCiudad {
 			gps.empezarJuego(new Moto(), new Facil(),jugador);
 			Vehiculo auto= gps.getVehiculo();
 			Ciudad ciudad = gps.getCiudad();
-			Posicion posicionDeMeta = ciudad.getPosicionDeMeta();
+			Posicion posicionDeMeta = ciudad.getPosicionMeta();
 			
 			ciudad.colocarVehiculo(posicionDeMeta);
 			
@@ -113,5 +115,30 @@ public class TestLasFuncionesDeLaCiudad {
 
     }
 	
-	
+	@Test
+	public void sePruebaLaSerializacionDeLaCiudad(){
+		  try {
+			  
+	    		int filas = 6;
+	    		int columnas = 10;
+	    		GPS gps = new GPS();
+	    		EstadoVehiculo estado = new Moto();
+	    		Vehiculo vehiculo = new Vehiculo(estado);
+	    		Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
+			  	
+				File file = new File("C:\\file.xml");
+				JAXBContext jaxbContext = JAXBContext.newInstance(Ciudad.class);
+				Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+		 
+				// output pretty printed
+				jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		 
+				jaxbMarshaller.marshal(ciudad, file);
+				jaxbMarshaller.marshal(ciudad, System.out);
+		 
+			      } catch (JAXBException e) {
+				e.printStackTrace();
+			      }
+		 
+			}
 }

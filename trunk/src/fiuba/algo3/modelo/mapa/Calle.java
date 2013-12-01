@@ -2,6 +2,8 @@ package fiuba.algo3.modelo.mapa;
 
 import java.util.Random;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import fiuba.algo3.modelo.efectosYSorpresas.ControlPolicial;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.efectosYSorpresas.Piquete;
@@ -20,7 +22,11 @@ public class Calle {
     private Efecto sorpresa;
     private Efecto obstaculo;
 
-    public Calle() {
+    public Calle(){
+    	
+    }
+    
+    public Calle(int n) {
     	transitable = true;
     	sorpresa = null;
     	obstaculo = null;
@@ -120,6 +126,8 @@ public class Calle {
 	public boolean calleVacia(){
 		return (this == null);
 	}
+	
+	@XmlElement(name="vehiculoCalle")
 	public Vehiculo getVehiculo() {
 		return vehiculo;
 	}
@@ -127,4 +135,23 @@ public class Calle {
     	sorpresa = null;
     	obstaculo = null;
 	}
+	
+	@XmlElement(name="meta")
+	public boolean isEsMeta() {
+		return esMeta;
+	}
+
+	public void setEsMeta(boolean esMeta) {
+		this.esMeta = esMeta;
+	}
+	
+	@XmlElement(name="transitable")
+	public boolean isTransitable() {
+		return transitable;
+	}
+
+	public void setTransitable(boolean transitable) {
+		this.transitable = transitable;
+	}
 }
+
