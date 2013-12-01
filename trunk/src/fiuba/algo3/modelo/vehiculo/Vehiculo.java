@@ -26,6 +26,10 @@ public class Vehiculo implements Posicionable {
 	private Ciudad ciudad;
 	private Direccion direccion;
 
+	
+	public Vehiculo() {
+	}
+	
 	public Vehiculo(EstadoVehiculo estadoASetear) {
 		this.estado = estadoASetear;
 		this.posicion = new Posicion();
