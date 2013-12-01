@@ -1,7 +1,7 @@
 package fiuba.algo3.modelo.vehiculo;
 
-import java.util.Observable;
 
+import ar.uba.fi.algo3.titiritero.Posicionable;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
@@ -17,18 +17,20 @@ import fiuba.algo3.modelo.movimientos.Retroceder;
 
 
 
-public class Vehiculo extends Observable {
+public class Vehiculo implements Posicionable {
 
 	private Posicion posicion;
 	private EstadoVehiculo estado;
 	private GPS GPS;
 	private Retroceder retroceder;
 	private Ciudad ciudad;
+	private Direccion direccion;
 
 	public Vehiculo(EstadoVehiculo estadoASetear) {
 		this.estado = estadoASetear;
 		this.posicion = new Posicion();
 		this.retroceder = new Retroceder();
+		this.direccion = Direccion.DERECHA;
 	}
 
 
@@ -87,8 +89,9 @@ public class Vehiculo extends Observable {
 	public void moverArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 
 		this.retroceder.getUltimaAccion(new Arriba(this));
-
-		this.moverme(Direccion.ARRIBA);
+		this.direccion = Direccion.ARRIBA;
+		
+		this.moverme();
 
 	}
 
@@ -97,28 +100,31 @@ public class Vehiculo extends Observable {
 	public void moverAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 
 		this.retroceder.getUltimaAccion(new Abajo(this));
-
-		this.moverme(Direccion.ABAJO);
+		this.direccion = Direccion.ABAJO;
+		
+		this.moverme();
 
 	}
 
 	public void moverDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 
 		this.retroceder.getUltimaAccion(new Derecha(this));
+		this.direccion = Direccion.DERECHA;
 
-		this.moverme(Direccion.DERECHA);
+		this.moverme();
 
 	}
 
 	public void moverIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
 
 		this.retroceder.getUltimaAccion(new Izquierda(this));
-
-		this.moverme(Direccion.IZQUIERDA);
+		this.direccion = Direccion.IZQUIERDA;
+		
+		this.moverme();
 
 	}
 
-	private void moverme(Direccion direccion) throws MovimientoInvalido, JuegoFinalizado{
+	private void moverme() throws MovimientoInvalido, JuegoFinalizado{
 
 		Posicion dondeQuieroIr= this.posicion.obtenerCopia();
 		dondeQuieroIr.moverX(direccion);
@@ -145,4 +151,22 @@ public class Vehiculo extends Observable {
 
 	}
 
+
+	@Override
+	public int getX() {
+		
+		return (this.posicion.getX()*500)/25;
+	}
+
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return ((this.posicion.getY()*500)/25);
+	}
+
+	public Direccion getDireccion(){
+		return this.direccion;
+	}
+	
 }
