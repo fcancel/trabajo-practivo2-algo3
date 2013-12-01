@@ -112,7 +112,7 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
        
         int opcionElegida = comboBoxJugadoresASeleccionar.getSelectedIndex();
         
-        if (opcionElegida > 0 ){
+        if (opcionElegida >= 0 ){
             
             
                        

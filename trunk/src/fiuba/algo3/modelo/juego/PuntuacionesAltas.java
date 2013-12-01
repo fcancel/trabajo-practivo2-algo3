@@ -20,7 +20,7 @@ public class PuntuacionesAltas implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 181082646L;
-	private List<Puntuacion> puntuaciones;
+	private ArrayList<Puntuacion> puntuaciones;
         private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 	
 
@@ -43,7 +43,8 @@ public class PuntuacionesAltas implements Serializable{
         
 	public void setPuntuacion(Puntuacion puntuacionAlta) {
 		
-		this.puntuaciones.add(puntuacionAlta);
+                
+                this.puntuaciones.add(puntuacionAlta);
 		Collections.sort(this.puntuaciones);
 		
 	}

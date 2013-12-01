@@ -6,6 +6,11 @@
 
 package fiuba.algo3.modelo.interfazGrafica;
 
+import ar.uba.fi.algo3.titiritero.ControladorJuego;
+import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
+import ar.uba.fi.algo3.titiritero.vista.Circulo;
+import ar.uba.fi.algo3.titiritero.vista.Ventana;
+
 /**
  *
  * @author Cancel
@@ -51,6 +56,11 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
         });
 
         botonNuevaPartida.setText("Nueva partida");
+        botonNuevaPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNuevaPartidaActionPerformed(evt);
+            }
+        });
 
         botonContinuarPartida.setText("Continuar partida");
 
@@ -103,6 +113,19 @@ public class PantallaJugadorIniciado extends javax.swing.JFrame {
         this.show(false);
         inicio.show();
     }//GEN-LAST:event_botonAtrasActionPerformed
+
+    private void botonNuevaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaPartidaActionPerformed
+
+                       
+        ControladorJuego controladorJuego = new ControladorJuego(true);
+        Ventana ventana = new Ventana(100, 200, controladorJuego);
+        Circulo circulo = new Circulo(3);
+        
+        circulo.dibujar(null);
+        controladorJuego.agregarDibujable(circulo);
+        
+        
+    }//GEN-LAST:event_botonNuevaPartidaActionPerformed
 
 
     
