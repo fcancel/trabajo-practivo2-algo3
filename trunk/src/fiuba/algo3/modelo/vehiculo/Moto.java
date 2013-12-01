@@ -5,24 +5,22 @@ import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 
 public class Moto implements EstadoVehiculo{
 
+	private String imagen="/res/moto.png";
    
     public Moto(){
         
     }
-    
-   
-    @Override
-    public EstadoVehiculo getEstadoVehiculo() {
-        EstadoVehiculo estadoMoto = new Moto();
-        return estadoMoto;
-    }
-    
-    
     @Override
     public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto) {
 	
     efecto.realizarEfecto((Moto) vehiculo.getEstado(), vehiculo);
 		
     }
+    
+	@Override
+	public String getDirecionDeImagen() {
+		// TODO Auto-generated method stub
+		return imagen;
+	}
     
 }

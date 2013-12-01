@@ -6,16 +6,10 @@ import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 
 public class Auto implements EstadoVehiculo{
     
+	private String imagen="/res/auto.png";
     
     public Auto (){
               
-    }
-    
-
-    @Override
-    public EstadoVehiculo getEstadoVehiculo() {
-        EstadoVehiculo estadoAuto = new Auto();
-        return estadoAuto;
     }
     
 	@Override
@@ -23,6 +17,12 @@ public class Auto implements EstadoVehiculo{
 		
 		efecto.realizarEfecto((Auto) vehiculo.getEstado(), vehiculo);
 		
+	}
+
+
+	@Override
+	public String getDirecionDeImagen() {
+		return imagen;
 	}
     
 }
