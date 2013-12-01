@@ -15,11 +15,6 @@ import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
-/**
- *
- * @author Cancel
- */
-
 public class GPS {
     
     private static int MOVIMIENTO_INICIAL = 0;

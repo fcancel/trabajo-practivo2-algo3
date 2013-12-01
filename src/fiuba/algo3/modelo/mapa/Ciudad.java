@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo.mapa;
 
-import java.util.Random;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
@@ -8,7 +9,7 @@ import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
-
+@XmlRootElement
 public class Ciudad {
     private Calle[][] ciudad;
     private GPS gps;
@@ -16,6 +17,10 @@ public class Ciudad {
     private int filas;
     private int columnas;
     private Posicion posicionMeta;
+    
+    public Ciudad(){
+    	
+    }
     
     public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps) {
         this.columnas = columnas;
@@ -67,13 +72,13 @@ public class Ciudad {
                     if ((j%2) == 0)
                         this.ciudad[i][j] = new Calle(false);
                     else
-                        this.ciudad[i][j] = new Calle();
+                        this.ciudad[i][j] = new Calle(i);
                 }
             }
             else{
             	for (int j = 0; j<(columnas); j++){
                     if ((j%2) == 0)
-                        this.ciudad[i][j] = new Calle();
+                        this.ciudad[i][j] = new Calle(i);
                     else
                     	//Para que sea una esquina, sin obstaculos y sorpresas
                         this.ciudad[i][j] = new Calle(true);
@@ -110,11 +115,13 @@ public class Ciudad {
 		return filas*columnas;
 	}
 	
+	@XmlElement(name="calle")
 	public Calle[][] getCiudad(){
 		return ciudad;
 	}
-
-	public Posicion getPosicionDeMeta() {
+	
+	@XmlElement(name="posicionMeta")
+	public Posicion getPosicionMeta() {
 		
 		return this.posicionMeta;
 		
@@ -140,6 +147,50 @@ public class Ciudad {
 				 this.ciudad[i][j].inicializarCalle();
 			 }
 		 }
+	}
+
+	@XmlElement(name="gps")
+	public GPS getGps() {
+		return gps;
+	}
+
+	public void setGps(GPS gps) {
+		this.gps = gps;
+	}
+
+	@XmlElement(name="vehiculo")
+	public Vehiculo getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(Vehiculo vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
+	@XmlElement(name="filas")
+	public int getFilas() {
+		return filas;
+	}
+
+	public void setFilas(int filas) {
+		this.filas = filas;
+	}
+
+	@XmlElement(name="columnas")
+	public int getColumnas() {
+		return columnas;
+	}
+
+	public void setColumnas(int columnas) {
+		this.columnas = columnas;
+	}
+
+	public void setPosicionMeta(Posicion posicionMeta) {
+		this.posicionMeta = posicionMeta;
+	}
+
+	public void setCiudad(Calle[][] ciudad) {
+		this.ciudad = ciudad;
 	}
 
 }
