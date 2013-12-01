@@ -74,7 +74,7 @@ public class GPS {
 		
 		int puntuacionTotal = (limiteDeMovimientos - this.movimientos)* multipilcador;
 		Puntuacion puntuacion = new Puntuacion(this.nick,puntuacionTotal);
-		this.puntuacionesAltas.setPuntuacion(puntuacion);
+                this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.puntuacionesAltas.persistir();
 		this.ciudad = null;
 		this.vehiculo = null;
