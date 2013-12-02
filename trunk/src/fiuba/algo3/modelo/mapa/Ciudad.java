@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo.mapa;
 
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
@@ -35,6 +37,12 @@ public class Ciudad {
         this.vehiculo = vehiculo;        
         this.cargarEscenario(filas, columnas);	
     	this.establecerMetayVehiculo(vehiculo, filas, columnas);
+    }
+    
+    public Ciudad cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
+    	SerializacionCiudad serializador = new SerializacionCiudad();
+		String archivo = new String(archivoDeCarga);
+		return serializador.desSerealizar(archivo);
     }
     
     private void establecerMetayVehiculo(Vehiculo vehiculo, int filas, int columnas) {
@@ -154,6 +162,10 @@ public class Ciudad {
 
 	public void setCiudad(Calle[][] ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	public void setGPS(GPS gps) {
+		this.gps = gps;
 	}
 
 }
