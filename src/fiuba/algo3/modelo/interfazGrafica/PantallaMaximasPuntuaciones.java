@@ -20,7 +20,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
  
     public PantallaMaximasPuntuaciones() throws NoExisteEsaPosicion {
         initComponents();
-   
+        this.show();
         PuntuacionesAltas puntuacionesAltas = new PuntuacionesAltas();
         JLabel[] labelsJugadores = new JLabel[] {null, this.jugadorMaximo1, this.jugadorMaximo2, this.jugadorMaximo3, this.jugadorMaximo4, this.jugadorMaximo5};
         JLabel[] labelsPuntajesDeJugadores = new JLabel[] {null, this.puntajeMaximo1, this.puntajeMaximo2, this.puntajeMaximo3, this.puntajeMaximo4, this.puntajeMaximo5};
@@ -37,7 +37,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
                                 
             }    
         }
-        //this.jugadorMaximo1.setText();
+        
     }
 
     /**

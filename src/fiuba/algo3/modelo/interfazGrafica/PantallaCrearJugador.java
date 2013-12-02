@@ -20,6 +20,7 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
      */
     public PantallaCrearJugador() {
         initComponents();
+        this.show();
     }
 
     /**
@@ -121,10 +122,9 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
         Jugadores jugadorAAgregar = new Jugadores();
         try {
             jugadorAAgregar.agregarNuevoJugador(jugadorNuevo);
-            PantallaJugadorIniciado pantallaJugadorIniciado = new PantallaJugadorIniciado();
-            pantallaJugadorIniciado.setNombreDelJugador(jugadorNuevo.getNombre());
+            PantallaJugadorIniciado pantallaJugadorIniciado = new PantallaJugadorIniciado(jugadorNuevo);
             this.show(false);
-            pantallaJugadorIniciado.show(true);
+          
         } catch (JugadorExistente ex) {
             // Si el nombre ya existe le aviso por pantalla y espero a que ponga otro
             mensajeJugadorYaExistente.setText("Nombre de jugador ya existente");

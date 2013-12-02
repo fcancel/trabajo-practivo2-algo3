@@ -11,7 +11,7 @@ import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 
 
-public class PantallaDeLJuego extends JFrame {
+public class PantallaDelJuego extends JFrame {
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -36,10 +36,11 @@ public class PantallaDeLJuego extends JFrame {
 		return panel;
 	}
 
-	public static void main(String[] args) {
+       
+	public static void mainE() {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				PantallaDeLJuego thisClass = new PantallaDeLJuego();
+				PantallaDelJuego thisClass = new PantallaDelJuego();
 				thisClass.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 				thisClass.setVisible(true);
@@ -54,7 +55,7 @@ public class PantallaDeLJuego extends JFrame {
 		});
 	}
 
-	public PantallaDeLJuego() {
+	public PantallaDelJuego() {
 		super();
 		initialize();
 	}
@@ -66,7 +67,7 @@ public class PantallaDeLJuego extends JFrame {
 		this.setSize(500,500);
 		this.setContentPane(getJContentPane());
 		this.setLocationRelativeTo(null);
-		this.setTitle("GPS");
+		this.setTitle("GPS Challenge");
 		this.addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosing(java.awt.event.WindowEvent e) {
 				System.out.println("windowClosing()"); // TODO Auto-generated Event stub windowClosing()
