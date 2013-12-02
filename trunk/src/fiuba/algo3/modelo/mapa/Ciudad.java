@@ -96,15 +96,11 @@ public class Ciudad {
     public boolean esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{ 
     	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
     	
-    	if (calleDondeQuieroMoverme.esTransitable()){
-    		
+    	if (calleDondeQuieroMoverme.esTransitable()){    		
     		return true;
-    		
         }        
         else{
-        	
         	throw new MovimientoInvalido();
-        	
         }
                           
     }
@@ -121,22 +117,19 @@ public class Ciudad {
 		return filas*columnas;
 	}
 	
-//	@XmlElement(name="calle")
-//	public Calle[][] getCiudad(){
-//		return ciudad;
-//	}
-	
 	@XmlElement(name="posicionMeta")
 	public Posicion getPosicionMeta() {
-		
-		return this.posicionMeta;
-		
+		return this.posicionMeta;	
 	}
 
 	public void colocarVehiculo(Posicion dondeQuieroIr) throws JuegoFinalizado {
 
 		if(!gps.juegoEnMarcha())
 			throw new JuegoFinalizado();
+		
+		Posicion posicionDondeEstaElVehiculo = this.vehiculo.getPosicion();
+		Calle calleDondeEstaElVehiculo = this.calleEnUnaPosicion(posicionDondeEstaElVehiculo);
+		calleDondeEstaElVehiculo.quitarVehiculo();
 		
 		Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(dondeQuieroIr);
 		this.colocarVehiculo(calleDondeQuieroMoverme);
