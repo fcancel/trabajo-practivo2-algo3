@@ -3,38 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestsDificultades.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/res/auto.png</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/ar/uba/fi/algo3/titiritero/vista/KeyPressedController.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Izquierda.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestLasFuncionesDelVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/juego/Jugadores.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaMaximasPuntuaciones.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaJugadorIniciado.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/juego/Puntuacion.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Derecha.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestLasFuncionesDeGPS.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/mapa/Ciudad.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Arriba.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Command.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/TestLasFuncionesDeLaCiudad.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaCrearJugador.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Direccion.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaDeInicio.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/juego/PuntuacionesAltas.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/VistaJuego.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/test/fiuba/algo3/tests/eliminarArchivosDePruebas.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vista/VistaDeVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaDeLJuego.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/ar/uba/fi/algo3/titiritero/audio/Reproductor.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/ar/uba/fi/algo3/titiritero/ControladorJuego.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/juego/GPS.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaJugadorYaExistente.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Abajo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/SorpresaCambioDeVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/Vehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/movimientos/Retroceder.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vista/VistaDeCiudad.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaDelJuego.java</file>
         </group>
     </open-files>
 </project-private>

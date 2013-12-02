@@ -110,6 +110,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="M&#xe1;ximas puntuaciones"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPuntuacionesAltasActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
