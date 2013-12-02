@@ -26,7 +26,8 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class GPS {    
     private static int MOVIMIENTO_INICIAL = 0;
-    
+
+	@XmlElement(name="dificultad")
     private Dificultad dificultad;
     @XmlAttribute (name="juegoEnCurso")
     private boolean juegoEnCurso;

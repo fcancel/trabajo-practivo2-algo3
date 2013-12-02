@@ -26,6 +26,7 @@ public class Vehiculo implements Posicionable {
 
 	@XmlElement(name="posicion")
 	private Posicion posicion;
+	@XmlElement(name="estadoVehiculo")
 	private EstadoVehiculo estado;
 	private GPS GPS;
 	@XmlElement(name="retroceder")
