@@ -38,11 +38,21 @@ public class Ciudad {
         this.cargarEscenario(filas, columnas);	
     	this.establecerMetayVehiculo(vehiculo, filas, columnas);
     }
+        
+    public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps, String archivo) throws JAXBException {
+        this.columnas = columnas;
+        this.filas = filas;
+        this.gps = gps;
+        this.vehiculo = vehiculo;        
+        this.ciudad = cargarMapaDesdeXML(archivo);
+    	this.establecerMetayVehiculo(vehiculo, filas, columnas);
+    }
     
-    public Ciudad cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
+    public Calle[][] cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
     	SerializacionCiudad serializador = new SerializacionCiudad();
 		String archivo = new String(archivoDeCarga);
-		return serializador.desSerealizar(archivo);
+		Ciudad ciudad = serializador.desSerealizar(archivo);
+		return ciudad.ciudad;
     }
     
     private void establecerMetayVehiculo(Vehiculo vehiculo, int filas, int columnas) {
