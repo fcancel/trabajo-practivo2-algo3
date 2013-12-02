@@ -8,6 +8,12 @@ package fiuba.algo3.modelo.juego;
 
 import java.io.File;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
@@ -15,18 +21,25 @@ import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
-public class GPS {
-    
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement
+
+public class GPS {    
     private static int MOVIMIENTO_INICIAL = 0;
     
     private Dificultad dificultad;
+    @XmlAttribute (name="juegoEnCurso")
     private boolean juegoEnCurso;
+	@XmlElement(name="puntuacionesAltas")
     private PuntuacionesAltas puntuacionesAltas;
+    @XmlAttribute (name="movimientos")
     private int movimientos;
     private Vehiculo vehiculo;
     private Ciudad ciudad;
+	@XmlElement(name="jugador")
     private Jugador jugador;
-    private String nick;
+	@XmlElement(name="nick")
+	private String nick;
 	
 
     private void verificarJuegoIniciado() throws JuegoNoIniciado{
@@ -60,7 +73,7 @@ public class GPS {
         this.movimientos += movimientoASumar;
         
     }
-    
+	
 	public boolean juegoEnMarcha() {
 		
 		return this.juegoEnCurso;
@@ -90,7 +103,7 @@ public class GPS {
 		return this.vehiculo;
 		
 	}
-
+	
 	public Ciudad getCiudad() throws JuegoNoIniciado{
 		
 		this.verificarJuegoIniciado();
@@ -128,8 +141,4 @@ public class GPS {
 		
 		return this.dificultad.getMaximoDeMovimientos();
 	}
-
-
-	
-
 }

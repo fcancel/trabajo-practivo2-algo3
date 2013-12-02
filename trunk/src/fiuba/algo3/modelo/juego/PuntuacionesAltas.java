@@ -12,18 +12,28 @@ import java.util.Collections;
 import java.util.List;
 
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+
 import java.io.File;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement
 public class PuntuacionesAltas implements Serializable{
 	
-	/**
-	 * 
-	 */
+    @XmlAttribute (name="serializacion")
 	private static final long serialVersionUID = 181082646L;
+	@XmlElement(name="puntuacion")
 	private ArrayList<Puntuacion> puntuaciones;
-        private String archivo = "puntuaciones\\puntuacionesAltas.dat";
 	
-
+    @XmlAttribute (name="archivo")
+	private String archivo = "puntuaciones\\puntuacionesAltas.dat";
+	
+    
 	public PuntuacionesAltas(){
 		
             File fichero = new File(this.archivo);
