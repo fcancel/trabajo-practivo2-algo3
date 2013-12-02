@@ -1,5 +1,7 @@
 package fiuba.algo3.modelo.efectosYSorpresas;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -7,7 +9,11 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class ControlPolicial implements Efecto {
 
+	@XmlElement(name="probabilidad")
 	private Probabilidad probabilidad;
+	
+	public ControlPolicial(){
+	}
 	
 	public ControlPolicial(Probabilidad probabilidad) {
 		this.probabilidad = probabilidad;
