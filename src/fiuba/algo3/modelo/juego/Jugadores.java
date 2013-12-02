@@ -17,16 +17,27 @@ import java.util.List;
 
 
 
+
+
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import fiuba.algo3.modelo.excepciones.JugadorExistente;
 
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement
 public class Jugadores implements Serializable {
 
-	/**
-	 * 
-	 */
+    @XmlAttribute (name="serializacion")
 	private static final long serialVersionUID = 136608738905107904L;
-	private ArrayList<Jugador> jugadores;
-	private String archivo = "jugadores\\jugadores.dat";
+    @XmlElement(name="jugadores")
+    private ArrayList<Jugador> jugadores;
+    @XmlAttribute (name="archivo")
+    private String archivo = "jugadores\\jugadores.dat";
 	
 	public Jugadores(){
 		

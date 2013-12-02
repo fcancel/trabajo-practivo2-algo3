@@ -115,15 +115,13 @@ public class TestLasFuncionesDeLaCiudad {
     }
 	
 	@Test
-	public void sePruebaLaSerializacionDeLaCiudad(){
+	public void sePruebaLaSerializacionDeLaCiudad() throws JuegoNoIniciado{
 		  try {
 			  
-	    		int filas = 6;
-	    		int columnas = 10;
-	    		GPS gps = new GPS();
-	    		EstadoVehiculo estado = new Moto();
-	    		Vehiculo vehiculo = new Vehiculo(estado);
-	    		Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
+				GPS gps = new GPS();
+				Jugador jugador = new Jugador("juan");
+				gps.empezarJuego(new Moto(), new Facil(),jugador);
+ 				Ciudad ciudad = gps.getCiudad();
 			  	
 				File file = new File("C:\\file.xml");
 				JAXBContext jaxbContext = JAXBContext.newInstance(Ciudad.class);
@@ -140,19 +138,19 @@ public class TestLasFuncionesDeLaCiudad {
 		  		}
 	}
 	
-	@Test
-	public void sePruebaLaDesSerializacionDeLaCiudad(){
-		  try {
-				File file = new File("C:\\file.xml");
-				JAXBContext jaxbContext = JAXBContext.newInstance(Ciudad.class);
-		 
-				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-				Ciudad customer = (Ciudad) jaxbUnmarshaller.unmarshal(file);
-				System.out.println(customer);
-		 
-		  }catch (JAXBException e) {
-			  e.printStackTrace();
-		  } 
-	}
+//	@Test
+//	public void sePruebaLaDesSerializacionDeLaCiudad(){
+//		  try {
+//				File file = new File("C:\\file.xml");
+//				JAXBContext jaxbContext = JAXBContext.newInstance(Ciudad.class);
+//		 
+//				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+//				Ciudad ciudad = (Ciudad) jaxbUnmarshaller.unmarshal(file);
+//				System.out.println(ciudad);
+//		 
+//		  }catch (JAXBException e) {
+//			  e.printStackTrace();
+//		  } 
+//	}
 }
 

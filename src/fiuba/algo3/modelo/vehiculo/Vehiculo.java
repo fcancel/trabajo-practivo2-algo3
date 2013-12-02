@@ -1,6 +1,11 @@
 package fiuba.algo3.modelo.vehiculo;
 
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import ar.uba.fi.algo3.titiritero.Posicionable;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
@@ -15,15 +20,18 @@ import fiuba.algo3.modelo.movimientos.Direccion;
 import fiuba.algo3.modelo.movimientos.Izquierda;
 import fiuba.algo3.modelo.movimientos.Retroceder;
 
-
-
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement
 public class Vehiculo implements Posicionable {
 
+	@XmlElement(name="posicion")
 	private Posicion posicion;
 	private EstadoVehiculo estado;
 	private GPS GPS;
+	@XmlElement(name="retroceder")
 	private Retroceder retroceder;
 	private Ciudad ciudad;
+	@XmlElement(name="direccion")
 	private Direccion direccion;
 
 	

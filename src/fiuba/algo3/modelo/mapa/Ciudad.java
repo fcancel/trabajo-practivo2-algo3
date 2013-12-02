@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo.mapa;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,10 +12,15 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 @XmlRootElement
 public class Ciudad {
-    private Calle[][] ciudad;
+	@XmlElement(name="calle")
+	private Calle[][] ciudad;
+	@XmlElement(name="GPS")
     private GPS gps;
+	@XmlElement(name="vehiculo")
     private Vehiculo vehiculo;
+    @XmlAttribute (name="filas")
     private int filas;
+    @XmlAttribute (name="columnas")
     private int columnas;
     private Posicion posicionMeta;
     
@@ -115,10 +121,10 @@ public class Ciudad {
 		return filas*columnas;
 	}
 	
-	@XmlElement(name="calle")
-	public Calle[][] getCiudad(){
-		return ciudad;
-	}
+//	@XmlElement(name="calle")
+//	public Calle[][] getCiudad(){
+//		return ciudad;
+//	}
 	
 	@XmlElement(name="posicionMeta")
 	public Posicion getPosicionMeta() {
@@ -147,42 +153,6 @@ public class Ciudad {
 				 this.ciudad[i][j].inicializarCalle();
 			 }
 		 }
-	}
-
-	@XmlElement(name="gps")
-	public GPS getGps() {
-		return gps;
-	}
-
-	public void setGps(GPS gps) {
-		this.gps = gps;
-	}
-
-	@XmlElement(name="vehiculo")
-	public Vehiculo getVehiculo() {
-		return vehiculo;
-	}
-
-	public void setVehiculo(Vehiculo vehiculo) {
-		this.vehiculo = vehiculo;
-	}
-
-	@XmlElement(name="filas")
-	public int getFilas() {
-		return filas;
-	}
-
-	public void setFilas(int filas) {
-		this.filas = filas;
-	}
-
-	@XmlElement(name="columnas")
-	public int getColumnas() {
-		return columnas;
-	}
-
-	public void setColumnas(int columnas) {
-		this.columnas = columnas;
 	}
 
 	public void setPosicionMeta(Posicion posicionMeta) {
