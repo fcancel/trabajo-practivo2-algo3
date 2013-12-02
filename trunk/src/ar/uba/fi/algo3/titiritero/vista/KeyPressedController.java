@@ -19,7 +19,9 @@ public class KeyPressedController extends KeyAdapter implements KeyListener {
 	}
 
 	public void keyReleased(KeyEvent e) {
-		this.controlador.despacharKeyPress(e);
+	
+            //Comento esta parte para que no haga ese doble movimiento. Porque se movia cuando apretabamos una tecla y además se movía cuando la soltabamos
+            //this.controlador.despacharKeyPress(e);
 	}
 
 }
