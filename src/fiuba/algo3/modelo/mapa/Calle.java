@@ -122,24 +122,31 @@ public class Calle {
     public void meta(){
     	esMeta = true;
     }
+    
     public boolean tengoSorpresa(){
     	return (sorpresa != null);
     }
+    
     public boolean tengoObstaculo(){
     	return (obstaculo != null);
     }
-	public boolean calleVacia(){
+	
+    public boolean calleVacia(){
 		return (this == null);
 	}
-	
+
 	@XmlElement(name="vehiculoCalle")
 	public Vehiculo getVehiculo() {
 		return vehiculo;
 	}
+
 	public void inicializarCalle(){
     	sorpresa = null;
     	obstaculo = null;
 	}
 	
+	public void quitarVehiculo(){
+		this.vehiculo = null;
+	}
 }
 
