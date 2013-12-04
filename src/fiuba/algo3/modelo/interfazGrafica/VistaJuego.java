@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import javax.xml.bind.JAXBException;
 
+import fiuba.algo3.controlador.ContadorDeCantidadDeMovimientos;
 import fiuba.algo3.controlador.ControladorTeclado;
 import fiuba.algo3.modelo.dificultad.Dificil;
 import fiuba.algo3.modelo.dificultad.Dificultad;
@@ -21,16 +22,21 @@ import fiuba.algo3.vista.VistaDeEfecto;
 import fiuba.algo3.vista.VistaDeMeta;
 import fiuba.algo3.vista.VistaDeVehiculo;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
+import ar.uba.fi.algo3.titiritero.ObjetoVivo;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.KeyPressedController;
 import fiuba.algo3.modelo.vehiculo.Moto;
 
 
-public class VistaJuego{
+public class VistaJuego implements ObjetoVivo{
 
 	private ControladorJuego controladorJuego = null;
 	private GPS gps;
 	private VistaDeVehiculo vistaDeVehiculo;
+	private ContadorDeCantidadDeMovimientos observador;
+	private int cantidadDeMovientos=0;
+	private int maximoDeMovimientos;
+	private boolean marcadoElMaximo = false;
 	
 	public VistaJuego(SuperficieDeDibujo superficieDeDibujo, EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
 		
@@ -41,6 +47,7 @@ public class VistaJuego{
 		gps.empezarJuego(vehiculoRecibido, dificultadRecibida,jugadorRecibido);
 		Vehiculo vehiculo = gps.getVehiculo();
 		
+		this.maximoDeMovimientos= dificultadRecibida.getMaximoDeMovimientos();
 		ControladorTeclado CT = new ControladorTeclado(vehiculo);
 		
 		controladorJuego = new ControladorJuego(true);
@@ -64,7 +71,8 @@ public class VistaJuego{
 		controladorJuego.agregarDibujable(vistaDeMeta);
 		controladorJuego.agregarDibujable(vistaDeVehiculo);
 		controladorJuego.agregarKeyPressObservador(CT);
-
+		this.controladorJuego.agregarObjetoVivo(this);
+		
 		controladorJuego.setIntervaloSimulacion(15);
 		
 	}
@@ -91,5 +99,22 @@ public class VistaJuego{
 	
 	public void agregarControladorDelTeclado(Panel unPanel){
 		unPanel.addKeyListener(new KeyPressedController(this.controladorJuego));
+	}
+
+	public void agregarObservadorDeMovimientos(PantallaDelJuego pantallaDelJuego) {
+		this.observador=pantallaDelJuego;
+	}
+
+	@Override
+	public void vivir() {
+		int movimientos = gps.getMovimientos();
+		if(this.cantidadDeMovientos != movimientos){
+			this.cantidadDeMovientos = movimientos;
+			this.observador.seActualizaronLosMovimientos(movimientos);
+		}
+		if(!this.marcadoElMaximo){
+			this.marcadoElMaximo= true;
+			this.observador.maximoDeMovimientos(this.maximoDeMovimientos);
+		}
 	}
 }
