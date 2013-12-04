@@ -30,8 +30,8 @@ public class PantallaJuegoTerminado extends javax.swing.JFrame {
         botonVolverAlMenuDeInicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
         setPreferredSize(new java.awt.Dimension(900, 558));
-        setResizable(false);
 
         labelSuPuntajeEs.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         labelSuPuntajeEs.setText("SU PUNTAJE ES:");
@@ -39,8 +39,8 @@ public class PantallaJuegoTerminado extends javax.swing.JFrame {
         labelPuntaje.setFont(new java.awt.Font("Motorwerk", 0, 90)); // NOI18N
         labelPuntaje.setText("PUNTAJE");
 
-        labelFelicitaciones1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        labelFelicitaciones1.setText("FELICITACIONES");
+        labelFelicitaciones1.setFont(new java.awt.Font("Segoe Keycaps", 0, 36)); // NOI18N
+        labelFelicitaciones1.setText("...GAME OVER...");
 
         labelJugador1.setFont(new java.awt.Font("Motorwerk", 0, 90)); // NOI18N
         labelJugador1.setText("Jugador");
@@ -58,47 +58,44 @@ public class PantallaJuegoTerminado extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(353, Short.MAX_VALUE)
-                .addComponent(labelSuPuntajeEs)
-                .addGap(306, 306, 306))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelPuntaje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonVolverAlMenuDeInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(botonVolverAlMenuDeInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(labelSuPuntajeEs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(labelPuntaje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(labelFelicitaciones1, javax.swing.GroupLayout.DEFAULT_SIZE, 861, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(344, Short.MAX_VALUE)
-                    .addComponent(labelFelicitaciones1)
-                    .addGap(308, 308, 308)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(labelJugador1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(60, 60, 60)
+                    .addComponent(labelJugador1, javax.swing.GroupLayout.DEFAULT_SIZE, 852, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(241, 241, 241)
+                .addGap(25, 25, 25)
+                .addComponent(labelFelicitaciones1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128)
                 .addComponent(labelSuPuntajeEs, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelPuntaje)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(botonVolverAlMenuDeInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(23, 23, 23)
-                    .addComponent(labelFelicitaciones1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(471, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
                     .addGap(129, 129, 129)
                     .addComponent(labelJugador1)
-                    .addContainerGap(349, Short.MAX_VALUE)))
+                    .addContainerGap(325, Short.MAX_VALUE)))
         );
 
         pack();
