@@ -150,5 +150,13 @@ public class Calle {
 	public void quitarVehiculo(){
 		this.vehiculo = null;
 	}
+
+	public Efecto getObstaculo() {
+		return this.obstaculo;
+	}
+
+	public Efecto getSorpresa() {
+		return this.sorpresa;
+	}
 }
 
