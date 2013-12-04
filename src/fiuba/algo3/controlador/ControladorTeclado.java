@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo.controlador;
+package fiuba.algo3.controlador;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

@@ -1,10 +1,14 @@
 package fiuba.algo3.modelo.mapa;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.juego.GPS;
@@ -37,6 +41,7 @@ public class Ciudad {
         this.vehiculo = vehiculo;        
         this.cargarEscenario(filas, columnas);	
     	this.establecerMetayVehiculo(vehiculo, filas, columnas);
+    	this.posicionarLosEfectos();
     }
         
     public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps, String archivo) throws JAXBException {
@@ -45,6 +50,7 @@ public class Ciudad {
         this.gps = gps;
         this.vehiculo = vehiculo;        
         this.ciudad = cargarMapaDesdeXML(archivo);
+        this.posicionarLosEfectos();
     	this.establecerMetayVehiculo(vehiculo, filas, columnas);
     }
     
@@ -177,5 +183,42 @@ public class Ciudad {
 	public void setGPS(GPS gps) {
 		this.gps = gps;
 	}
+	
+	public Iterator<Efecto> listaDeEfectos() {
+		
+		ArrayList<Efecto> listaDeEfectos = new ArrayList<Efecto>();
+		
+		for (int i = 0; i<(filas); i++){
+			 for (int j = 0; j<(columnas); j++){
+				 if(this.ciudad[i][j].tengoObstaculo()){
+					 listaDeEfectos.add(this.ciudad[i][j].getObstaculo());
+				 }
+				 if(this.ciudad[i][j].tengoSorpresa()){
+					 listaDeEfectos.add(this.ciudad[i][j].getSorpresa());
+				 }
+			 }
+		 }
+		
+		Iterator<Efecto> iteradorDeEfectos = listaDeEfectos.iterator();
+		
+		return iteradorDeEfectos;
+		
+	}
 
+	 private void posicionarLosEfectos() {
+	    	for (int i = 0; i<(filas); i++){
+				 for (int j = 0; j<(columnas); j++){
+					 Posicion posicion = new Posicion();
+					 posicion.setX(i);
+					 posicion.setY(j);
+					 if(this.ciudad[i][j].tengoObstaculo()){
+						 this.ciudad[i][j].getObstaculo().setPosicion(posicion);
+					 }
+					 if(this.ciudad[i][j].tengoSorpresa()){
+						 this.ciudad[i][j].getSorpresa().setPosicion(posicion);
+					 }
+				 }
+			 }
+		}
+		
 }

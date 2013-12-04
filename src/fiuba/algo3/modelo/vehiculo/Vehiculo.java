@@ -168,7 +168,7 @@ public class Vehiculo implements Posicionable {
 	@Override
 	public int getX() {
 		
-		return (this.posicion.getX()*500)/25;
+		return ((this.posicion.getX()*500)/25);
 	}
 
 

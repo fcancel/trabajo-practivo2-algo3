@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo.vista;
+package fiuba.algo3.vista;
 
 import java.awt.Graphics;
 import java.awt.geom.AffineTransform;

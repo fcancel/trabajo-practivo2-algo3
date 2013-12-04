@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
+import fiuba.algo3.modelo.mapa.Ciudad;
+import fiuba.algo3.vista.VistaDeEfecto;
 import ar.uba.fi.algo3.titiritero.audio.Reproductor;
 
 /**
@@ -110,7 +113,14 @@ public class ControladorJuego implements Runnable {
 		while(iterador.hasNext()){
 			Dibujable dibujable = iterador.next();
 			dibujable.dibujar(this.superficieDeDibujo);
-		}		
+		}
+		Iterator<Efecto> iEfecto = this.ciudad.listaDeEfectos();
+		while(iEfecto.hasNext()){
+			Efecto efecto = iEfecto.next();
+			Dibujable vistaDeEfecto = new VistaDeEfecto(efecto);
+			vistaDeEfecto.setPosicionable(efecto);
+			vistaDeEfecto.dibujar(this.superficieDeDibujo);
+		}
 		this.superficieDeDibujo.actualizar();
 	}
 	
@@ -173,6 +183,10 @@ public class ControladorJuego implements Runnable {
 		this.keyPressedObservadores.remove(unMouseClickObservador);
 	}
 	
+	public void setCiudad(Ciudad ciudad){
+		this.ciudad = ciudad;
+	}
+	
 	private long intervaloSimulacion;
 	private boolean estaEnEjecucion;
 	private List<ObjetoVivo> objetosVivos;
@@ -183,6 +197,7 @@ public class ControladorJuego implements Runnable {
 	private Reproductor reproductor;
 	private Thread hiloAudio;
 	private boolean estaReproductorActivo;
+	private Ciudad ciudad;
 	
 	public void run() {
 		this.comenzarJuego();

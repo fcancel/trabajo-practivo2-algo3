@@ -134,8 +134,8 @@ public class GPS {
 		this.juegoEnCurso = true;
         this.vehiculo = new Vehiculo(estadoInicial);
         this.vehiculo.setGPS(this);
-        String mapa = this.dificultad.getMapa();
-		this.ciudad = new Ciudad(filas,columnas,this.vehiculo,this,mapa);
+        //String mapa = this.dificultad.getMapa();
+		this.ciudad = new Ciudad(filas,columnas,this.vehiculo,this/*,mapa*/);
         this.vehiculo.setCiudad(this.ciudad);
 		
 	}
