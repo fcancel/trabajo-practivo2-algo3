@@ -7,16 +7,12 @@ import javax.xml.bind.JAXBException;
 import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.juego.GPS;
-import fiuba.algo3.modelo.dificultad.Dificil;
 import fiuba.algo3.modelo.dificultad.Facil;
-import fiuba.algo3.modelo.dificultad.Moderado;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
-import fiuba.algo3.modelo.vehiculo.Auto;
-import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Posicion;
@@ -113,15 +109,15 @@ public class TestLasFuncionesDeLaCiudad {
 		}
 
     }
-	
+
 	@Test
 	public void sePruebaLaSerializacionDeLaCiudad() throws JuegoNoIniciado{
 		  try {
 				SerializacionCiudad serealizador = new SerializacionCiudad();
 			  	GPS gps = new GPS();
-				String nombreArchivo = new String("C:\\EscenarioFacil1.xml");
+				String nombreArchivo = new String("C:\\EscenarioDificil9.xml");
 				Jugador jugador = new Jugador("martin");
-				gps.empezarJuego(new Moto(), new Dificil(),jugador);
+				gps.empezarJuego(new Moto(), new Facil(),jugador);
  				Ciudad ciudad = gps.getCiudad();
  				serealizador.serializar(ciudad,nombreArchivo);
 		  }catch (JAXBException e) {
