@@ -144,8 +144,8 @@ public class Vehiculo implements Posicionable {
 		dondeQuieroIr.moverY(direccion);
 
 		if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
-			ciudad.colocarVehiculo(dondeQuieroIr);
 			this.posicion = dondeQuieroIr;
+			ciudad.colocarVehiculo(dondeQuieroIr);
 			this.sumarMovimiento(1);
 		}
 
