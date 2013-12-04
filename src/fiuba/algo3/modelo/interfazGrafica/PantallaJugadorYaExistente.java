@@ -56,6 +56,8 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
         });
 
         botonAtras.setText("Atras");
+        botonAtras.setMaximumSize(new java.awt.Dimension(5000, 5000));
+        botonAtras.setMinimumSize(new java.awt.Dimension(900, 558));
         botonAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAtrasActionPerformed(evt);

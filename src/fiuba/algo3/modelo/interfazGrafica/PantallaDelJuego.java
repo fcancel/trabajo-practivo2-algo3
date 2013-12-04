@@ -31,7 +31,7 @@ public class PantallaDelJuego extends JFrame {
             
                 this.vista = new VistaJuego(this.panel, vehiculoRecibido, dificultadRecibida, jugadorRecibido);		
 		this.vista.agregarControladorDelTeclado(panel);
-		this.vista.comenzar();
+		this.vista.comenzar();                
 	}
 
 	private Panel getSuperficieDeDibujo() {
@@ -57,10 +57,8 @@ public class PantallaDelJuego extends JFrame {
 				try {
 					thisClass.comenzar(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
 				} catch (JuegoNoIniciado e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (JAXBException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
