@@ -30,7 +30,7 @@ public class PantallaDelJuego extends JFrame {
 
 	private Panel getSuperficieDeDibujo() {
 		if (panel == null) {
-			panel = new Panel(500,500);
+			panel = new Panel(400,400);
 			panel.setLayout(new GridBagLayout());
 			panel.setBounds(new Rectangle(0, 0,500,500));
 		}
@@ -68,7 +68,7 @@ public class PantallaDelJuego extends JFrame {
 		this.setResizable(false);
 		//this.setSize(700,529);
 		//this.setSize(800,550);
-		this.setSize(500,500);
+		this.setSize(509,531);
 		this.setContentPane(getJContentPane());
 		this.setLocationRelativeTo(null);
 		this.setTitle("GPS Challenge");
