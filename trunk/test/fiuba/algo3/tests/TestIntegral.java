@@ -2,6 +2,8 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.dificultad.Facil;
@@ -19,7 +21,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class TestIntegral {
 
 	@Test
-	public void ganarJuegoSinObstaculos() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JugadorExistente {
+	public void ganarJuegoSinObstaculos() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JugadorExistente, JAXBException {
 		
 		eliminarArchivosDePruebas.eliminar("jugadores\\jugadores.dat");
 		GPS gps = new GPS();
@@ -35,6 +37,16 @@ public class TestIntegral {
 
 		//posicion inicial (1,7) y meta en (14,7)
 		//14 movimientos a la derecha para ganar
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
+		auto.moverDerecha();
 		auto.moverDerecha();
 		auto.moverDerecha();
 		auto.moverDerecha();

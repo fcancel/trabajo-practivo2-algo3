@@ -1,5 +1,7 @@
 package fiuba.algo3.tests;
 
+import javax.xml.bind.JAXBException;
+
 import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.efectosYSorpresas.Pozo;
@@ -18,7 +20,7 @@ import org.junit.Test;
 public class TestPozo {
     
     @Test
-    public void testAlCaerUnaMotoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
+    public void testAlCaerUnaMotoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado, JAXBException {
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("ArmandoBarreda");
@@ -34,7 +36,7 @@ public class TestPozo {
    }
     
     @Test
-    public void testAlCaerUnAutoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado {
+    public void testAlCaerUnAutoEnUnPozoSusMovimientosSonIncrementadosEnTres() throws JuegoNoIniciado, JAXBException {
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Schwarzenegger");
@@ -50,7 +52,7 @@ public class TestPozo {
     }
     
     @Test
-    public void testAlCaerUnaCuatroPorCuatroEnUnPozoSusMovimientosNoSonAfectados() throws JuegoNoIniciado {
+    public void testAlCaerUnaCuatroPorCuatroEnUnPozoSusMovimientosNoSonAfectados() throws JuegoNoIniciado, JAXBException {
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Rojo");

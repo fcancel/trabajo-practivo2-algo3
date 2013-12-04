@@ -1,5 +1,7 @@
 package fiuba.algo3.tests;
 
+import javax.xml.bind.JAXBException;
+
 import junit.framework.Assert;
 
 import org.junit.Test;
@@ -57,7 +59,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+    public void testMuevoVehiculoHaciaArriba() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Arriba");
@@ -75,7 +77,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+    public void testMuevoVehiculoHaciaAbajo() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
        
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Abajo");
@@ -94,7 +96,7 @@ public class TestLasFuncionesDelVehiculo {
 
    
     @Test
-    public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+    public void testMuevoVehiculoHaciaLaDerecha() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Derecha");
@@ -113,7 +115,7 @@ public class TestLasFuncionesDelVehiculo {
     }
     
     @Test
-    public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+    public void testMuevoVehiculoHaciaLaIzquierda() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
         
         GPS gps = new GPS();
         Jugador jugador = new Jugador("Izquierda");

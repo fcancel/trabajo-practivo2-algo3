@@ -2,7 +2,10 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.Test;
+
 
 
 
@@ -25,7 +28,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class TestSorpresaDesfavorable {
 
 	@Test
-	public void alAplicarSorpresaDesfavorableDeberianAumentarEnUn25PorCientoLosMovimientos() throws JuegoNoIniciado {
+	public void alAplicarSorpresaDesfavorableDeberianAumentarEnUn25PorCientoLosMovimientos() throws JuegoNoIniciado, JAXBException {
 		
 		
 		GPS gps = new GPS();

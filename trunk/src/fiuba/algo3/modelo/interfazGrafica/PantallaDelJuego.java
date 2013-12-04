@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import javax.xml.bind.JAXBException;
 
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
@@ -21,7 +22,7 @@ public class PantallaDelJuego extends JFrame {
 	private VistaJuego vista = null;
 
 
-	private void comenzar() throws JuegoNoIniciado{
+	private void comenzar() throws JuegoNoIniciado, JAXBException{
 		this.vista = new VistaJuego(this.panel/*getSuperficieDeDibujo()*/);
 		this.vista.agregarControladorDelTeclado(panel);
 		this.vista.comenzar();
@@ -47,6 +48,9 @@ public class PantallaDelJuego extends JFrame {
 				try {
 					thisClass.comenzar();
 				} catch (JuegoNoIniciado e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (JAXBException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}

@@ -44,7 +44,7 @@ public class TestLasFuncionesDeLaCiudad {
     }
 
 	@Test
-    public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado{
+    public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -78,7 +78,7 @@ public class TestLasFuncionesDeLaCiudad {
     }
 	
 	@Test
-    public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado{
+    public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado, JAXBException{
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -91,7 +91,7 @@ public class TestLasFuncionesDeLaCiudad {
     }
 
 	@Test
-    public void alUbicaElVehiculoEnLaMetaYQuererRealizarOtroMovimientoDeboRecibirExcepcionJuegoTerminado() throws MovimientoInvalido, JuegoNoIniciado{
+    public void alUbicaElVehiculoEnLaMetaYQuererRealizarOtroMovimientoDeboRecibirExcepcionJuegoTerminado() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
 		
 		try{
 			

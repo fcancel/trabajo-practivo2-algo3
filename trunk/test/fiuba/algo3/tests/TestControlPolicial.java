@@ -2,6 +2,8 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.dificultad.Facil;
@@ -19,7 +21,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class TestControlPolicial{
 
 	@Test
-	public void alCaerUnAutoEnElControlPolicialConProbabilidad5DebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnAutoEnElControlPolicialConProbabilidad5DebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("tomas");
@@ -36,7 +38,7 @@ public class TestControlPolicial{
 	}
 	
 	@Test
-	public void alCaerUnAutoEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnAutoEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -53,7 +55,7 @@ public class TestControlPolicial{
 	}
 	
 	@Test
-	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad3DebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad3DebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("pedro");
@@ -70,7 +72,7 @@ public class TestControlPolicial{
 	}
 	
 	@Test
-	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnaCuatroPorCuatroEnElControlPolicialConProbabilidad7NoDebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("lautaro");
@@ -87,7 +89,7 @@ public class TestControlPolicial{
 	}
 	
 	@Test
-	public void alCaerUnaMotoEnElControlPolicialConProbabilidad8DebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnaMotoEnElControlPolicialConProbabilidad8DebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("tomas");
@@ -103,7 +105,7 @@ public class TestControlPolicial{
 		
 	}
 	@Test
-	public void alCaerUnaMotoEnElControlPolicialConProbabilidad9NoDebeSumarTresMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnaMotoEnElControlPolicialConProbabilidad9NoDebeSumarTresMovimientos() throws JuegoNoIniciado, JAXBException {
 
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("jose");

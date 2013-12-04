@@ -8,6 +8,7 @@ package fiuba.algo3.modelo.juego;
 
 import java.io.File;
 
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -88,7 +89,7 @@ public class GPS {
 		
 		int puntuacionTotal = (limiteDeMovimientos - this.movimientos)* multipilcador;
 		Puntuacion puntuacion = new Puntuacion(this.nick,puntuacionTotal);
-                this.puntuacionesAltas.setPuntuacion(puntuacion);
+        this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.puntuacionesAltas.persistir();
 		this.ciudad = null;
 		this.vehiculo = null;
@@ -119,7 +120,7 @@ public class GPS {
 		
 	}
 
-	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador){
+	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador) throws JAXBException{
 		
 		this.jugador=jugador;
 		this.dificultad = dificultad;
@@ -128,12 +129,13 @@ public class GPS {
 
 	}
 	
-	private void inicializarJuego(EstadoVehiculo estadoInicial, int filas, int columnas) {
+	private void inicializarJuego(EstadoVehiculo estadoInicial, int filas, int columnas) throws JAXBException {
 		
 		this.juegoEnCurso = true;
         this.vehiculo = new Vehiculo(estadoInicial);
         this.vehiculo.setGPS(this);
-		this.ciudad = new Ciudad(filas,columnas,this.vehiculo,this);
+        String mapa = this.dificultad.getMapa();
+		this.ciudad = new Ciudad(filas,columnas,this.vehiculo,this,mapa);
         this.vehiculo.setCiudad(this.ciudad);
 		
 	}
