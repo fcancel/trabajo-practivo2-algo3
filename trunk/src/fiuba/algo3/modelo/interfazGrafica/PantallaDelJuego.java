@@ -30,9 +30,9 @@ public class PantallaDelJuego extends JFrame {
 
 	private Panel getSuperficieDeDibujo() {
 		if (panel == null) {
-			panel = new Panel(400,400);
+			panel = new Panel(500,500);
 			panel.setLayout(new GridBagLayout());
-			panel.setBounds(new Rectangle(0, 0, 500, 500));
+			panel.setBounds(new Rectangle(0, 0,500,500));
 		}
 		return panel;
 	}

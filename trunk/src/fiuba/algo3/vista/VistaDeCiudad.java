@@ -6,7 +6,7 @@ import ar.uba.fi.algo3.titiritero.vista.Imagen;
 public class VistaDeCiudad  extends Imagen implements Posicionable{
 	
 	public VistaDeCiudad(){
-		this.setNombreArchivoImagen("/res/Fondo.png");
+		this.setNombreArchivoImagen("/res/Ciudad.png");
 	}
 
 	@Override
