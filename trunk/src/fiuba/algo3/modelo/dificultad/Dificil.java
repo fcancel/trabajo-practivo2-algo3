@@ -6,7 +6,6 @@ import java.util.Random;
 public class Dificil implements Dificultad {
 	
 	private static String MAPADIFICIL = ".\\Mapas xml\\EscenarioDificil";
-	//private static String MAPADIFICIL = "/Mapas xml/EscenarioDificil";
 	private static int MOVIMIENTOS = 40;
 	private static int FILAS = 25;
 	private static int COLUMNAS = 25;
@@ -43,8 +42,7 @@ public class Dificil implements Dificultad {
 	}
         
         @Override
-        public String toString(){
-            
+        public String toString(){          
             return "Difícil";
         }
 	
