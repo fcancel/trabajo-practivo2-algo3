@@ -18,6 +18,7 @@ import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 import fiuba.algo3.vista.VistaDeCiudad;
 import fiuba.algo3.vista.VistaDeEfecto;
+import fiuba.algo3.vista.VistaDeMeta;
 import fiuba.algo3.vista.VistaDeVehiculo;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
@@ -66,26 +67,20 @@ public class VistaJuego{
 		VistaDeCiudad vistaDeCiudad = new VistaDeCiudad(); 
 		vistaDeCiudad.setPosicionable(vistaDeCiudad);
 		
+		VistaDeMeta vistaDeMeta= new VistaDeMeta();
+		vistaDeMeta.getPosicion(gps.getCiudad().getPosicionMeta());
+		vistaDeMeta.setPosicionable(vistaDeMeta);
+		
 		controladorJuego.agregarDibujable(vistaDeCiudad);
 		//this.agregarVistaDeEfectos(gps.getCiudad());
 		controladorJuego.setCiudad(gps.getCiudad());
+		controladorJuego.agregarDibujable(vistaDeMeta);
 		controladorJuego.agregarDibujable(vistaDeVehiculo);
 		controladorJuego.agregarKeyPressObservador(CT);
 
 		controladorJuego.setIntervaloSimulacion(15);
 		
 	}
-	
-	/*private void agregarVistaDeEfectos(Ciudad ciudad) {
-		Iterator<Efecto> iEfecto = ciudad.listaDeEfectos();
-		int i= 1;
-		while(iEfecto.hasNext()){
-			Efecto efecto = iEfecto.next();
-			VistaDeEfecto vistaDeEfecto = new VistaDeEfecto(efecto);
-			vistaDeEfecto.setPosicionable(efecto);
-			this.controladorJuego.agregarDibujable(vistaDeEfecto);
-		}
-	}*/
 
 	public void comenzar(){
 		controladorJuego.comenzarJuegoAsyn();	

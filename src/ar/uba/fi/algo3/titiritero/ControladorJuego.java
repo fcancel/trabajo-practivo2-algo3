@@ -120,6 +120,8 @@ public class ControladorJuego implements Runnable {
 			vistaDeEfecto.setPosicionable(efecto);
 			vistaDeEfecto.dibujar(this.superficieDeDibujo);
 		}
+		Dibujable meta = iterador.next();
+		meta.dibujar(this.superficieDeDibujo);
 		Dibujable vehiculo = iterador.next();
 		vehiculo.dibujar(this.superficieDeDibujo);
 		this.superficieDeDibujo.actualizar();
