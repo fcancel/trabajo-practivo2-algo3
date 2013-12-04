@@ -1,5 +1,8 @@
 package fiuba.algo3.modelo.efectosYSorpresas;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+
 import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -8,7 +11,9 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class SorpresaFavorable implements Efecto {
 
+	@XmlElement(name="posicion")
 	private Posicion posicion;
+	@XmlAttribute(name="direccionDeImagen")
 	private String direccionDeImagen="/res/sorpresa.png";
 
 	private void restarMovimientos(Vehiculo vehiculo){

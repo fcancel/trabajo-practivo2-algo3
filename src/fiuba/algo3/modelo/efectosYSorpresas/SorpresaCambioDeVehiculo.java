@@ -1,5 +1,8 @@
 package fiuba.algo3.modelo.efectosYSorpresas;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+
 import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -10,8 +13,10 @@ public class SorpresaCambioDeVehiculo implements Efecto {
 
 	//private boolean fueAbierto = false;
 
-
+	@XmlElement(name="posicion")
 	private Posicion posicion;
+	@XmlAttribute(name="direccionDeImagen")
+
 	private String direccionDeImagen="/res/sorpresa.png";
 
 	@Override

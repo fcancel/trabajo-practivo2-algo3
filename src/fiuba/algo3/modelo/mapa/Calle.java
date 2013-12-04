@@ -22,9 +22,7 @@ public class Calle {
     @XmlAttribute (name="transitable")
     private boolean transitable;
     private Vehiculo vehiculo;
-	@XmlElement(name="sorpresa")
     private Efecto sorpresa;
-	@XmlElement(name="obstaculo")
 	private Efecto obstaculo;
 
     public Calle(){
@@ -151,10 +149,12 @@ public class Calle {
 		this.vehiculo = null;
 	}
 
+	@XmlElement(name="obstaculo")
 	public Efecto getObstaculo() {
 		return this.obstaculo;
 	}
 
+	@XmlElement(name="sorpresa")
 	public Efecto getSorpresa() {
 		return this.sorpresa;
 	}
