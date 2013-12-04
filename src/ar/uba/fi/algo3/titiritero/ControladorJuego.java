@@ -109,11 +109,10 @@ public class ControladorJuego implements Runnable {
 	}
  
 	private void dibujar() {
+		
 		Iterator<Dibujable> iterador = dibujables.iterator();
-		while(iterador.hasNext()){
-			Dibujable dibujable = iterador.next();
-			dibujable.dibujar(this.superficieDeDibujo);
-		}
+		Dibujable mapa = iterador.next();
+		mapa.dibujar(this.superficieDeDibujo);
 		Iterator<Efecto> iEfecto = this.ciudad.listaDeEfectos();
 		while(iEfecto.hasNext()){
 			Efecto efecto = iEfecto.next();
@@ -121,6 +120,8 @@ public class ControladorJuego implements Runnable {
 			vistaDeEfecto.setPosicionable(efecto);
 			vistaDeEfecto.dibujar(this.superficieDeDibujo);
 		}
+		Dibujable vehiculo = iterador.next();
+		vehiculo.dibujar(this.superficieDeDibujo);
 		this.superficieDeDibujo.actualizar();
 	}
 	
