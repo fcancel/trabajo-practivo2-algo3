@@ -33,6 +33,7 @@ public class VistaJuego implements ObjetoVivo{
 	private ControladorJuego controladorJuego = null;
 	private GPS gps;
 	private VistaDeVehiculo vistaDeVehiculo;
+        private PantallaDelJuego pantallita;
 	private ContadorDeCantidadDeMovimientos observador;
 	private int cantidadDeMovientos=0;
 	private int maximoDeMovimientos;
@@ -44,7 +45,7 @@ public class VistaJuego implements ObjetoVivo{
 		gps = new GPS();
 		
 		
-		gps.empezarJuego(vehiculoRecibido, dificultadRecibida,jugadorRecibido);
+		gps.empezarJuego(vehiculoRecibido, dificultadRecibida, jugadorRecibido, this);
 		Vehiculo vehiculo = gps.getVehiculo();
 		
 		this.maximoDeMovimientos= dificultadRecibida.getMaximoDeMovimientos();
@@ -81,11 +82,17 @@ public class VistaJuego implements ObjetoVivo{
 		controladorJuego.comenzarJuegoAsyn();	
 	}
 	
-	/*public void detener() {
-		controladorJuego.detenerJuego();
+	public void detener() {
+            
+                this.dejarDeMostrar();
+		controladorJuego.detenerJuego();                
 	}
+        
+        private void dejarDeMostrar(){
+            this.pantallita.setVisible(false);
+        }
 	
-	
+	/*
 	public void pausar() {
 		controladorJuego.detenerJuego();
 		
@@ -103,6 +110,7 @@ public class VistaJuego implements ObjetoVivo{
 
 	public void agregarObservadorDeMovimientos(PantallaDelJuego pantallaDelJuego) {
 		this.observador=pantallaDelJuego;
+                this.pantallita = pantallaDelJuego;
 	}
 
 	@Override
@@ -117,4 +125,6 @@ public class VistaJuego implements ObjetoVivo{
 			this.observador.maximoDeMovimientos(this.maximoDeMovimientos);
 		}
 	}
+        
+        
 }

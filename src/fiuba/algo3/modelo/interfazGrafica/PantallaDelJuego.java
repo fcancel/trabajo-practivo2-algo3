@@ -17,6 +17,7 @@ import fiuba.algo3.controlador.ContadorDeCantidadDeMovimientos;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
+import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -36,10 +37,12 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	private JLabel jLabelMovimientosActuales = null;
 	private JLabel jLabel = null;
 	private JLabel jLabel1 = null;  
+        
 
 	private void comenzar(EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
             
         this.vista = new VistaJuego(this.panel, vehiculoRecibido, dificultadRecibida, jugadorRecibido);		
+                
 		this.vista.agregarControladorDelTeclado(panel);
 		this.vista.agregarObservadorDeMovimientos(this);
 		this.vista.comenzar();                
@@ -72,7 +75,8 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 				} catch (JAXBException e) {
 					e.printStackTrace();
 				}
-
+                               
+                              
 			}
 		});
 	}
@@ -94,7 +98,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 		this.setTitle("GPS Challenge");
 		this.addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosing(java.awt.event.WindowEvent e) {
-				System.out.println("windowClosing()"); // TODO Auto-generated Event stub windowClosing()
+				System.out.println("windowClosing()");
 				System.exit(NORMAL);
 			}
 		});
@@ -158,11 +162,16 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	@Override
 	public void seActualizaronLosMovimientos(int movimientosTotales) {
 		this.jLabelMovimientosActuales.setText(String.valueOf(movimientosTotales));
+                
 	}
 
 	@Override
 	public void maximoDeMovimientos(int movimientosMaximo) {
 		this.jLabelMovimientos.setText(String.valueOf(movimientosMaximo));
 	}
+
+    private void getGPS() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 } 
