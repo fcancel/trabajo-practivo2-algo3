@@ -1,7 +1,6 @@
 package fiuba.algo3.controlador;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import ar.uba.fi.algo3.titiritero.KeyPressedObservador;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
@@ -40,11 +39,9 @@ public class ControladorTeclado implements KeyPressedObservador {
 			} catch (JuegoNoIniciado e1) {
 				
 			} catch (MovimientoInvalido e1) {
-				// TODO Auto-generated catch block
-				
+
 			} catch (JuegoFinalizado e1) {
-				// TODO Auto-generated catch block
-				
+	
 			};
 
 		}
