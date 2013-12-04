@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
@@ -95,6 +96,7 @@ public class GPS {
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
 		this.movimientos = MOVIMIENTO_INICIAL;
+                PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
 		
 	}
 

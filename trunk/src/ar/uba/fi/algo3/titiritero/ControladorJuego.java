@@ -9,6 +9,7 @@ import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.vista.VistaDeEfecto;
 import ar.uba.fi.algo3.titiritero.audio.Reproductor;
+import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
 
 /**
  * @author NicoPaez
@@ -82,6 +83,7 @@ public class ControladorJuego implements Runnable {
 		this.estaEnEjecucion = false;
 		if(reproductor!=null)
 			this.reproductor.apagar();
+               
 	}
 	
 	public void agregarObjetoVivo(ObjetoVivo objetoVivo){
