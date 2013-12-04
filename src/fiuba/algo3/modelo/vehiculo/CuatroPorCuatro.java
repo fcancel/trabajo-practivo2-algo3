@@ -22,5 +22,10 @@ public class CuatroPorCuatro implements EstadoVehiculo{
 		// TODO Auto-generated method stub
 		return imagen;
 	}
-    
+ 
+        @Override
+        public String toString(){
+            
+            return "4x4";
+        }
 }

@@ -41,5 +41,11 @@ public class Dificil implements Dificultad {
 		String direccionDelMapa = this.MAPADIFICIL+  Integer.toString(numeroDeMapa) +".xml"; 
 		return direccionDelMapa;
 	}
+        
+        @Override
+        public String toString(){
+            
+            return "Difícil";
+        }
 	
 }

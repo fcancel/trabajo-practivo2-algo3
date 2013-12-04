@@ -25,4 +25,9 @@ public class Auto implements EstadoVehiculo{
 		return imagen;
 	}
     
+        @Override
+        public String toString(){
+            
+            return "Auto";
+        }
 }

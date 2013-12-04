@@ -23,6 +23,7 @@ import fiuba.algo3.vista.VistaDeVehiculo;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.KeyPressedController;
+import fiuba.algo3.modelo.vehiculo.Moto;
 
 
 public class VistaJuego{
@@ -31,38 +32,24 @@ public class VistaJuego{
 	private GPS gps;
 	private VistaDeVehiculo vistaDeVehiculo;
 	
-	public VistaJuego(SuperficieDeDibujo superficieDeDibujo) throws JuegoNoIniciado, JAXBException{
+	public VistaJuego(SuperficieDeDibujo superficieDeDibujo, EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
 		
-		//Creo el Controlador del juego y le seteo la superficie donde se mostraran los dibujables
-		
-		//new PantallaDeInicio().setVisible(true);
-		
+	
 		gps = new GPS();
 		
 		
-		//Habira que crar un menu que retorne el estado seleccionado
-		//Como por Ej
-		//EstadoVehiculo estadoDelVehiculo = IGObtenerEstado.estado();
-		EstadoVehiculo estadoDelVehiculo = new Auto();
+		gps.empezarJuego(vehiculoRecibido, dificultadRecibida,jugadorRecibido);
+		Vehiculo vehiculo = gps.getVehiculo();
 		
-		
-		//Habira que crar un menu que retorne el estado seleccionado
-		//Como por Ej
-		//Dificultad dificultad = IGObtenerDificultad.dificultad();
-		Dificultad dificultad = new Dificil();
-		
-		gps.empezarJuego(estadoDelVehiculo, dificultad,new Jugador("tomas"));
-		Vehiculo auto = gps.getVehiculo();
-		
-		ControladorTeclado CT = new ControladorTeclado(auto);
+		ControladorTeclado CT = new ControladorTeclado(vehiculo);
 		
 		controladorJuego = new ControladorJuego(true);
 		controladorJuego.setSuperficieDeDibujo(superficieDeDibujo);
 
 		
 		vistaDeVehiculo = new VistaDeVehiculo();
-		vistaDeVehiculo.agregarVehiculo(auto);
-		vistaDeVehiculo.setPosicionable(auto);
+		vistaDeVehiculo.agregarVehiculo(vehiculo);
+		vistaDeVehiculo.setPosicionable(vehiculo);
 		
 		VistaDeCiudad vistaDeCiudad = new VistaDeCiudad(); 
 		vistaDeCiudad.setPosicionable(vistaDeCiudad);

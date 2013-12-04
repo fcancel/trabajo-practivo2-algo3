@@ -39,6 +39,10 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
         botonAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
+        setBounds(new java.awt.Rectangle(500, 200, 900, 550));
+        setPreferredSize(new java.awt.Dimension(900, 558));
+        setResizable(false);
 
         titulo.setFont(new java.awt.Font("Tahoma", 0, 31)); // NOI18N
         titulo.setText("Elija un nombre");
@@ -98,7 +102,7 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
                         .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(titulo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
                         .addComponent(mensajeJugadorYaExistente)
                         .addGap(18, 18, 18)
                         .addComponent(nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,6 +114,7 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {guardarNombre, mensajeJugadorYaExistente, nombreUsuario});
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void nombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreUsuarioActionPerformed
