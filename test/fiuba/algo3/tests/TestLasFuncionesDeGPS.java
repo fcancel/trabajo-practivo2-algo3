@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 
+import javax.xml.bind.JAXBException;
+
 import fiuba.algo3.modelo.dificultad.Dificil;
 import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.dificultad.Facil;
@@ -39,7 +41,7 @@ public class TestLasFuncionesDeGPS {
     }
 	
 	@Test
-	public void alEmpezarJuegoElJuegoEstaEnMarcha(){
+	public void alEmpezarJuegoElJuegoEstaEnMarcha() throws JAXBException{
 		
 		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 		
@@ -54,7 +56,7 @@ public class TestLasFuncionesDeGPS {
 	}
 	
 	@Test
-    public void alTerminarElJuegoEsteNoEstaEnMarcha(){
+    public void alTerminarElJuegoEsteNoEstaEnMarcha() throws JAXBException{
 		
 		eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
 		
@@ -72,7 +74,7 @@ public class TestLasFuncionesDeGPS {
 	
 	
 	@Test
-    public void alTerminarElJuegoYPedirVehiculoReciboExcepcionDeJuegoNoIniciado(){
+    public void alTerminarElJuegoYPedirVehiculoReciboExcepcionDeJuegoNoIniciado() throws JAXBException{
 			
         try{
         	
@@ -96,7 +98,7 @@ public class TestLasFuncionesDeGPS {
     }
 	
 	@Test
-    public void alTerminarElJuegoYPedirCiudadReciboExcepcionDeJuegoNoIniciado(){
+    public void alTerminarElJuegoYPedirCiudadReciboExcepcionDeJuegoNoIniciado() throws JAXBException{
 			
         try{
         	
@@ -175,7 +177,7 @@ public class TestLasFuncionesDeGPS {
     
     //Faltan definir los limite de movimientos
     @Test
-    public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer80(){
+    public void testAlEmpezarUnaPartidaEnFacilElLimiteDeMovimientosDebeSer80() throws JAXBException{
         
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -189,7 +191,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void testAlEmpezarUnaPartidaEnModeradoElLimiteDeMovimientosDebeSer60(){
+    public void testAlEmpezarUnaPartidaEnModeradoElLimiteDeMovimientosDebeSer60() throws JAXBException{
         
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -203,7 +205,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void testAlEmpezarUnaPartidaEnDificilElLimiteDeMovimientosDebeSer40(){
+    public void testAlEmpezarUnaPartidaEnDificilElLimiteDeMovimientosDebeSer40() throws JAXBException{
         
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -218,7 +220,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void testAlTerminarUnaPartidaEnFacilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+    public void testAlTerminarUnaPartidaEnFacilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion, JAXBException{
         
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -235,7 +237,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void testAlTerminarUnaPartidaEnModeradoLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+    public void testAlTerminarUnaPartidaEnModeradoLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion, JAXBException{
         
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -252,7 +254,7 @@ public class TestLasFuncionesDeGPS {
     }
 
     @Test
-    public void testAlTerminarUnaPartidaEnDificilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion{
+    public void testAlTerminarUnaPartidaEnDificilLaPuntuacionDebeSerCorrecta() throws NoExisteEsaPosicion, JAXBException{
 
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -269,7 +271,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void alTerminarElJuegoLaPuntuacionDebeSerAgregada() throws NoExisteEsaPosicion{
+    public void alTerminarElJuegoLaPuntuacionDebeSerAgregada() throws NoExisteEsaPosicion, JAXBException{
 
 
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
@@ -287,7 +289,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void alJugarDosPartidasDeboTenerDosPuntuaciones() throws NoExisteEsaPosicion{
+    public void alJugarDosPartidasDeboTenerDosPuntuaciones() throws NoExisteEsaPosicion, JAXBException{
     		
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	
@@ -311,7 +313,7 @@ public class TestLasFuncionesDeGPS {
     }
     
     @Test
-    public void alIniciarUnGPSTerminarloYCrearUnoNuevoLasPuntuacionesDebenPersistir() throws NoExisteEsaPosicion{
+    public void alIniciarUnGPSTerminarloYCrearUnoNuevoLasPuntuacionesDebenPersistir() throws NoExisteEsaPosicion, JAXBException{
 		
     	eliminarArchivosDePruebas.eliminar("puntuaciones\\puntuacionesAltas.dat");
     	

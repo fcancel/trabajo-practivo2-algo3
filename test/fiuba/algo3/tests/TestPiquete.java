@@ -2,6 +2,8 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.dificultad.Facil;
@@ -23,7 +25,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class TestPiquete {
 
 	@Test
-	public void alCaerUnaMotoEnUnPiqueteDebeSumarDosMovimientos() throws JuegoNoIniciado {
+	public void alCaerUnaMotoEnUnPiqueteDebeSumarDosMovimientos() throws JuegoNoIniciado, JAXBException {
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -39,7 +41,7 @@ public class TestPiquete {
 	}
 	
 	@Test
-	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+	public void alCaerUnAutoEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -59,24 +61,24 @@ public class TestPiquete {
 		calleDestino.setObstaculo(piquete);
 		calleDestino.setSorpresa(null);
 		
-		// El vehiculo se ubicara en la posicion  (1,7)
+		// El vehiculo se ubicara en la posicion  (1,11)
 		Posicion posicion = auto.getPosicion();
 		
 		//verifico posicion inicial
 		assertEquals(1,posicion.getX());
-		assertEquals(7,posicion.getY());
+		assertEquals(11,posicion.getY());
 				
 		auto.moverDerecha();
 				
 		// la auto retrocede una posicion
 		assertEquals(1,posicion.getX());
-		assertEquals(7,posicion.getY());
+		assertEquals(11,posicion.getY());
 		
 		
 	}
 	
 	@Test
-	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado{
+	public void alCaerUnaCuatroPorCuatroEnUnPiqueteDebeVolverALaPosicionAnterior() throws JuegoNoIniciado, MovimientoInvalido, JuegoFinalizado, JAXBException{
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -96,18 +98,18 @@ public class TestPiquete {
 		calleDestino.setObstaculo(piquete);
 		calleDestino.setSorpresa(null);
 		
-		// El vehiculo se ubicara en la posicion  (1,7)
+		// El vehiculo se ubicara en la posicion  (1,11)
 		Posicion posicion = cuatroPorCuatro.getPosicion();
 		
 		//verifico posicion inicial
 		assertEquals(1,posicion.getX());
-		assertEquals(7,posicion.getY());
+		assertEquals(11,posicion.getY());
 		
 		cuatroPorCuatro.moverDerecha();
 		
 		// la 4X4 retrocede una posicion
 		assertEquals(1,posicion.getX());
-		assertEquals(7,posicion.getY());
+		assertEquals(11,posicion.getY());
 		
 	}
 

@@ -2,6 +2,8 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.dificultad.Facil;
@@ -20,7 +22,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class TestSorpresaCambioDeVehiculo {
 	
 	@Test
-	public void alCaerUnaMotoEnCambioDeVehiculoDebeCambiarAAuto() throws JuegoNoIniciado {
+	public void alCaerUnaMotoEnCambioDeVehiculoDebeCambiarAAuto() throws JuegoNoIniciado, JAXBException {
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("juan");
@@ -43,7 +45,7 @@ public class TestSorpresaCambioDeVehiculo {
 	}
 	
 	@Test
-	public void alCaerUnAutoEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado {
+	public void alCaerUnAutoEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado, JAXBException {
 		
 		
 		GPS gps = new GPS();
@@ -67,7 +69,7 @@ public class TestSorpresaCambioDeVehiculo {
 	}
 	
 	@Test
-	public void alCaerUnaCuatroPorCuatroEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado {
+	public void alCaerUnaCuatroPorCuatroEnCambioDeVehiculoDebeCambiarACuatroPorCuatro() throws JuegoNoIniciado, JAXBException {
 		
 		GPS gps = new GPS();
 		Jugador jugador = new Jugador("tomas");

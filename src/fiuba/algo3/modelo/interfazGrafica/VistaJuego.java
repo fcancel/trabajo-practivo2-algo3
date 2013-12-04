@@ -2,6 +2,8 @@ package fiuba.algo3.modelo.interfazGrafica;
 
 import java.awt.Panel;
 
+import javax.xml.bind.JAXBException;
+
 import fiuba.algo3.modelo.controlador.ControladorTeclado;
 import fiuba.algo3.modelo.dificultad.Dificil;
 import fiuba.algo3.modelo.dificultad.Dificultad;
@@ -24,7 +26,7 @@ public class VistaJuego{
 	private GPS gps;
 	private VistaDeVehiculo vistaDeVehiculo;
 	
-	public VistaJuego(SuperficieDeDibujo superficieDeDibujo) throws JuegoNoIniciado{
+	public VistaJuego(SuperficieDeDibujo superficieDeDibujo) throws JuegoNoIniciado, JAXBException{
 		
 		//Creo el Controlador del juego y le seteo la superficie donde se mostraran los dibujables
 		

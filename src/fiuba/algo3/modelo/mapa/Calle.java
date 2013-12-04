@@ -102,12 +102,14 @@ public class Calle {
     	};
     }
 
-	public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
-		if (this.tengoSorpresa())
-			vehiculo.aceptarEfecto(this.sorpresa);
-                if(this.tengoObstaculo())
-                        vehiculo.aceptarEfecto(this.obstaculo);
+    public void setVehiculo(Vehiculo vehiculo) {
+    	this.vehiculo = vehiculo;
+    	if (this.tengoSorpresa()){
+    		vehiculo.aceptarEfecto(this.sorpresa);
+    		this.sorpresa= null;
+    	}
+    	if(this.tengoObstaculo())
+    		vehiculo.aceptarEfecto(this.obstaculo);
     }
 	
     public void setSorpresa(Efecto sorpresa) {
@@ -126,7 +128,7 @@ public class Calle {
     public boolean tengoSorpresa(){
     	return (sorpresa != null);
     }
-    
+      
     public boolean tengoObstaculo(){
     	return (obstaculo != null);
     }

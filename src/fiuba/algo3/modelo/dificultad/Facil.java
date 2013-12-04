@@ -1,11 +1,15 @@
 package fiuba.algo3.modelo.dificultad;
 
+import java.util.Random;
+
 
 public class Facil implements Dificultad{
 
+	private static String MAPAFACIL = ".\\Mapas xml\\EscenarioDificil";
+	//private static String MAPAFACIL = "/Mapas xml/EscenarioDificil";
 	private static int MOVIMIENTOS = 80;
-	private static int FILAS = 15;
-	private static int COLUMNAS = 15;
+	private static int FILAS = 25;
+	private static int COLUMNAS = 25;
 	private static int MULTIPLICADOR = 1;
 	
 	
@@ -30,4 +34,12 @@ public class Facil implements Dificultad{
 		
 	}
 
+	@Override
+	public String getMapa() {
+
+		Random rnd = new Random();
+		int numeroDeMapa = (int)(rnd.nextDouble() * 9 + 1);  
+		String direccionDelMapa = this.MAPAFACIL+  Integer.toString(numeroDeMapa) +".XML"; 
+		return direccionDelMapa;
+	}
 }

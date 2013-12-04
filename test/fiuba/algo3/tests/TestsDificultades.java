@@ -16,8 +16,8 @@ public class TestsDificultades {
 		
 		Dificultad facil = new Facil();
 		
-		assertEquals(15,facil.getFilas());
-		assertEquals(15,facil.getColumnas());
+		assertEquals(25,facil.getFilas());
+		assertEquals(25,facil.getColumnas());
 		assertEquals(1,facil.getMultiplicador());
 		assertEquals(80,facil.getMaximoDeMovimientos());
 		
@@ -28,8 +28,8 @@ public class TestsDificultades {
 		
 		Dificultad moderado = new Moderado();
 		
-		assertEquals(19,moderado.getFilas());
-		assertEquals(19,moderado.getColumnas());
+		assertEquals(25,moderado.getFilas());
+		assertEquals(25,moderado.getColumnas());
 		assertEquals(2,moderado.getMultiplicador());
 		assertEquals(60,moderado.getMaximoDeMovimientos());
 		

@@ -6,10 +6,11 @@ import fiuba.algo3.modelo.serializacion.AdaptadorDeInterfaces;
 
 @XmlJavaTypeAdapter(AdaptadorDeInterfaces.class)
 public interface Dificultad {
-	
+
 	public int getFilas();
 	public int getColumnas();
 	public int getMultiplicador();
 	public int getMaximoDeMovimientos();
+	public String getMapa();
 	
 }
