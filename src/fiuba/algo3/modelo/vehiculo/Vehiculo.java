@@ -166,16 +166,16 @@ public class Vehiculo implements Posicionable {
 
 
 	@Override
-	public int getX() {
-		
-		return ((this.posicion.getX()*500)/25);
+	public int getX() {	
+		//return ((this.posicion.getX()*500)/25);
+		return (this.posicion.getX()*20+12);
 	}
 
 
 	@Override
 	public int getY() {
-		// TODO Auto-generated method stub
-		return ((this.posicion.getY()*500)/25);
+		//return ((this.posicion.getY()*500)/25);
+		return (this.posicion.getY()*20+12);
 	}
 
 	public Direccion getDireccion(){
