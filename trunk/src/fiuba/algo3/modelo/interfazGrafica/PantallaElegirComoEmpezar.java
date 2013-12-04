@@ -1,10 +1,23 @@
 package fiuba.algo3.modelo.interfazGrafica;
 
+import fiuba.algo3.modelo.dificultad.Dificil;
+import fiuba.algo3.modelo.dificultad.Dificultad;
+import fiuba.algo3.modelo.dificultad.Facil;
+import fiuba.algo3.modelo.dificultad.Moderado;
 import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Moto;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class PantallaElegirComoEmpezar extends javax.swing.JFrame {
 private final Jugador jugador;
+private EstadoVehiculo[] estadoVehiculos;
+private Dificultad[] dificultades;
     
     public PantallaElegirComoEmpezar(Jugador jugadorRecibido) {
         this.jugador = jugadorRecibido;
@@ -25,10 +38,16 @@ private final Jugador jugador;
         BotonComenzarAJugar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
+        setPreferredSize(new java.awt.Dimension(900, 558));
+        setResizable(false);
 
-        comboBoxDificultad.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fácil", "Moderado", "Difícil" }));
+        Dificultad[] dificultades = { new Facil(), new Moderado(), new Dificil()};
+        comboBoxDificultad.setModel(new javax.swing.DefaultComboBoxModel(dificultades));
 
-        comboBoxVehiculoParaEmpezar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Moto", "4x4", "Auto" }));
+        EstadoVehiculo[] vehiculos = {new Auto(), new CuatroPorCuatro(), new Moto()};
+        this.estadoVehiculos = vehiculos;
+        comboBoxVehiculoParaEmpezar.setModel(new javax.swing.DefaultComboBoxModel(vehiculos));
 
         labelNombreJugador.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelNombreJugador.setText("Jugador:");
@@ -52,12 +71,6 @@ private final Jugador jugador;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(comboBoxDificultad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
-                .addComponent(comboBoxVehiculoParaEmpezar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170))
-            .addGroup(layout.createSequentialGroup()
                 .addComponent(labelNombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -68,6 +81,12 @@ private final Jugador jugador;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BotonComenzarAJugar)
                 .addGap(387, 387, 387))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(comboBoxDificultad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 434, Short.MAX_VALUE)
+                .addComponent(comboBoxVehiculoParaEmpezar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(170, 170, 170))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,6 +104,7 @@ private final Jugador jugador;
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
@@ -95,8 +115,9 @@ private final Jugador jugador;
 
     private void BotonComenzarAJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonComenzarAJugarActionPerformed
 
+                
         PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
-        pantallaDelJuego.mainE();
+        pantallaDelJuego.comenzarMiJuego( (EstadoVehiculo) comboBoxVehiculoParaEmpezar.getSelectedItem(), (Dificultad) comboBoxDificultad.getSelectedItem(), this.jugador);
         this.show(false);
     }//GEN-LAST:event_BotonComenzarAJugarActionPerformed
 

@@ -64,6 +64,9 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
         avisoPuntuacionesVacias = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
+        setPreferredSize(new java.awt.Dimension(900, 558));
+        setResizable(false);
 
         tituloDeMaximasPuntuaciones.setFont(new java.awt.Font("Ravie", 0, 31)); // NOI18N
         tituloDeMaximasPuntuaciones.setText("Máximas Puntuaciones");
@@ -139,7 +142,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
                                 .addComponent(jugadorMaximo3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(213, 213, 213)
                                 .addComponent(puntajeMaximo3)))
-                        .addContainerGap(209, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +157,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tituloDeMaximasPuntuaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                .addComponent(tituloDeMaximasPuntuaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jugadorMaximo1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,6 +186,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed

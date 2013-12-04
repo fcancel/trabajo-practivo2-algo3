@@ -40,4 +40,10 @@ public class Moderado  implements Dificultad {
 		String direccionDelMapa = this.MAPAMODERADO+  Integer.toString(numeroDeMapa) +".XML"; 
 		return direccionDelMapa;
 	}
+        
+        @Override
+        public String toString(){
+            
+            return "Moderado";
+        }
 }

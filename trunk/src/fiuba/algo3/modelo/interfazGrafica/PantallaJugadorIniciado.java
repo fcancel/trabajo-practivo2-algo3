@@ -40,6 +40,9 @@ private final Jugador jugador;
         botonPuntuacionesAltas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
+        setPreferredSize(new java.awt.Dimension(900, 558));
+        setResizable(false);
 
         labelNombreJugador.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelNombreJugador.setText("Jugador:");
@@ -78,7 +81,7 @@ private final Jugador jugador;
                 .addComponent(labelNombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
                 .addComponent(tituloDelJuego)
-                .addGap(0, 325, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -104,12 +107,13 @@ private final Jugador jugador;
                 .addComponent(botonContinuarPartida)
                 .addGap(18, 18, 18)
                 .addComponent(botonPuntuacionesAltas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed

@@ -39,6 +39,10 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         botonPuntuacionesAltas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GPS Challenge");
+        setBounds(new java.awt.Rectangle(500, 200, 900, 550));
+        setForeground(java.awt.Color.lightGray);
+        setResizable(false);
 
         botonCrearNuevoJugador.setFont(new java.awt.Font("Tahoma", 1, 29)); // NOI18N
         botonCrearNuevoJugador.setText("Crear nuevo jugador");
@@ -88,7 +92,7 @@ public class PantallaDeInicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(botonPuntuacionesAltas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
                         .addComponent(botonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,6 +125,7 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botonCrearNuevoJugador, botonPuntuacionesAltas, botonYaTengoUsuario});
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCrearNuevoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearNuevoJugadorActionPerformed
