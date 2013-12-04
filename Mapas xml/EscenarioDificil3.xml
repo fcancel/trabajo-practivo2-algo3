@@ -3,292 +3,12 @@
     <calle>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
                 <probabilidad xsi:type="probabilidadEquiprobable"/>
             </obstaculo>
         </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
@@ -296,334 +16,8 @@
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
         </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
@@ -635,270 +29,8 @@
         </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
         </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
@@ -916,10 +48,92 @@
             <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
         </item>
         <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
         </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
@@ -928,19 +142,109 @@
     <calle>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
         </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
         </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
@@ -949,6 +253,90 @@
                 <probabilidad xsi:type="probabilidadEquiprobable"/>
             </obstaculo>
         </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
@@ -957,74 +345,68 @@
         <item meta="false" transitable="true">
             <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
         </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
         </item>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
                 <probabilidad xsi:type="probabilidadEquiprobable"/>
             </obstaculo>
         </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-    </calle>
-    <calle>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
-                <probabilidad xsi:type="probabilidadEquiprobable"/>
-            </obstaculo>
-        </item>
-        <item meta="false" transitable="false"/>
-    </calle>
-    <calle>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
-        </item>
-        <item meta="false" transitable="true"/>
-        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
@@ -1034,6 +416,102 @@
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
@@ -1043,9 +521,147 @@
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
         </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true">
             <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
         </item>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
@@ -1057,24 +673,26 @@
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
     </calle>
     <calle>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
-        </item>
-        <item meta="false" transitable="false"/>
-        <item meta="false" transitable="true">
-            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
-        </item>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
@@ -1088,9 +706,403 @@
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
         <item meta="false" transitable="false"/>
         <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item  transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable"/>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo"/>
+        </item>
         <item meta="false" transitable="false"/>
     </calle>
 </ciudad>

@@ -50,7 +50,7 @@ public class Calle {
     	transitable = true;
     	sorpresa = null;
     	obstaculo = null;
-    	int objeto = (int)(rnd.nextDouble() * 7 + 1);  
+    	int objeto = (int)(rnd.nextDouble() * 10 + 1);  
     	this.crearObjetoEnLaCalle(objeto);
     }
     
