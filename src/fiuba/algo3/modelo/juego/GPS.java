@@ -136,6 +136,17 @@ public class GPS {
 		this.inicializarJuego(estadoInicial,dificultad.getFilas(),dificultad.getColumnas());
 
 	}
+        
+        //Solo para las pruebas que no necesitan de la vista
+        public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador) throws JAXBException{
+		
+                
+		this.jugador=jugador;
+		this.dificultad = dificultad;
+		this.nick = this.jugador.getNombre();
+		this.inicializarJuego(estadoInicial,dificultad.getFilas(),dificultad.getColumnas());
+
+	}
 	
 	private void inicializarJuego(EstadoVehiculo estadoInicial, int filas, int columnas) throws JAXBException {
 		
