@@ -146,6 +146,7 @@ public class Vehiculo implements Posicionable {
 		if(ciudad.esValidaLaPosicion(dondeQuieroIr)){
 			ciudad.colocarVehiculo(dondeQuieroIr);
 			this.posicion = dondeQuieroIr;
+			this.sumarMovimiento(1);
 		}
 
 	}
