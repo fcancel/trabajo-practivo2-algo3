@@ -158,7 +158,7 @@ public class Ciudad {
 		Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(dondeQuieroIr);
 		this.colocarVehiculo(calleDondeQuieroMoverme);
 		
-		if(calleDondeQuieroMoverme.sosMeta()){
+		if(calleDondeQuieroMoverme.sosMeta() || this.gps.getLimiteDeMovimientos()<this.gps.getMovimientos()){
 			this.gps.terminarJuego();
 		}
 		
