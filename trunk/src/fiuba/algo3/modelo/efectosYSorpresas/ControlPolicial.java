@@ -1,5 +1,6 @@
 package fiuba.algo3.modelo.efectosYSorpresas;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
 import fiuba.algo3.modelo.vehiculo.Auto;
@@ -12,7 +13,9 @@ public class ControlPolicial implements Efecto {
 
 	@XmlElement(name="probabilidad")
 	private Probabilidad probabilidad;
+	@XmlElement(name="posicion")
 	private Posicion posicion;
+	@XmlAttribute(name="direccionDeImagen")
 	private String direccionDeImagen="/res/policia.png";
 	
 	public ControlPolicial(){
