@@ -11,11 +11,7 @@ import fiuba.algo3.vista.VistaDeEfecto;
 import ar.uba.fi.algo3.titiritero.audio.Reproductor;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
 
-/**
- * @author NicoPaez
- * Esta clase es la encargada de manejar todo el gameloop. Basicamente tiene una lista
- * de ObjetosVivos y una Dibujables que son recorridas en cada gameloop.
- */
+
 public class ControladorJuego implements Runnable {
 	
 	public ControladorJuego(boolean activarReproductor){

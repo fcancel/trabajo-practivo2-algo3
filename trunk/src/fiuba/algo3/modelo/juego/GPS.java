@@ -6,6 +6,7 @@
 
 package fiuba.algo3.modelo.juego;
 
+import com.sun.org.apache.xerces.internal.util.DOMUtil;
 import java.io.File;
 
 import javax.xml.bind.JAXBException;
@@ -19,6 +20,7 @@ import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
+import fiuba.algo3.modelo.interfazGrafica.VistaJuego;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
@@ -27,6 +29,8 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 @XmlRootElement
 
 public class GPS {    
+    
+    private VistaJuego vistaJuego;
     private static int MOVIMIENTO_INICIAL = 0;
 
 	@XmlElement(name="dificultad")
@@ -96,6 +100,7 @@ public class GPS {
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
 		this.movimientos = MOVIMIENTO_INICIAL;
+                this.vistaJuego.detener();                
                 PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
 		
 	}
@@ -122,8 +127,9 @@ public class GPS {
 		
 	}
 
-	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador) throws JAXBException{
+	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador, VistaJuego vistaJuego) throws JAXBException{
 		
+                this.vistaJuego = vistaJuego;
 		this.jugador=jugador;
 		this.dificultad = dificultad;
 		this.nick = this.jugador.getNombre();
