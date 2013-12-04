@@ -159,6 +159,7 @@ public class Vehiculo implements Posicionable {
 
 		try{
 
+			this.sumarMovimiento(-2);
 			this.retroceder.realizar();
 
 		}catch (JuegoNoIniciado | MovimientoInvalido | JuegoFinalizado e) {}
@@ -168,14 +169,12 @@ public class Vehiculo implements Posicionable {
 
 	@Override
 	public int getX() {	
-		//return ((this.posicion.getX()*500)/25);
 		return (this.posicion.getX()*20+12);
 	}
 
 
 	@Override
 	public int getY() {
-		//return ((this.posicion.getY()*500)/25);
 		return (this.posicion.getY()*20+12);
 	}
 
