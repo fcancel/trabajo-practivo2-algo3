@@ -17,7 +17,7 @@ import fiuba.algo3.controlador.ContadorDeCantidadDeMovimientos;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
-import fiuba.algo3.modelo.juego.GPS;
+//import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
@@ -170,8 +170,8 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 		this.jLabelMovimientos.setText(String.valueOf(movimientosMaximo));
 	}
 
-    private void getGPS() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //private void getGPS() {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   // }
 
 } 
