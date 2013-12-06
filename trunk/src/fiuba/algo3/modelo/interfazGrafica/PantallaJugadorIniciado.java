@@ -10,13 +10,18 @@ import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.Circulo;
 import ar.uba.fi.algo3.titiritero.vista.Ventana;
+import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
+import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 
 import java.awt.event.ActionEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.xml.bind.JAXBException;
 
 
 public class PantallaJugadorIniciado extends javax.swing.JFrame {
@@ -69,7 +74,13 @@ private final Jugador jugador;
         botonContinuarPartida.setText("Continuar partida");
         botonContinuarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonContinuarPartidaActionPerformed(evt);
+                try {
+					botonContinuarPartidaActionPerformed(evt);
+				} catch (JAXBException e) {
+					e.printStackTrace();
+				} catch (JuegoNoIniciado e) {
+					e.printStackTrace();
+				}
             }
         });
 
@@ -137,8 +148,11 @@ private final Jugador jugador;
         
     }//GEN-LAST:event_botonNuevaPartidaActionPerformed
 
-    private void botonContinuarPartidaActionPerformed(ActionEvent evt) {
-		// TODO Auto-generated method stub
+    private void botonContinuarPartidaActionPerformed(ActionEvent evt) throws JAXBException, JuegoNoIniciado {
+    	PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
+    	GPS gps = new GPS();
+    	gps.cargarPartida("C:\\"+this.jugador.getNombre()+".xml");
+    	pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador);
 		
 	}
     

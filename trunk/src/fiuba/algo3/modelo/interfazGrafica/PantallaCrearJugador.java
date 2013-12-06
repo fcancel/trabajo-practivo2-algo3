@@ -15,9 +15,6 @@ import java.util.logging.Logger;
         
 public class PantallaCrearJugador extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CrearJugador
-     */
     public PantallaCrearJugador() {
         initComponents();
         this.show();

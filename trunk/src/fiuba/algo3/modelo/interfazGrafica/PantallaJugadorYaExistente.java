@@ -14,10 +14,6 @@ import java.util.Iterator;
 
 import javax.swing.ComboBoxModel;
 
-/**
- *
- * @author Cancel
- */
 public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
     private Jugadores jugadores;

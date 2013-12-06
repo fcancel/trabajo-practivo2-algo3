@@ -10,10 +10,6 @@ import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Cancel
- */
 public class PantallaDeInicio extends javax.swing.JFrame {
 
     /**

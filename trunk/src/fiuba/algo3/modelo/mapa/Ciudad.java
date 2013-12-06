@@ -12,6 +12,7 @@ import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.juego.PuntuacionesAltas;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
@@ -20,9 +21,7 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 public class Ciudad {
 	@XmlElement(name="calle")
 	private Calle[][] ciudad;
-	@XmlElement(name="GPS")
     private GPS gps;
-	@XmlElement(name="vehiculo")
     private Vehiculo vehiculo;
     @XmlAttribute (name="filas")
     private int filas;
@@ -220,5 +219,23 @@ public class Ciudad {
 				 }
 			 }
 		}
+	 
+	@XmlElement(name="vehiculo")
+	public Vehiculo getVehiculo() {
+		return this.vehiculo;
+	}
+
+	@XmlElement(name="GPS")
+	public GPS getGps() {
+		return this.gps;
+	}
+	
+	public void setGps(GPS gps){
+		this.gps = gps;
+	}
+	
+	public void setVehiculo(Vehiculo vehiculo){
+		this.vehiculo = vehiculo;
+	}
 		
 }
