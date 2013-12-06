@@ -9,14 +9,20 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-
+import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.juego.GPS;
+import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.dificultad.Facil;
+import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
+import fiuba.algo3.modelo.excepciones.MovimientoInvalido;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
+import fiuba.algo3.modelo.vehiculo.Posicion;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -25,92 +31,93 @@ import org.xml.sax.SAXException;
 
 public class TestLasFuncionesDeLaCiudad {
 
-//	@Test
-//    public void validarPosicion() throws MovimientoInvalido{
-//		int filas = 10;
-//		int columnas = 10;
-//		Posicion posicion = new Posicion();
-//		posicion.setX(1);
-//		posicion.setY(1);
-//		GPS gps = new GPS();
-//        EstadoVehiculo estado = new Moto();
-//        Vehiculo vehiculo = new Vehiculo(estado);
-//        Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
-//        Calle calle = ciudad.calleEnUnaPosicion(posicion);
-//        calle.inicializarCalle();
-//        assertTrue(ciudad.esValidaLaPosicion(posicion) == true);
-//    }
-//
-//	@Test
-//    public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
-//		
-//		GPS gps = new GPS();
-//		Jugador jugador = new Jugador("juan");
-//		gps.empezarJuego(new Moto(), new Facil(),jugador);
-//		Vehiculo auto = gps.getVehiculo();
-//		Ciudad ciudad = gps.getCiudad();
-//		Posicion posicion = auto.getPosicion();
-//		Calle calle = ciudad.calleEnUnaPosicion(posicion);
-//		
-//		assertTrue(calle.getVehiculo() == auto);
-//    }
-//
-//	@Test
-//    public void alMovermeAUnLugarInvalidoReciboExcepcionMovimientoInvalido(){
-//        try{
-//    		int filas = 6;
-//    		int columnas = 10;
-//    		Posicion posicion = new Posicion();
-//    		posicion.setX(0);
-//    		posicion.setY(0);
-//    		GPS gps = new GPS();
-//    		EstadoVehiculo estado = new Moto();
-//    		Vehiculo vehiculo = new Vehiculo(estado);
-//    		Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
-//    		ciudad.esValidaLaPosicion(posicion);
-//        	assertTrue( false );
-//        	
-//        }catch( MovimientoInvalido e ){
-//        	
-//        }
-//    }
-//	
-//	@Test
-//    public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado, JAXBException{
-//		
-//		GPS gps = new GPS();
-//		Jugador jugador = new Jugador("juan");
-//		gps.empezarJuego(new Moto(), new Facil(),jugador);
-//		Ciudad ciudad = gps.getCiudad();
-//		Posicion posicionDeMeta = ciudad.getPosicionMeta();
-//		ciudad.colocarVehiculo(posicionDeMeta);
-//		
-//		assertFalse(gps.juegoEnMarcha());
-//    }
-//
-//	@Test
-//    public void alUbicaElVehiculoEnLaMetaYQuererRealizarOtroMovimientoDeboRecibirExcepcionJuegoTerminado() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
-//		
-//		try{
-//			
-//			GPS gps = new GPS();
-//			Jugador jugador = new Jugador("juan");
-//			gps.empezarJuego(new Moto(), new Facil(),jugador);
-//			Vehiculo auto= gps.getVehiculo();
-//			Ciudad ciudad = gps.getCiudad();
-//			Posicion posicionDeMeta = ciudad.getPosicionMeta();
-//			
-//			ciudad.colocarVehiculo(posicionDeMeta);
-//			
-//			auto.moverDerecha();
-//			
-//			assertTrue(false);
-//			
-//		}catch(JuegoFinalizado e){
-//			
-//		}
-//
-//    }
+	@Test
+    public void validarPosicion() throws MovimientoInvalido{
+		int filas = 10;
+		int columnas = 10;
+		Posicion posicion = new Posicion();
+		posicion.setX(1);
+		posicion.setY(1);
+		GPS gps = new GPS();
+        EstadoVehiculo estado = new Moto();
+        Vehiculo vehiculo = new Vehiculo(estado);
+        Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
+        Calle calle = ciudad.calleEnUnaPosicion(posicion);
+        calle.inicializarCalle();
+		
+        assertTrue(ciudad.esValidaLaPosicion(posicion) == true);
+    }
+
+	@Test
+    public void ubicaElVehiculoEnUnaPosicionValida() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
+		
+		GPS gps = new GPS();
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
+		Vehiculo auto = gps.getVehiculo();
+		Ciudad ciudad = gps.getCiudad();
+		Posicion posicion = auto.getPosicion();
+		Calle calle = ciudad.calleEnUnaPosicion(posicion);
+		
+		assertTrue(calle.getVehiculo() == auto);
+    }
+
+	@Test
+    public void alMovermeAUnLugarInvalidoReciboExcepcionMovimientoInvalido(){
+        try{
+    		int filas = 6;
+    		int columnas = 10;
+    		Posicion posicion = new Posicion();
+    		posicion.setX(0);
+    		posicion.setY(0);
+    		GPS gps = new GPS();
+    		EstadoVehiculo estado = new Moto();
+    		Vehiculo vehiculo = new Vehiculo(estado);
+    		Ciudad ciudad = new Ciudad(filas,columnas,vehiculo,gps);
+    		ciudad.esValidaLaPosicion(posicion);
+        	assertTrue( false );
+        	
+        }catch( MovimientoInvalido e ){
+        	
+        }
+    }
+	
+	@Test
+    public void alUbicaElVehiculoEnLaMetaElJuegoNoDebeEstarEnMarcha() throws MovimientoInvalido, JuegoNoIniciado, JuegoFinalizado, JAXBException{
+		
+		GPS gps = new GPS();
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
+		Ciudad ciudad = gps.getCiudad();
+		Posicion posicionDeMeta = ciudad.getPosicionMeta();
+		ciudad.colocarVehiculo(posicionDeMeta);
+		
+		assertFalse(gps.juegoEnMarcha());
+    }
+
+	@Test
+    public void alUbicaElVehiculoEnLaMetaYQuererRealizarOtroMovimientoDeboRecibirExcepcionJuegoTerminado() throws MovimientoInvalido, JuegoNoIniciado, JAXBException{
+		
+		try{
+			
+			GPS gps = new GPS();
+			Jugador jugador = new Jugador("juan");
+			gps.empezarJuego(new Moto(), new Facil(),jugador);
+			Vehiculo auto= gps.getVehiculo();
+			Ciudad ciudad = gps.getCiudad();
+			Posicion posicionDeMeta = ciudad.getPosicionMeta();
+			
+			ciudad.colocarVehiculo(posicionDeMeta);
+			
+			auto.moverDerecha();
+						
+			assertTrue(false);
+			
+		}catch(JuegoFinalizado e){
+			
+		}
+
+    }
 
 	@Test
 	public void sePruebaLaSerializacionDeLaCiudadYLaDesSerealizacionComparandoLosXmlGenerados() throws JuegoNoIniciado, SAXException, IOException, ParserConfigurationException{
@@ -146,5 +153,15 @@ public class TestLasFuncionesDeLaCiudad {
 			    	  e.printStackTrace();
 		  		}
 	}	
+
+	@Test
+	public void pruebaCualquiera() throws JuegoNoIniciado, SAXException, IOException, ParserConfigurationException, JAXBException{
+		GPS gps = new GPS();
+		Jugador jugador = new Jugador("juan");
+		gps.empezarJuego(new Moto(), new Facil(),jugador);
+		Dificultad dificultadDelJuego= gps.getDificultad();
+		String dificultadElegida = dificultadDelJuego.getClass().getSimpleName();
+		System.out.println(dificultadElegida);	
+	}
 }
 

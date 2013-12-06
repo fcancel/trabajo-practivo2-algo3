@@ -22,6 +22,7 @@ import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
 import fiuba.algo3.modelo.interfazGrafica.VistaJuego;
 import fiuba.algo3.modelo.mapa.Ciudad;
+import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
@@ -162,5 +163,17 @@ public class GPS {
 	public int getLimiteDeMovimientos() {
 
 		return this.dificultad.getMaximoDeMovimientos();
+	}
+	
+	public void guardarPartida() throws JAXBException{
+		String nombreJugador= this.jugador.getNombre();
+		Dificultad dificultadDelJuego= this.getDificultad();
+		String dificultadElegida = dificultadDelJuego.getClass().getSimpleName();
+		SerializacionCiudad serealizador = new SerializacionCiudad();
+		serealizador.serializar(this.ciudad,"C:\\"+nombreJugador+dificultadElegida+".xml");
+	}
+
+	public Dificultad getDificultad() {
+		return this.dificultad;
 	}
 }

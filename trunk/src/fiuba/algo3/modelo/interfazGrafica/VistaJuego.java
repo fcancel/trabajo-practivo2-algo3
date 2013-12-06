@@ -82,6 +82,14 @@ public class VistaJuego implements ObjetoVivo{
 		controladorJuego.comenzarJuegoAsyn();	
 	}
 	
+	public void salvarPartida(){
+		try {
+			gps.guardarPartida();
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	/*public void detener() {
             
                 this.dejarDeMostrar();
