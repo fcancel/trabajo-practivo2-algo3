@@ -5,8 +5,11 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,12 +22,14 @@ import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
 //import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
+import fiuba.algo3.modelo.mapa.Ciudad;
+import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 
-public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovimientos {
+public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovimientos  {
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -37,6 +42,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	private JLabel jLabelMovimientosActuales = null;
 	private JLabel jLabel = null;
 	private JLabel jLabel1 = null;  
+	private JButton jBotonDeGuardarPartida = null; 
         
 
 	private void comenzar(EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
@@ -98,7 +104,6 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 		this.setTitle("GPS Challenge");
 		this.addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosing(java.awt.event.WindowEvent e) {
-				System.out.println("windowClosing()");
 				System.exit(NORMAL);
 			}
 		});
@@ -143,7 +148,15 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 			jLabel1.setText("Cantidad de movimientos: ");
 			jLabel1.setForeground(Color.blue);
 			jLabel1.setFont(new Font("", 0, 16)); 
-			
+
+			GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
+			gridBagConstraints3.gridx = 0;
+			gridBagConstraints3.gridy = 0;
+			jBotonDeGuardarPartida = new JButton();
+			jBotonDeGuardarPartida.setText("Guardar Partida");
+			jBotonDeGuardarPartida.setForeground(Color.blue);
+			jLabel1.setFont(new Font("", 0, 16)); 
+
 			
 			jPanelEstado = new JPanel();
 			jPanelEstado.setLayout(new GridBagLayout());
@@ -154,6 +167,14 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 			jPanelEstado.add(jLabelMovimientos, gridBagConstraints1);
 			jPanelEstado.add(jLabel1, gridBagConstraints3);
 			jPanelEstado.add(jLabelMovimientosActuales, gridBagConstraints2);
+			jPanelEstado.add(jBotonDeGuardarPartida, gridBagConstraints4);
+			
+
+			jBotonDeGuardarPartida.addActionListener(new java.awt.event.ActionListener() {
+	            public void actionPerformed(java.awt.event.ActionEvent evt) {
+	            	jBotonDeGuardarPartidaActionPerformed(evt);
+	            }
+	        });
 
 		}
 		return jPanelEstado;
@@ -168,6 +189,13 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	@Override
 	public void maximoDeMovimientos(int movimientosMaximo) {
 		this.jLabelMovimientos.setText(String.valueOf(movimientosMaximo));
+	}
+	
+	
+	private void jBotonDeGuardarPartidaActionPerformed(
+			ActionEvent evt) {
+		this.vista.salvarPartida();
+		System.exit(NORMAL);
 	}
 
     //private void getGPS() {

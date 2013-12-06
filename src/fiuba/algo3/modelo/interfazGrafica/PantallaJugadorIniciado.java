@@ -13,6 +13,8 @@ import ar.uba.fi.algo3.titiritero.vista.Ventana;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.juego.Jugador;
+
+import java.awt.event.ActionEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -65,6 +67,12 @@ private final Jugador jugador;
         });
 
         botonContinuarPartida.setText("Continuar partida");
+        botonContinuarPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonContinuarPartidaActionPerformed(evt);
+            }
+        });
+
 
         botonPuntuacionesAltas.setText("Máximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +137,11 @@ private final Jugador jugador;
         
     }//GEN-LAST:event_botonNuevaPartidaActionPerformed
 
+    private void botonContinuarPartidaActionPerformed(ActionEvent evt) {
+		// TODO Auto-generated method stub
+		
+	}
+    
     private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
             
         PantallaMaximasPuntuaciones pantallaMaximasPuntuaciones;
