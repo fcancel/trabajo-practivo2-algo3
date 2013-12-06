@@ -154,14 +154,5 @@ public class TestLasFuncionesDeLaCiudad {
 		  		}
 	}	
 
-	@Test
-	public void pruebaCualquiera() throws JuegoNoIniciado, SAXException, IOException, ParserConfigurationException, JAXBException{
-		GPS gps = new GPS();
-		Jugador jugador = new Jugador("juan");
-		gps.empezarJuego(new Moto(), new Facil(),jugador);
-		Dificultad dificultadDelJuego= gps.getDificultad();
-		String dificultadElegida = dificultadDelJuego.getClass().getSimpleName();
-		System.out.println(dificultadElegida);	
-	}
 }
 

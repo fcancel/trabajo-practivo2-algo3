@@ -86,6 +86,29 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 			}
 		});
 	}
+	
+	public void comenzarMiJuegoGuardado(final EstadoVehiculo vehiculoRecibido, final Dificultad dificultadRecibida, final Jugador jugadorRecibido) {
+        
+        
+		SwingUtilities.invokeLater(new Runnable() {
+                   
+			public void run() {
+				PantallaDelJuego thisClass = new PantallaDelJuego();
+				thisClass.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+				thisClass.setVisible(true);
+				try {
+					thisClass.comenzar(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
+				} catch (JuegoNoIniciado e) {
+					e.printStackTrace();
+				} catch (JAXBException e) {
+					e.printStackTrace();
+				}
+                               
+                              
+			}
+		});
+	}
 
 	public PantallaDelJuego() {
             

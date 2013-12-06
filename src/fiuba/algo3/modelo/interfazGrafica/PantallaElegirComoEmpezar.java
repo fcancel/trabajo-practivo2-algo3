@@ -115,7 +115,6 @@ private Dificultad[] dificultades;
 
     private void BotonComenzarAJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonComenzarAJugarActionPerformed
 
-                
         PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
         pantallaDelJuego.comenzarMiJuego( (EstadoVehiculo) comboBoxVehiculoParaEmpezar.getSelectedItem(), (Dificultad) comboBoxDificultad.getSelectedItem(), this.jugador);
         this.show(false);
