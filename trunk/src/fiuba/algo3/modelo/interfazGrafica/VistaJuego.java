@@ -77,6 +77,41 @@ public class VistaJuego implements ObjetoVivo{
 		controladorJuego.setIntervaloSimulacion(15);
 		
 	}
+	
+	public VistaJuego(SuperficieDeDibujo superficieDeDibujo, GPS gps) throws JuegoNoIniciado, JAXBException{
+		
+		this.gps = gps;
+		Vehiculo vehiculo = gps.getVehiculo();
+		
+		this.maximoDeMovimientos= gps.getDificultad().getMaximoDeMovimientos();
+		ControladorTeclado CT = new ControladorTeclado(vehiculo);
+		
+		controladorJuego = new ControladorJuego(true);
+		controladorJuego.setSuperficieDeDibujo(superficieDeDibujo);
+
+		
+		vistaDeVehiculo = new VistaDeVehiculo();
+		vistaDeVehiculo.agregarVehiculo(vehiculo);
+		vistaDeVehiculo.setPosicionable(vehiculo);
+		
+		VistaDeCiudad vistaDeCiudad = new VistaDeCiudad(); 
+		vistaDeCiudad.setPosicionable(vistaDeCiudad);
+		
+		VistaDeMeta vistaDeMeta= new VistaDeMeta();
+		vistaDeMeta.getPosicion(gps.getCiudad().getPosicionMeta());
+		vistaDeMeta.setPosicionable(vistaDeMeta);
+		
+		controladorJuego.agregarDibujable(vistaDeCiudad);
+		//this.agregarVistaDeEfectos(gps.getCiudad());
+		controladorJuego.setCiudad(gps.getCiudad());
+		controladorJuego.agregarDibujable(vistaDeMeta);
+		controladorJuego.agregarDibujable(vistaDeVehiculo);
+		controladorJuego.agregarKeyPressObservador(CT);
+		this.controladorJuego.agregarObjetoVivo(this);
+		
+		controladorJuego.setIntervaloSimulacion(15);
+		
+	}
 
 	public void comenzar(){
 		controladorJuego.comenzarJuegoAsyn();	

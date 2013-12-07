@@ -152,7 +152,7 @@ private final Jugador jugador;
     	PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
     	GPS gps = new GPS();
     	gps.cargarPartida("C:\\"+this.jugador.getNombre()+".xml");
-    	pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador);
+    	pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador, gps);
 		
 	}
     

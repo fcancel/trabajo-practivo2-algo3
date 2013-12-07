@@ -19,13 +19,10 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 @XmlRootElement
 public class Ciudad {
-	@XmlElement(name="calle")
 	private Calle[][] ciudad;
     private GPS gps;
     private Vehiculo vehiculo;
-    @XmlAttribute (name="filas")
     private int filas;
-    @XmlAttribute (name="columnas")
     private int columnas;
     private Posicion posicionMeta;
     
@@ -53,7 +50,17 @@ public class Ciudad {
     	this.establecerMetayVehiculo(vehiculo, filas, columnas);
     }
     
-    public Calle[][] cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
+    public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps, Calle[][] ciudad, Posicion posicionVehiculo, Posicion posicionMeta) throws JAXBException {
+        this.columnas = columnas;
+        this.filas = filas;
+        this.gps = gps;
+        this.vehiculo = vehiculo;        
+        this.ciudad = ciudad;
+        this.posicionarLosEfectos();
+    	this.establecerMetayVehiculo(posicionVehiculo, posicionMeta);
+    }
+    
+	public Calle[][] cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
     	SerializacionCiudad serializador = new SerializacionCiudad();
 		String archivo = new String(archivoDeCarga);
 		Ciudad ciudad = serializador.desSerealizar(archivo);
@@ -74,7 +81,16 @@ public class Ciudad {
     	calleMeta.meta();
     }
 
-	private Posicion posicionValida(int coordenadaX) {
+    private void establecerMetayVehiculo(Posicion posicionVehiculo,Posicion posicionMeta) {			
+    	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
+    	vehiculo.setPosicion(posicionVehiculo);
+    	calleVehiculo.setVehiculo(vehiculo);
+    	Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
+    	calleMeta.inicializarCalle();
+    	calleMeta.meta();	
+    }
+    
+    private Posicion posicionValida(int coordenadaX) {
 		
 		// la primer posicion del vehiculo es (1, (this.dimension-1)/2(impar) )
 		// la meta es (this.dimension-1 ,(this.dimension-1)/2(impar) )
@@ -153,7 +169,7 @@ public class Ciudad {
 		Posicion posicionDondeEstaElVehiculo = this.vehiculo.getPosicion();
 		Calle calleDondeEstaElVehiculo = this.calleEnUnaPosicion(posicionDondeEstaElVehiculo);
 		calleDondeEstaElVehiculo.quitarVehiculo();
-		
+
 		Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(dondeQuieroIr);
 		this.colocarVehiculo(calleDondeQuieroMoverme);
 		
@@ -173,10 +189,6 @@ public class Ciudad {
 
 	public void setPosicionMeta(Posicion posicionMeta) {
 		this.posicionMeta = posicionMeta;
-	}
-
-	public void setCiudad(Calle[][] ciudad) {
-		this.ciudad = ciudad;
 	}
 
 	public void setGPS(GPS gps) {
@@ -237,5 +249,32 @@ public class Ciudad {
 	public void setVehiculo(Vehiculo vehiculo){
 		this.vehiculo = vehiculo;
 	}
-		
+	
+    @XmlAttribute (name="filas")
+    public int getFilas(){
+    	return this.filas;
+    };
+    
+    @XmlAttribute (name="columnas")
+    public int getColumnas(){
+    	return this.columnas;
+    };
+    
+    public void setFilas(int filas){
+    	this.filas = filas;
+    };
+    
+    public void setColumnas(int columnas){
+    	this.columnas = columnas;
+    };
+	
+	@XmlElement(name="calle")
+	public Calle[][] getCiudad() {
+		return this.ciudad;
+	};
+	
+	public void setCiudad(Calle[][] ciudad) {
+		this.ciudad = ciudad;
+	}
+
 }
