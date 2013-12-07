@@ -21,9 +21,11 @@ import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
 import fiuba.algo3.modelo.interfazGrafica.VistaJuego;
+import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 @XmlAccessorType(XmlAccessType.NONE)
@@ -33,8 +35,6 @@ public class GPS {
 
 	//private VistaJuego vistaJuego;
 	private static int MOVIMIENTO_INICIAL = 0;
-
-	@XmlElement(name="dificultad")
 	private Dificultad dificultad;
 	@XmlAttribute (name="juegoEnCurso")
 	private boolean juegoEnCurso;
@@ -43,7 +43,6 @@ public class GPS {
 	private int movimientos;
 	private Vehiculo vehiculo;
 	private Ciudad ciudad;
-	@XmlElement(name="jugador")
 	private Jugador jugador;
 	@XmlElement(name="nick")
 	private String nick;
@@ -127,16 +126,6 @@ public class GPS {
 
 	}
 
-	/*public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador, VistaJuego vistaJuego) throws JAXBException{
-
-                this.vistaJuego = vistaJuego;
-		this.jugador=jugador;
-		this.dificultad = dificultad;
-		this.nick = this.jugador.getNombre();
-		this.inicializarJuego(estadoInicial,dificultad.getFilas(),dificultad.getColumnas());
-
-	}*/
-
 	//Solo para las pruebas que no necesitan de la vista
 	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador) throws JAXBException{
 
@@ -173,25 +162,40 @@ public class GPS {
 	}
 	
 	public void cargarPartida(String partidaGuardada) throws JAXBException{
-		this.juegoEnCurso = true;
-		SerializacionCiudad serealizador = new SerializacionCiudad();
-		Ciudad ciudadDesSerealizada = serealizador.desSerealizar(partidaGuardada);
-		this.vehiculo = ciudadDesSerealizada.getVehiculo();
-		this.vehiculo.setGPS(this);
-		this.ciudad = ciudadDesSerealizada;
-		this.vehiculo.setCiudad(this.ciudad);
-		this.puntuacionesAltas = ciudadDesSerealizada.getGps().getPuntuacionesAltas();
-		this.dificultad = ciudadDesSerealizada.getGps().getDificultad();
+	this.juegoEnCurso = true;
+	SerializacionCiudad serealizador = new SerializacionCiudad();
+	Ciudad ciudadCargada = serealizador.desSerealizar(partidaGuardada);
+	this.vehiculo = ciudadCargada.getVehiculo();
+	this.puntuacionesAltas = ciudadCargada.getGps().getPuntuacionesAltas();
+	this.dificultad = ciudadCargada.getGps().getDificultad();
+	this.jugador= ciudadCargada.getGps().getJugador();
+	this.nick = this.jugador.getNombre();
+	this.movimientos = ciudadCargada.getGps().getMovimientos();
+	this.vehiculo.setGPS(this);
+	this.ciudad = ciudadCargada;
+	this.vehiculo.setCiudad(this.ciudad);
+}
 
-	}
-	
 	@XmlElement(name="puntuacionesAltas")
 	private PuntuacionesAltas getPuntuacionesAltas() {
 		return this.puntuacionesAltas;
 	}
 
+	@XmlElement(name="dificultad")
 	public Dificultad getDificultad() {
 		return this.dificultad;
-		
+	}
+
+	@XmlElement(name="jugador")
+	public Jugador getJugador(){
+		return this.jugador;
+	}
+
+	public void setDificultad(Dificultad dificultad){
+		this.dificultad = dificultad;
+	}
+
+	public void setJugador(Jugador jugador){
+		this.jugador = jugador;
 	}
 }

@@ -20,6 +20,7 @@ import fiuba.algo3.controlador.ContadorDeCantidadDeMovimientos;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
+import fiuba.algo3.modelo.juego.GPS;
 //import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.mapa.Ciudad;
@@ -48,6 +49,15 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	private void comenzar(EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
             
         this.vista = new VistaJuego(this.panel, vehiculoRecibido, dificultadRecibida, jugadorRecibido);		
+                
+		this.vista.agregarControladorDelTeclado(panel);
+		this.vista.agregarObservadorDeMovimientos(this);
+		this.vista.comenzar();                
+	}
+	
+	private void comenzarJuegoGuardado(GPS gps) throws JuegoNoIniciado, JAXBException{
+        
+        this.vista = new VistaJuego(this.panel, gps);		
                 
 		this.vista.agregarControladorDelTeclado(panel);
 		this.vista.agregarObservadorDeMovimientos(this);
@@ -87,7 +97,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 		});
 	}
 	
-	public void comenzarMiJuegoGuardado(final EstadoVehiculo vehiculoRecibido, final Dificultad dificultadRecibida, final Jugador jugadorRecibido) {
+	public void comenzarMiJuegoGuardado(final EstadoVehiculo vehiculoRecibido, final Dificultad dificultadRecibida, final Jugador jugadorRecibido, final GPS gps) {
         
         
 		SwingUtilities.invokeLater(new Runnable() {
@@ -98,7 +108,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 
 				thisClass.setVisible(true);
 				try {
-					thisClass.comenzar(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
+					thisClass.comenzarJuegoGuardado(gps);
 				} catch (JuegoNoIniciado e) {
 					e.printStackTrace();
 				} catch (JAXBException e) {
