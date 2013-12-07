@@ -154,26 +154,23 @@ public class GPS {
 	
 	public void guardarPartida() throws JAXBException{
 		String nombreJugador= this.jugador.getNombre();
-		Dificultad dificultadDelJuego= this.getDificultad();
-		String dificultadElegida = dificultadDelJuego.getClass().getSimpleName();
 		SerializacionCiudad serealizador = new SerializacionCiudad();
-//		serealizador.serializar(this.ciudad,"C:\\"+nombreJugador+dificultadElegida+".xml");
 		serealizador.serializar(this.ciudad,"C:\\"+nombreJugador+".xml");
 	}
 	
 	public void cargarPartida(String partidaGuardada) throws JAXBException{
-	this.juegoEnCurso = true;
-	SerializacionCiudad serealizador = new SerializacionCiudad();
-	Ciudad ciudadCargada = serealizador.desSerealizar(partidaGuardada);
-	this.vehiculo = ciudadCargada.getVehiculo();
-	this.puntuacionesAltas = ciudadCargada.getGps().getPuntuacionesAltas();
-	this.dificultad = ciudadCargada.getGps().getDificultad();
-	this.jugador= ciudadCargada.getGps().getJugador();
-	this.nick = this.jugador.getNombre();
-	this.movimientos = ciudadCargada.getGps().getMovimientos();
-	this.vehiculo.setGPS(this);
-	this.ciudad = ciudadCargada;
-	this.vehiculo.setCiudad(this.ciudad);
+		this.juegoEnCurso = true;
+		SerializacionCiudad serealizador = new SerializacionCiudad();
+		Ciudad ciudadCargada = serealizador.desSerealizar(partidaGuardada);
+		this.vehiculo = ciudadCargada.getVehiculo();
+		this.puntuacionesAltas = ciudadCargada.getGps().getPuntuacionesAltas();
+		this.dificultad = ciudadCargada.getGps().getDificultad();
+		this.jugador= ciudadCargada.getGps().getJugador();
+		this.nick = this.jugador.getNombre();
+		this.movimientos = ciudadCargada.getGps().getMovimientos();
+		this.vehiculo.setGPS(this);
+		this.ciudad = ciudadCargada;
+		this.vehiculo.setCiudad(this.ciudad);
 }
 
 	@XmlElement(name="puntuacionesAltas")
