@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package fiuba.algo3.modelo.interfazGrafica;
 
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
@@ -74,16 +68,9 @@ private final Jugador jugador;
         botonContinuarPartida.setText("Continuar partida");
         botonContinuarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                try {
-					botonContinuarPartidaActionPerformed(evt);
-				} catch (JAXBException e) {
-					e.printStackTrace();
-				} catch (JuegoNoIniciado e) {
-					e.printStackTrace();
-				}
+                botonContinuarPartidaActionPerformed(evt);
             }
         });
-
 
         botonPuntuacionesAltas.setText("Máximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
@@ -148,13 +135,6 @@ private final Jugador jugador;
         
     }//GEN-LAST:event_botonNuevaPartidaActionPerformed
 
-    private void botonContinuarPartidaActionPerformed(ActionEvent evt) throws JAXBException, JuegoNoIniciado {
-    	PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
-    	GPS gps = new GPS();
-    	gps.cargarPartida(".\\partidas\\"+this.jugador.getNombre()+".xml");
-    	pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador, gps);
-		
-	}
     
     private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
             
@@ -168,6 +148,20 @@ private final Jugador jugador;
         }        
 
     }//GEN-LAST:event_botonPuntuacionesAltasActionPerformed
+
+    private void botonContinuarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonContinuarPartidaActionPerformed
+
+        PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
+    	GPS gps = new GPS();
+    try {
+        gps.cargarPartida(".\\partidas\\"+this.jugador.getNombre()+".xml");
+        pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador, gps);
+        this.show(false);
+    } catch (JAXBException | JuegoNoIniciado ex) {
+        Logger.getLogger(PantallaJugadorIniciado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    	
+    }//GEN-LAST:event_botonContinuarPartidaActionPerformed
 
 
     

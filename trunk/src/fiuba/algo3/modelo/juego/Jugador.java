@@ -14,8 +14,7 @@ public class Jugador implements Serializable{
 	private static final long serialVersionUID = -2805430129443063211L;
     @XmlAttribute (name="nombre")
 	private String nombre;
-	//direccion del XML de la ciudad guardada
-	//¿Obstaculos? ¿GPS?
+
 	
     public Jugador(){
     }
@@ -29,10 +28,7 @@ public class Jugador implements Serializable{
 		return this.nombre;
 	}
 
-	/*public boolean equals(String nombre) {
-		
-		return this.nombre.equals(nombre);
-	}*/
+
 	
 
 	@Override

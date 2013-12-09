@@ -19,7 +19,7 @@ public class Moto implements EstadoVehiculo{
     
 	@Override
 	public String getDirecionDeImagen() {
-		// TODO Auto-generated method stub
+
 		return imagen;
 	}
         

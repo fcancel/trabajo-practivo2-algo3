@@ -18,28 +18,18 @@ public class Posicion {
         this.posicionX = numero;        
     }
     
-    /**
-     *
-     * @return
-     */
+
     public int getX(){
         
         return posicionX;
     }
 
-    /**
-     *
-     * @param numero
-     */
     public void setY( int numero ) {
         
         this.posicionY = numero;
     }
 
-    /**
-     *
-     * @return
-     */
+
     public int getY() {
         
         return posicionY;

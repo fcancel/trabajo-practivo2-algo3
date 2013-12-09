@@ -33,7 +33,6 @@ public class VistaJuego implements ObjetoVivo{
 	private ControladorJuego controladorJuego = null;
 	private GPS gps;
 	private VistaDeVehiculo vistaDeVehiculo;
-        //private PantallaDelJuego pantallita;
 	private ContadorDeCantidadDeMovimientos observador;
 	private int cantidadDeMovientos=0;
 	private int maximoDeMovimientos;
@@ -45,7 +44,6 @@ public class VistaJuego implements ObjetoVivo{
 		gps = new GPS();
 		
 		gps.empezarJuego(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
-		//gps.empezarJuego(vehiculoRecibido, dificultadRecibida, jugadorRecibido, this);
 		Vehiculo vehiculo = gps.getVehiculo();
 		
 		this.maximoDeMovimientos= dificultadRecibida.getMaximoDeMovimientos();
@@ -67,7 +65,6 @@ public class VistaJuego implements ObjetoVivo{
 		vistaDeMeta.setPosicionable(vistaDeMeta);
 		
 		controladorJuego.agregarDibujable(vistaDeCiudad);
-		//this.agregarVistaDeEfectos(gps.getCiudad());
 		controladorJuego.setCiudad(gps.getCiudad());
 		controladorJuego.agregarDibujable(vistaDeMeta);
 		controladorJuego.agregarDibujable(vistaDeVehiculo);
@@ -124,28 +121,6 @@ public class VistaJuego implements ObjetoVivo{
 			e.printStackTrace();
 		}
 	}
-	
-	/*public void detener() {
-            
-                this.dejarDeMostrar();
-		controladorJuego.detenerJuego();                
-	}*/
-        
-        /*private void dejarDeMostrar(){
-            this.pantallita.setVisible(false);
-        }*/
-	
-	/*
-	public void pausar() {
-		controladorJuego.detenerJuego();
-		
-	}
-
-	public void continuarJuego() {
-		controladorJuego.comenzarJuego();
-		
-	}*/
-
 	
 	public void agregarControladorDelTeclado(Panel unPanel){
 		unPanel.addKeyListener(new KeyPressedController(this.controladorJuego));

@@ -71,7 +71,6 @@ public class Ciudad {
     	// el 1 para que este en la segunda columna
     	Posicion posicionVehiculo = this.posicionValida(1);
     	Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
-    	// le asigno la posicion al vehiculo
     	vehiculo.setPosicion(posicionVehiculo);
     	calleVehiculo.setVehiculo(vehiculo);
     	// el dimension-1 para que este en la ultima columna
