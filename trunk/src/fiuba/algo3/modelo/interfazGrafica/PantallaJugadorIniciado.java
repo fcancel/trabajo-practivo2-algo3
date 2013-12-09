@@ -151,7 +151,7 @@ private final Jugador jugador;
     private void botonContinuarPartidaActionPerformed(ActionEvent evt) throws JAXBException, JuegoNoIniciado {
     	PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
     	GPS gps = new GPS();
-    	gps.cargarPartida("C:\\"+this.jugador.getNombre()+".xml");
+    	gps.cargarPartida(".\\partidas\\"+this.jugador.getNombre()+".xml");
     	pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador, gps);
 		
 	}
