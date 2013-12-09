@@ -34,7 +34,7 @@ public class Calle {
     	sorpresa = null;
     	obstaculo = null;
     	Random rnd = new Random();
-    //genera un numero aleatorio entre 1 y 7 para decidir que agregar� en la calle 
+    //genera un numero aleatorio entre 1 y 7 para decidir que agregar en la calle 
     	int objeto = (int)(rnd.nextDouble() * 10 + 1);        
     	this.crearObjetoEnLaCalle(objeto);
     }

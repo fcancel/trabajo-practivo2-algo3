@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package fiuba.algo3.modelo.juego;
 
-//import com.sun.org.apache.xerces.internal.util.DOMUtil;
+
 import java.io.File;
 
 import javax.xml.bind.JAXBException;
@@ -99,7 +93,7 @@ public class GPS {
 		this.vehiculo = null;
 		this.juegoEnCurso = false;
 		this.movimientos = MOVIMIENTO_INICIAL;
-		//this.vistaJuego.detener();                
+		                
 		PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
 
 	}

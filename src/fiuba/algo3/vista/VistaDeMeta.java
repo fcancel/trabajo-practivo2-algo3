@@ -23,7 +23,6 @@ public class VistaDeMeta extends Imagen implements Posicionable{
 
 	@Override
 	public int getY() {
-		// TODO Auto-generated method stub
 		return this.posicion.getY()*20;
 	}
 }

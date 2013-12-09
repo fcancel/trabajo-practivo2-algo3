@@ -21,7 +21,6 @@ import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.juego.GPS;
-//import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
@@ -129,8 +128,6 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
         
 	private void initialize() {
 		this.setResizable(false);
-		//this.setSize(700,529);
-		//this.setSize(800,550);
 		this.setSize(509,631);
 		this.setContentPane(getJContentPane());
 		this.setLocationRelativeTo(null);
@@ -231,8 +228,5 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 		System.exit(NORMAL);
 	}
 
-    //private void getGPS() {
-    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   // }
 
 } 

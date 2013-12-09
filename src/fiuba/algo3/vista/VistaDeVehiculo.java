@@ -13,9 +13,6 @@ public class VistaDeVehiculo extends Imagen{
 	
 	private Vehiculo vehiculo;
 	
-	public VistaDeVehiculo(){
-		//this.setNombreArchivoImagen("/res/auto.png");
-	}
 	
 	public void dibujar(SuperficieDeDibujo superficeDeDibujo) {
 		this.setNombreArchivoImagen(this.vehiculo.getEstado().getDirecionDeImagen());

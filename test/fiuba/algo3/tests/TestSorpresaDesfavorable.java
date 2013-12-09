@@ -5,17 +5,6 @@ import static org.junit.Assert.*;
 import javax.xml.bind.JAXBException;
 
 import org.junit.Test;
-
-
-
-
-
-
-
-
-
-
-
 import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.efectosYSorpresas.SorpresaDesfavorable;
