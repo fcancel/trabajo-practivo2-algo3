@@ -155,7 +155,7 @@ public class GPS {
 	public void guardarPartida() throws JAXBException{
 		String nombreJugador= this.jugador.getNombre();
 		SerializacionCiudad serealizador = new SerializacionCiudad();
-		serealizador.serializar(this.ciudad,"C:\\"+nombreJugador+".xml");
+		serealizador.serializar(this.ciudad,".\\partidas\\"+nombreJugador+".xml");
 	}
 	
 	public void cargarPartida(String partidaGuardada) throws JAXBException{
