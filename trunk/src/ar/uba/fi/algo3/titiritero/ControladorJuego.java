@@ -7,6 +7,7 @@ import java.util.List;
 
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.mapa.Ciudad;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
 import fiuba.algo3.vista.VistaDeEfecto;
 import ar.uba.fi.algo3.titiritero.audio.Reproductor;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
@@ -112,11 +113,19 @@ public class ControladorJuego implements Runnable {
 		Dibujable mapa = iterador.next();
 		mapa.dibujar(this.superficieDeDibujo);
 		Iterator<Efecto> iEfecto = this.ciudad.listaDeEfectos();
+		Vehiculo movil = this.ciudad.getVehiculo();
 		while(iEfecto.hasNext()){
 			Efecto efecto = iEfecto.next();
-			Dibujable vistaDeEfecto = new VistaDeEfecto(efecto);
-			vistaDeEfecto.setPosicionable(efecto);
-			vistaDeEfecto.dibujar(this.superficieDeDibujo);
+			double x = Math.pow(efecto.getX()-movil.getX(),2);
+			double y = Math.pow(efecto.getY()-movil.getY(),2);
+			double radioCuadrado = 10000;
+			//Solo dibuja los efectos dentro de una circuferencia de radio 100			
+			if(x+y<=radioCuadrado){
+					Dibujable vistaDeEfecto = new VistaDeEfecto(efecto);
+					vistaDeEfecto.setPosicionable(efecto);
+					vistaDeEfecto.dibujar(this.superficieDeDibujo);
+				}
+			
 		}
 		Dibujable meta = iterador.next();
 		meta.dibujar(this.superficieDeDibujo);
