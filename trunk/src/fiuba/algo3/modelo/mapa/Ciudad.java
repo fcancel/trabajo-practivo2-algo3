@@ -131,13 +131,20 @@ public class Ciudad {
         }        
     }
     
+	private void verificarPosicion(Posicion posicion) throws MovimientoInvalido{
+		if((posicion.getX()<0)|(posicion.getX()>this.columnas-1))
+			throw new MovimientoInvalido();
+		if((posicion.getY()<0)|(posicion.getY()>this.filas-1))
+			throw new MovimientoInvalido();
+	}
+	
     public boolean esValidaLaPosicion(Posicion posicion) throws MovimientoInvalido{ 
+    	this.verificarPosicion(posicion);
     	Calle calleDondeQuieroMoverme = this.calleEnUnaPosicion(posicion);
     	
     	if (calleDondeQuieroMoverme.esTransitable()){    		
     		return true;
-        }        
-        else{
+        }else{
         	throw new MovimientoInvalido();
         }
                           
