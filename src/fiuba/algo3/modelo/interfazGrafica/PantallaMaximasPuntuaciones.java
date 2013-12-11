@@ -17,7 +17,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
         JLabel[] labelsPuntajesDeJugadores = new JLabel[] {null, this.puntajeMaximo1, this.puntajeMaximo2, this.puntajeMaximo3, this.puntajeMaximo4, this.puntajeMaximo5};
         
         if ( puntuacionesAltas.estaVacia() )
-            avisoPuntuacionesVacias.setText("No hay puntuaciones m√°ximas.");
+            avisoPuntuacionesVacias.setText("No hay puntuaciones m·ximas.");
         else{
             for (int contador = 1 ; contador<5 ; contador++){
                 
@@ -54,7 +54,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
         setResizable(false);
 
         tituloDeMaximasPuntuaciones.setFont(new java.awt.Font("Ravie", 0, 31)); // NOI18N
-        tituloDeMaximasPuntuaciones.setText("M√°ximas Puntuaciones");
+        tituloDeMaximasPuntuaciones.setText("M·ximas Puntuaciones");
 
         jugadorMaximo1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jugadorMaximo1.setText("Jugador1");
