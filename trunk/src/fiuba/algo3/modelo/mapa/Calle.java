@@ -28,7 +28,13 @@ public class Calle {
     public Calle(){
     	
     }
+
+    public Calle(boolean transitable){
+    	this.transitable = transitable;
+    }
     
+    
+    //Este constructor solo es utilizado para llevar a cabo las pruebas
     public Calle(int n) {
     	transitable = true;
     	sorpresa = null;
@@ -39,10 +45,7 @@ public class Calle {
     	this.crearObjetoEnLaCalle(objeto);
     }
     
-    public Calle(boolean transitable){
-    	this.transitable = transitable;
-    }
-    
+
     //Este constructor solo es utilizado para llevar a cabo las pruebas
     public Calle(Random rnd){
     	transitable = true;
