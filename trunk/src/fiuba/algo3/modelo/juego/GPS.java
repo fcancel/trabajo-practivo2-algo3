@@ -91,7 +91,7 @@ public class GPS {
 		this.juegoEnCurso = false;
 		this.movimientos = MOVIMIENTO_INICIAL;
 		                
-		//PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
+		PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
 
 	}
 

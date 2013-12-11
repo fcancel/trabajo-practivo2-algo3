@@ -30,7 +30,7 @@ public class VistaJuego implements ObjetoVivo{
 	private int cantidadDeMovientos=0;
 	private int maximoDeMovimientos;
 	private boolean marcadoElMaximo = false;
-	private boolean yaEntre = false;
+	//private boolean yaEntre = false;
 	
 	public VistaJuego(SuperficieDeDibujo superficieDeDibujo, EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
 		
@@ -117,10 +117,10 @@ public class VistaJuego implements ObjetoVivo{
 			this.marcadoElMaximo= true;
 			this.observador.maximoDeMovimientos(this.maximoDeMovimientos);
 		}
-		if(!this.gps.juegoEnMarcha()&&!yaEntre){
+		/*if(!this.gps.juegoEnMarcha()&&!yaEntre){
 			PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.gps.getJugador(), this.gps.getPuntuacion());
 			this.yaEntre=true;
-		}
+		}*/
 	}
         
         
