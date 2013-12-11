@@ -133,5 +133,20 @@
 
 	<target name="integracion-continua" depends="coverage-report" description="Ejecuta todas las tareas de integracion y genera los correspondientes reportes"/>
 
+        <target name="crear.jar" depends="compilar.aplicacion">
+                <manifest file="MANIFEST.MF">
+                        <attribute name="Main-Class" value="fiuba.algo3.modelo.interfazGrafica.PantallaDeInicio"/>
+                </manifest>
+                <unjar dest="${build}"
+                       src="${libs}/jdom-2.0.2.jar"/>
+                <copy todir="${build}">
+                        <fileset dir="${src.dir}">
+                                <include name="**"/>
+                                <exclude name="**/*.java"/>
+                        </fileset>
+                </copy>
+                <jar destfile="release/GPSChallenge.jar" basedir="build" includes="**" manifest="MANIFEST.MF"/>
+                <delete file="MANIFEST.MF" />
+        </target>
 
 </project>
