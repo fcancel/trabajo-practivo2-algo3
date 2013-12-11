@@ -33,7 +33,7 @@ public class GPS {
 	private Jugador jugador;
 	@XmlElement(name="nick")
 	private String nick;
-
+	private Puntuacion puntuacion;
 
 	private void verificarJuegoIniciado() throws JuegoNoIniciado{
 
@@ -61,6 +61,10 @@ public class GPS {
 
 	}
 
+	public Puntuacion getPuntuacion(){
+		return this.puntuacion;
+	}
+	
 	public void sumarMovimiento( int movimientoASumar ){
 
 		this.movimientos += movimientoASumar;
@@ -79,7 +83,7 @@ public class GPS {
 		int multipilcador = this.dificultad.getMultiplicador();
 
 		int puntuacionTotal = (limiteDeMovimientos - this.movimientos)* multipilcador;
-		Puntuacion puntuacion = new Puntuacion(this.nick,puntuacionTotal);
+		this.puntuacion = new Puntuacion(this.nick,puntuacionTotal);
 		this.puntuacionesAltas.setPuntuacion(puntuacion);
 		this.puntuacionesAltas.persistir();
 		this.ciudad = null;
@@ -87,7 +91,7 @@ public class GPS {
 		this.juegoEnCurso = false;
 		this.movimientos = MOVIMIENTO_INICIAL;
 		                
-		PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
+		//PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.jugador, puntuacion);                
 
 	}
 
