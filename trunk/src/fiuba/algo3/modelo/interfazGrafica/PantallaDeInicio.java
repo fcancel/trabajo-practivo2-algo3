@@ -56,7 +56,7 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         });
 
         botonPuntuacionesAltas.setFont(new java.awt.Font("Tahoma", 1, 29)); // NOI18N
-        botonPuntuacionesAltas.setText("MÃ¡ximas puntuaciones");
+        botonPuntuacionesAltas.setText("Máximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPuntuacionesAltasActionPerformed(evt);

@@ -64,7 +64,7 @@ private final Jugador jugador;
             }
         });
 
-        botonPuntuacionesAltas.setText("MÃ¡ximas puntuaciones");
+        botonPuntuacionesAltas.setText("Máximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPuntuacionesAltasActionPerformed(evt);

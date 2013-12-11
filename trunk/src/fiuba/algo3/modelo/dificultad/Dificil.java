@@ -43,7 +43,7 @@ public class Dificil implements Dificultad {
 
 	@Override
 	public String toString(){          
-		return "DifÃ­cil";
+		return "Difícil";
 	}
 
 }
