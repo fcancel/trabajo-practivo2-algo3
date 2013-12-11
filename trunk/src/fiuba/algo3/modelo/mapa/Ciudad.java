@@ -96,15 +96,6 @@ public class Ciudad {
 		calleMeta.meta();
 	}
 
-	private void establecerMetayVehiculo(Posicion posicionVehiculo,Posicion posicionMeta) {			
-		Calle calleVehiculo = this.calleEnUnaPosicion(posicionVehiculo);
-		vehiculo.setPosicion(posicionVehiculo);
-		calleVehiculo.setVehiculo(vehiculo);
-		Calle calleMeta = this.calleEnUnaPosicion(posicionMeta);
-		calleMeta.inicializarCalle();
-		calleMeta.meta();	
-	}
-
 	private Posicion posicionValida(int coordenadaX) {
 
 		// la primer posicion del vehiculo es (1, (this.dimension-1)/2(impar) )

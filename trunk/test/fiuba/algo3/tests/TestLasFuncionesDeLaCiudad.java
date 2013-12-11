@@ -12,7 +12,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.juego.GPS;
-import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.dificultad.Facil;
 import fiuba.algo3.modelo.excepciones.JuegoFinalizado;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
