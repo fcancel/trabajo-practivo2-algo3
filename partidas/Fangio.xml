@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ciudad columnas="25" filas="25">
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>0</x>
+                    <y>1</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>0</x>
+                    <y>5</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>0</x>
+                    <y>11</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>0</x>
+                    <y>13</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>0</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>0</x>
+                    <y>17</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>0</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>0</x>
+                    <y>23</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>1</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>1</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>1</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>1</x>
+                    <y>16</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>1</x>
+                    <y>18</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>1</x>
+                    <y>20</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>1</x>
+                    <y>22</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>2</x>
+                    <y>1</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>2</x>
+                    <y>13</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>2</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>2</x>
+                    <y>21</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>3</x>
+                    <y>4</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>3</x>
+                    <y>10</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>3</x>
+                    <y>14</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>3</x>
+                    <y>22</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>3</x>
+                    <y>24</y>
+                </posicion>
+            </sorpresa>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>4</x>
+                    <y>1</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>4</x>
+                    <y>3</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>4</x>
+                    <y>5</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>4</x>
+                    <y>19</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>5</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>5</x>
+                    <y>14</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>5</x>
+                    <y>16</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>5</x>
+                    <y>20</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>5</x>
+                    <y>24</y>
+                </posicion>
+            </obstaculo>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>6</x>
+                    <y>1</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>6</x>
+                    <y>5</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>6</x>
+                    <y>7</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <vehiculoCalle>
+                <posicion>
+                    <x>1</x>
+                    <y>10</y>
+                </posicion>
+                <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+                <retroceder/>
+                <direccion>ABAJO</direccion>
+            </vehiculoCalle>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>6</x>
+                    <y>13</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>6</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>6</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>6</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>6</x>
+                    <y>23</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>7</x>
+                    <y>2</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>7</x>
+                    <y>6</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>7</x>
+                    <y>10</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>7</x>
+                    <y>12</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>7</x>
+                    <y>16</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>7</x>
+                    <y>18</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>7</x>
+                    <y>22</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>7</x>
+                    <y>24</y>
+                </posicion>
+            </sorpresa>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>8</x>
+                    <y>5</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>8</x>
+                    <y>9</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>8</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>8</x>
+                    <y>19</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>8</x>
+                    <y>21</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>8</x>
+                    <y>23</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>9</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>9</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>9</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>9</x>
+                    <y>8</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>9</x>
+                    <y>12</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>9</x>
+                    <y>16</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>9</x>
+                    <y>20</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>9</x>
+                    <y>22</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>10</x>
+                    <y>1</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>10</x>
+                    <y>5</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>10</x>
+                    <y>7</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>10</x>
+                    <y>9</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>10</x>
+                    <y>11</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>10</x>
+                    <y>13</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>10</x>
+                    <y>21</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>10</x>
+                    <y>23</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>11</x>
+                    <y>0</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>11</x>
+                    <y>4</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>11</x>
+                    <y>8</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>11</x>
+                    <y>12</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>11</x>
+                    <y>14</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>11</x>
+                    <y>18</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>11</x>
+                    <y>22</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>11</x>
+                    <y>24</y>
+                </posicion>
+            </obstaculo>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>12</x>
+                    <y>1</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>12</x>
+                    <y>3</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>12</x>
+                    <y>7</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>12</x>
+                    <y>13</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>12</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>12</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>12</x>
+                    <y>19</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>12</x>
+                    <y>21</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>12</x>
+                    <y>23</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>13</x>
+                    <y>6</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>13</x>
+                    <y>8</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>13</x>
+                    <y>10</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>13</x>
+                    <y>12</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>13</x>
+                    <y>14</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>13</x>
+                    <y>22</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>13</x>
+                    <y>24</y>
+                </posicion>
+            </obstaculo>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>14</x>
+                    <y>3</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>14</x>
+                    <y>9</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>14</x>
+                    <y>15</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>14</x>
+                    <y>21</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>15</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>15</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>15</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>15</x>
+                    <y>6</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>15</x>
+                    <y>10</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>15</x>
+                    <y>22</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>15</x>
+                    <y>24</y>
+                </posicion>
+            </sorpresa>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>16</x>
+                    <y>11</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>16</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>16</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>16</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>16</x>
+                    <y>21</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>16</x>
+                    <y>23</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>17</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>17</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>17</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>17</x>
+                    <y>6</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>17</x>
+                    <y>8</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>17</x>
+                    <y>12</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>17</x>
+                    <y>18</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>17</x>
+                    <y>24</y>
+                </posicion>
+            </sorpresa>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>18</x>
+                    <y>3</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>18</x>
+                    <y>13</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>18</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>18</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>18</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>18</x>
+                    <y>21</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>18</x>
+                    <y>23</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>19</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>19</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>19</x>
+                    <y>6</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>19</x>
+                    <y>10</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>19</x>
+                    <y>12</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>19</x>
+                    <y>16</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>19</x>
+                    <y>18</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>20</x>
+                    <y>1</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>20</x>
+                    <y>3</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>20</x>
+                    <y>5</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>20</x>
+                    <y>7</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>20</x>
+                    <y>9</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>20</x>
+                    <y>13</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>20</x>
+                    <y>17</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>20</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>20</x>
+                    <y>21</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>21</x>
+                    <y>2</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>21</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>21</x>
+                    <y>6</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>21</x>
+                    <y>10</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>21</x>
+                    <y>12</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>21</x>
+                    <y>16</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>1</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>22</x>
+                    <y>3</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>5</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>22</x>
+                    <y>7</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>22</x>
+                    <y>9</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>22</x>
+                    <y>11</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaFavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>13</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>22</x>
+                    <y>15</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>19</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>22</x>
+                    <y>21</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>22</x>
+                    <y>23</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <calle>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>23</x>
+                    <y>0</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>23</x>
+                    <y>2</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pozo" direccionDeImagen="/res/pozo.png">
+                <posicion>
+                    <x>23</x>
+                    <y>4</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>23</x>
+                    <y>8</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>23</x>
+                    <y>10</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>23</x>
+                    <y>12</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>23</x>
+                    <y>14</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>23</x>
+                    <y>20</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>23</x>
+                    <y>22</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>23</x>
+                    <y>24</y>
+                </posicion>
+            </obstaculo>
+        </item>
+    </calle>
+    <calle>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>24</x>
+                    <y>3</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>24</x>
+                    <y>5</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="controlPolicial" direccionDeImagen="/res/policia.png">
+                <probabilidad xsi:type="probabilidadEquiprobable"/>
+                <posicion>
+                    <x>24</x>
+                    <y>7</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <obstaculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="piquete" direccionDeImagen="/res/piquete.png">
+                <posicion>
+                    <x>24</x>
+                    <y>9</y>
+                </posicion>
+            </obstaculo>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="true" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>24</x>
+                    <y>15</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaDesfavorable" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>24</x>
+                    <y>17</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true"/>
+        <item meta="false" transitable="false"/>
+        <item meta="false" transitable="true">
+            <sorpresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sorpresaCambioDeVehiculo" direccionDeImagen="/res/sorpresa.png">
+                <posicion>
+                    <x>24</x>
+                    <y>23</y>
+                </posicion>
+            </sorpresa>
+        </item>
+        <item meta="false" transitable="false"/>
+    </calle>
+    <GPS juegoEnCurso="true" movimientos="17">
+        <nick>Fangio</nick>
+        <dificultad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="facil"/>
+        <jugador serializacion="-2805430129443063211" nombre="Fangio"/>
+        <puntuacionesAltas serializacion="181082646" archivo="puntuaciones\puntuacionesAltas.dat">
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="80" nick="juan"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-1" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-1" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fer"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="wasd"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-3" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-9" nick="Fangio"/>
+            <puntuacion serializacion="1644432881082646123" puntos="-15" nick="Fangio"/>
+        </puntuacionesAltas>
+    </GPS>
+    <posicionMeta>
+        <x>24</x>
+        <y>11</y>
+    </posicionMeta>
+    <vehiculo>
+        <posicion>
+            <x>1</x>
+            <y>10</y>
+        </posicion>
+        <estadoVehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="moto"/>
+        <retroceder/>
+        <direccion>ABAJO</direccion>
+    </vehiculo>
+</ciudad>
