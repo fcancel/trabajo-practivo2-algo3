@@ -12,9 +12,12 @@ import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import fiuba.algo3.vista.VistaCircuferenciaMeta;
+import fiuba.algo3.vista.VistaCircuferenciaVehiculo;
 import fiuba.algo3.vista.VistaDeCiudad;
 import fiuba.algo3.vista.VistaDeMeta;
 import fiuba.algo3.vista.VistaDeVehiculo;
+import fiuba.algo3.vista.VistaFondo;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.ObjetoVivo;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
@@ -64,6 +67,10 @@ public class VistaJuego implements ObjetoVivo{
 		controladorJuego = new ControladorJuego(true);
 		controladorJuego.setSuperficieDeDibujo(superficieDeDibujo);
 
+		VistaFondo vistaFondo = new VistaFondo();
+		vistaFondo.setPosicionable(vistaFondo);
+		VistaCircuferenciaVehiculo vistaCircuferenciaVehiculo= new VistaCircuferenciaVehiculo();
+		vistaCircuferenciaVehiculo.setPosicionable(vehiculo);
 		
 		vistaDeVehiculo = new VistaDeVehiculo();
 		vistaDeVehiculo.agregarVehiculo(vehiculo);
@@ -75,7 +82,12 @@ public class VistaJuego implements ObjetoVivo{
 		VistaDeMeta vistaDeMeta= new VistaDeMeta();
 		vistaDeMeta.getPosicion(gps.getCiudad().getPosicionMeta());
 		vistaDeMeta.setPosicionable(vistaDeMeta);
+		VistaCircuferenciaMeta vistaCircuferenciaMeta=new VistaCircuferenciaMeta();
+		vistaCircuferenciaMeta.setPosicionable(vistaDeMeta);
 		
+		controladorJuego.agregarDibujable(vistaFondo);
+		controladorJuego.agregarDibujable(vistaCircuferenciaVehiculo);
+		controladorJuego.agregarDibujable(vistaCircuferenciaMeta);
 		controladorJuego.agregarDibujable(vistaDeCiudad);
 		controladorJuego.setCiudad(gps.getCiudad());
 		controladorJuego.agregarDibujable(vistaDeMeta);
