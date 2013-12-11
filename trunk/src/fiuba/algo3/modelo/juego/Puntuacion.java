@@ -47,6 +47,4 @@ public class Puntuacion implements Comparable, Serializable {
 		return 0;
 	}
 
-
-
 }

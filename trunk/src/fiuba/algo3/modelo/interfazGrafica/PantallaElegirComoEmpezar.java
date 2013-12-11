@@ -9,9 +9,7 @@ import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Moto;
-import fiuba.algo3.modelo.vehiculo.Vehiculo;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class PantallaElegirComoEmpezar extends javax.swing.JFrame {
@@ -28,7 +26,6 @@ private Dificultad[] dificultades;
 
   
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         comboBoxDificultad = new javax.swing.JComboBox();
@@ -105,29 +102,26 @@ private Dificultad[] dificultades;
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         PantallaJugadorIniciado pantallaJugadorIniciado = new PantallaJugadorIniciado(this.jugador);
         this.show(false);
         pantallaJugadorIniciado.show();
-    }//GEN-LAST:event_botonAtrasActionPerformed
+    }
 
     private void BotonComenzarAJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonComenzarAJugarActionPerformed
 
         PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
         pantallaDelJuego.comenzarMiJuego( (EstadoVehiculo) comboBoxVehiculoParaEmpezar.getSelectedItem(), (Dificultad) comboBoxDificultad.getSelectedItem(), this.jugador);
         this.show(false);
-    }//GEN-LAST:event_BotonComenzarAJugarActionPerformed
-
-    
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonComenzarAJugar;
     private javax.swing.JButton botonAtras;
     private javax.swing.JComboBox comboBoxDificultad;
     private javax.swing.JComboBox comboBoxVehiculoParaEmpezar;
     private javax.swing.JLabel labelNombreJugador;
-    // End of variables declaration//GEN-END:variables
+
 }

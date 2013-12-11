@@ -14,7 +14,6 @@ public class Jugador implements Serializable{
 	private static final long serialVersionUID = -2805430129443063211L;
     @XmlAttribute (name="nombre")
 	private String nombre;
-
 	
     public Jugador(){
     }

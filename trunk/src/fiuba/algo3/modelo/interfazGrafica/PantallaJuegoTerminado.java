@@ -16,7 +16,6 @@ public class PantallaJuegoTerminado extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         labelSuPuntajeEs = new javax.swing.JLabel("SU PUNTAJE ES:", SwingConstants.CENTER);
@@ -96,20 +95,17 @@ public class PantallaJuegoTerminado extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
-
+    }
+    
     private void botonVolverAlMenuDeInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverAlMenuDeInicioActionPerformed
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
-    }//GEN-LAST:event_botonVolverAlMenuDeInicioActionPerformed
+    }
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonVolverAlMenuDeInicio;
     private javax.swing.JLabel labelFelicitaciones1;
     private javax.swing.JLabel labelJugador1;
     private javax.swing.JLabel labelPuntaje;
     private javax.swing.JLabel labelSuPuntajeEs;
-    // End of variables declaration//GEN-END:variables
 }

@@ -1,8 +1,5 @@
 package fiuba.algo3.modelo.juego;
 
-
-import java.io.File;
-
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,12 +11,9 @@ import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.interfazGrafica.PantallaJuegoTerminado;
-import fiuba.algo3.modelo.interfazGrafica.VistaJuego;
-import fiuba.algo3.modelo.mapa.Calle;
 import fiuba.algo3.modelo.mapa.Ciudad;
 import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
-import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 @XmlAccessorType(XmlAccessType.NONE)
@@ -27,7 +21,6 @@ import fiuba.algo3.modelo.vehiculo.Vehiculo;
 
 public class GPS {    
 
-	//private VistaJuego vistaJuego;
 	private static int MOVIMIENTO_INICIAL = 0;
 	private Dificultad dificultad;
 	@XmlAttribute (name="juegoEnCurso")
@@ -120,7 +113,6 @@ public class GPS {
 
 	}
 
-	//Solo para las pruebas que no necesitan de la vista
 	public void empezarJuego(EstadoVehiculo estadoInicial, Dificultad dificultad,Jugador jugador) throws JAXBException{
 
 

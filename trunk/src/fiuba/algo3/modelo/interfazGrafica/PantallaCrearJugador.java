@@ -17,7 +17,7 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         titulo = new javax.swing.JLabel();
@@ -103,10 +103,10 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void nombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreUsuarioActionPerformed
-    }//GEN-LAST:event_nombreUsuarioActionPerformed
+    }
 
     private void guardarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarNombreActionPerformed
         
@@ -122,22 +122,18 @@ public class PantallaCrearJugador extends javax.swing.JFrame {
             mensajeJugadorYaExistente.setText("Nombre de jugador ya existente");
         }
        
-    }//GEN-LAST:event_guardarNombreActionPerformed
+    }
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
-    }//GEN-LAST:event_botonAtrasActionPerformed
-
-
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    }
+    
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton guardarNombre;
     private javax.swing.JLabel mensajeJugadorYaExistente;
     private javax.swing.JTextField nombreUsuario;
     private javax.swing.JLabel titulo;
-    // End of variables declaration//GEN-END:variables
+
 }

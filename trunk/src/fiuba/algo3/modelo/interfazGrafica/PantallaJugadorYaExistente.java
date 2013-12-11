@@ -19,7 +19,6 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         comboBoxJugadoresASeleccionar = new javax.swing.JComboBox();
@@ -32,7 +31,7 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
         setResizable(false);
 
         this.jugadores = new Jugadores();
-        jugadores.recuperar();
+
         Iterator<Jugador> listaDeJugadores = this.jugadores.listaDeJugadores();
         ArrayList<String> cadenaJugadores = new ArrayList<String>();
         while (listaDeJugadores.hasNext()){
@@ -89,18 +88,18 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void comboBoxJugadoresASeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxJugadoresASeleccionarActionPerformed
        
         
-    }//GEN-LAST:event_comboBoxJugadoresASeleccionarActionPerformed
+    }
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
-    }//GEN-LAST:event_botonAtrasActionPerformed
+    }
 
     private void botonElegirJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonElegirJugadorActionPerformed
        
@@ -114,13 +113,10 @@ public class PantallaJugadorYaExistente extends javax.swing.JFrame {
             this.show(false);
             
         }
-    }//GEN-LAST:event_botonElegirJugadorActionPerformed
+    }
 
-   
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton botonElegirJugador;
     private javax.swing.JComboBox comboBoxJugadoresASeleccionar;
-    // End of variables declaration//GEN-END:variables
+
 }

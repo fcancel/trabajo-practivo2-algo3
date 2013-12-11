@@ -1,31 +1,24 @@
 package fiuba.algo3.modelo.interfazGrafica;
 
 import java.awt.Panel;
-import java.util.Iterator;
 
 import javax.xml.bind.JAXBException;
 
 import fiuba.algo3.controlador.ContadorDeCantidadDeMovimientos;
 import fiuba.algo3.controlador.ControladorTeclado;
-import fiuba.algo3.modelo.dificultad.Dificil;
 import fiuba.algo3.modelo.dificultad.Dificultad;
-import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
-import fiuba.algo3.modelo.mapa.Ciudad;
-import fiuba.algo3.modelo.vehiculo.Auto;
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 import fiuba.algo3.vista.VistaDeCiudad;
-import fiuba.algo3.vista.VistaDeEfecto;
 import fiuba.algo3.vista.VistaDeMeta;
 import fiuba.algo3.vista.VistaDeVehiculo;
 import ar.uba.fi.algo3.titiritero.ControladorJuego;
 import ar.uba.fi.algo3.titiritero.ObjetoVivo;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.KeyPressedController;
-import fiuba.algo3.modelo.vehiculo.Moto;
 
 
 public class VistaJuego implements ObjetoVivo{
@@ -81,7 +74,7 @@ public class VistaJuego implements ObjetoVivo{
 		Vehiculo vehiculo = gps.getVehiculo();
 		
 		this.maximoDeMovimientos= gps.getDificultad().getMaximoDeMovimientos();
-		ControladorTeclado CT = new ControladorTeclado(vehiculo);
+		ControladorTeclado controladorTeclado = new ControladorTeclado(vehiculo);
 		
 		controladorJuego = new ControladorJuego(true);
 		controladorJuego.setSuperficieDeDibujo(superficieDeDibujo);
@@ -99,11 +92,10 @@ public class VistaJuego implements ObjetoVivo{
 		vistaDeMeta.setPosicionable(vistaDeMeta);
 		
 		controladorJuego.agregarDibujable(vistaDeCiudad);
-		//this.agregarVistaDeEfectos(gps.getCiudad());
 		controladorJuego.setCiudad(gps.getCiudad());
 		controladorJuego.agregarDibujable(vistaDeMeta);
 		controladorJuego.agregarDibujable(vistaDeVehiculo);
-		controladorJuego.agregarKeyPressObservador(CT);
+		controladorJuego.agregarKeyPressObservador(controladorTeclado);
 		this.controladorJuego.agregarObjetoVivo(this);
 		
 		controladorJuego.setIntervaloSimulacion(15);
@@ -128,7 +120,6 @@ public class VistaJuego implements ObjetoVivo{
 
 	public void agregarObservadorDeMovimientos(PantallaDelJuego pantallaDelJuego) {
 		this.observador=pantallaDelJuego;
-                //this.pantallita = pantallaDelJuego;
 	}
 
 	@Override
