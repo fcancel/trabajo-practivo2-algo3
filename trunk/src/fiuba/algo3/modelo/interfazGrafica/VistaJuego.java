@@ -30,41 +30,19 @@ public class VistaJuego implements ObjetoVivo{
 	private int cantidadDeMovientos=0;
 	private int maximoDeMovimientos;
 	private boolean marcadoElMaximo = false;
+	private boolean yaEntre = false;
 	
 	public VistaJuego(SuperficieDeDibujo superficieDeDibujo, EstadoVehiculo vehiculoRecibido, Dificultad dificultadRecibida, Jugador jugadorRecibido) throws JuegoNoIniciado, JAXBException{
 		
-	
+		
 		gps = new GPS();
 		
 		gps.empezarJuego(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
 		Vehiculo vehiculo = gps.getVehiculo();
 		
 		this.maximoDeMovimientos= dificultadRecibida.getMaximoDeMovimientos();
-		ControladorTeclado CT = new ControladorTeclado(vehiculo);
 		
-		controladorJuego = new ControladorJuego(true);
-		controladorJuego.setSuperficieDeDibujo(superficieDeDibujo);
-
-		
-		vistaDeVehiculo = new VistaDeVehiculo();
-		vistaDeVehiculo.agregarVehiculo(vehiculo);
-		vistaDeVehiculo.setPosicionable(vehiculo);
-		
-		VistaDeCiudad vistaDeCiudad = new VistaDeCiudad(); 
-		vistaDeCiudad.setPosicionable(vistaDeCiudad);
-		
-		VistaDeMeta vistaDeMeta= new VistaDeMeta();
-		vistaDeMeta.getPosicion(gps.getCiudad().getPosicionMeta());
-		vistaDeMeta.setPosicionable(vistaDeMeta);
-		
-		controladorJuego.agregarDibujable(vistaDeCiudad);
-		controladorJuego.setCiudad(gps.getCiudad());
-		controladorJuego.agregarDibujable(vistaDeMeta);
-		controladorJuego.agregarDibujable(vistaDeVehiculo);
-		controladorJuego.agregarKeyPressObservador(CT);
-		this.controladorJuego.agregarObjetoVivo(this);
-		
-		controladorJuego.setIntervaloSimulacion(15);
+		this.inicializar(vehiculo, superficieDeDibujo);
 		
 	}
 	
@@ -74,6 +52,13 @@ public class VistaJuego implements ObjetoVivo{
 		Vehiculo vehiculo = gps.getVehiculo();
 		
 		this.maximoDeMovimientos= gps.getDificultad().getMaximoDeMovimientos();
+		
+		this.inicializar(vehiculo, superficieDeDibujo);
+		
+	}
+
+	private void inicializar(Vehiculo vehiculo,SuperficieDeDibujo superficieDeDibujo) throws JuegoNoIniciado{
+		
 		ControladorTeclado controladorTeclado = new ControladorTeclado(vehiculo);
 		
 		controladorJuego = new ControladorJuego(true);
@@ -99,7 +84,6 @@ public class VistaJuego implements ObjetoVivo{
 		this.controladorJuego.agregarObjetoVivo(this);
 		
 		controladorJuego.setIntervaloSimulacion(15);
-		
 	}
 
 	public void comenzar(){
@@ -132,6 +116,10 @@ public class VistaJuego implements ObjetoVivo{
 		if(!this.marcadoElMaximo){
 			this.marcadoElMaximo= true;
 			this.observador.maximoDeMovimientos(this.maximoDeMovimientos);
+		}
+		if(!this.gps.juegoEnMarcha()&&!yaEntre){
+			PantallaJuegoTerminado pantallaJuegoTerminado = new PantallaJuegoTerminado(this.gps.getJugador(), this.gps.getPuntuacion());
+			this.yaEntre=true;
 		}
 	}
         
