@@ -110,6 +110,12 @@ public class ControladorJuego implements Runnable {
 	private void dibujar() {
 		
 		Iterator<Dibujable> iterador = dibujables.iterator();
+		Dibujable fondo = iterador.next();
+		fondo.dibujar(this.superficieDeDibujo);
+		Dibujable vc = iterador.next();
+		vc.dibujar(this.superficieDeDibujo);
+		Dibujable vcm = iterador.next();
+		vcm.dibujar(this.superficieDeDibujo);
 		Dibujable mapa = iterador.next();
 		mapa.dibujar(this.superficieDeDibujo);
 		Iterator<Efecto> iEfecto = this.ciudad.listaDeEfectos();

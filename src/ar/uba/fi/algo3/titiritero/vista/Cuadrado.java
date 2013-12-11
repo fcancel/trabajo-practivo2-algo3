@@ -16,7 +16,7 @@ public class Cuadrado extends Figura {
 	public Cuadrado(int ancho, int alto){
 		this.alto = alto;
 		this.ancho = ancho;
-		setColor(Color.GRAY);
+		setColor(Color.BLACK);
 	}
 	
 	public void dibujar(SuperficieDeDibujo superfice) {
