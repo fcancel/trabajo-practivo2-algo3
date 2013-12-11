@@ -6,9 +6,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,11 +20,9 @@ import ar.uba.fi.algo3.titiritero.vista.Panel;
 import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
-import fiuba.algo3.modelo.mapa.Ciudad;
-import fiuba.algo3.modelo.serializacion.SerializacionCiudad;
+
 import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
-import fiuba.algo3.modelo.vehiculo.Moto;
-import fiuba.algo3.modelo.vehiculo.Vehiculo;
+
 
 
 public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovimientos  {

@@ -13,7 +13,7 @@ public class PantallaDeInicio extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
 
         botonCrearNuevoJugador = new javax.swing.JButton();
@@ -110,24 +110,24 @@ public class PantallaDeInicio extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void botonCrearNuevoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearNuevoJugadorActionPerformed
         PantallaCrearJugador creoJugador = new PantallaCrearJugador();
         this.show(false);
         
-    }//GEN-LAST:event_botonCrearNuevoJugadorActionPerformed
+    }
 
     private void botonYaTengoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYaTengoUsuarioActionPerformed
 
         PantallaJugadorYaExistente pantallaJugadorExistente = new PantallaJugadorYaExistente();
         this.show(false);
                 
-    }//GEN-LAST:event_botonYaTengoUsuarioActionPerformed
+    }
 
     private void botonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonExitActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_botonExitActionPerformed
+    }
 
     private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
         PantallaMaximasPuntuaciones pantallaMaximasPuntuaciones;
@@ -136,9 +136,9 @@ public class PantallaDeInicio extends javax.swing.JFrame {
             this.show(false);
           
         } catch (NoExisteEsaPosicion ex) {
-            Logger.getLogger(PantallaDeInicio.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(PantallaDeInicio.class.getName()).log(Level.SEVERE, null, ex);
         }        
-    }//GEN-LAST:event_botonPuntuacionesAltasActionPerformed
+    }
 
    
    
@@ -152,11 +152,11 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+   
     private javax.swing.JButton botonCrearNuevoJugador;
     private javax.swing.JButton botonExit;
     private javax.swing.JButton botonPuntuacionesAltas;
     private javax.swing.JButton botonYaTengoUsuario;
     private javax.swing.JLabel tituloDelJuego;
-    // End of variables declaration//GEN-END:variables
+
 }

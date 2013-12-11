@@ -1,17 +1,10 @@
 package fiuba.algo3.modelo.interfazGrafica;
 
-import ar.uba.fi.algo3.titiritero.ControladorJuego;
-import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
-import ar.uba.fi.algo3.titiritero.vista.Circulo;
-import ar.uba.fi.algo3.titiritero.vista.Ventana;
-import fiuba.algo3.modelo.dificultad.Dificultad;
 import fiuba.algo3.modelo.excepciones.JuegoNoIniciado;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.juego.GPS;
 import fiuba.algo3.modelo.juego.Jugador;
-import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
 
-import java.awt.event.ActionEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,7 +23,6 @@ private final Jugador jugador;
 
  
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         labelNombreJugador = new javax.swing.JLabel();
@@ -120,20 +112,20 @@ private final Jugador jugador;
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
-    }//GEN-LAST:event_botonAtrasActionPerformed
+    }
 
     private void botonNuevaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaPartidaActionPerformed
         
         PantallaElegirComoEmpezar pantallaElegirComoEmpezar = new PantallaElegirComoEmpezar(this.jugador);
         this.show(false);       
         
-    }//GEN-LAST:event_botonNuevaPartidaActionPerformed
+    }
 
     
     private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
@@ -144,10 +136,10 @@ private final Jugador jugador;
             this.show(false);
           
         } catch (NoExisteEsaPosicion ex) {
-            Logger.getLogger(PantallaDeInicio.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(PantallaDeInicio.class.getName()).log(Level.SEVERE, null, ex);
         }        
 
-    }//GEN-LAST:event_botonPuntuacionesAltasActionPerformed
+    }
 
     private void botonContinuarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonContinuarPartidaActionPerformed
 
@@ -158,23 +150,20 @@ private final Jugador jugador;
         pantallaDelJuego.comenzarMiJuegoGuardado(gps.getVehiculo().getEstado(), gps.getDificultad() , this.jugador, gps);
         this.show(false);
     } catch (JAXBException | JuegoNoIniciado ex) {
-        Logger.getLogger(PantallaJugadorIniciado.class.getName()).log(Level.SEVERE, null, ex);
+        //Logger.getLogger(PantallaJugadorIniciado.class.getName()).log(Level.SEVERE, null, ex);
     }
     	
-    }//GEN-LAST:event_botonContinuarPartidaActionPerformed
-
-
+    }
     
     private void setNombreDelJugador(String nombreJugadorAIntroducir){
         labelNombreJugador.setText("Jugador: " +nombreJugadorAIntroducir);
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton botonContinuarPartida;
     private javax.swing.JButton botonNuevaPartida;
     private javax.swing.JButton botonPuntuacionesAltas;
     private javax.swing.JLabel labelNombreJugador;
     private javax.swing.JLabel tituloDelJuego;
-    // End of variables declaration//GEN-END:variables
+  
 }

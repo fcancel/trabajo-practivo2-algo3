@@ -8,12 +8,9 @@ import fiuba.algo3.modelo.serializacion.AdaptadorDeInterfaces;
 
 @XmlJavaTypeAdapter(AdaptadorDeInterfaces.class)
 public interface EstadoVehiculo {
-    
- 
-    //public EstadoVehiculo getEstadoVehiculo();
-    
+
 	public String getDirecionDeImagen();
-	
-    public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto);
-    
+
+	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto);
+
 }

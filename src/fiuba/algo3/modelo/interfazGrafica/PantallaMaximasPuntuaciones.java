@@ -3,10 +3,7 @@ package fiuba.algo3.modelo.interfazGrafica;
 import fiuba.algo3.modelo.excepciones.NoExisteEsaPosicion;
 import fiuba.algo3.modelo.juego.Puntuacion;
 import fiuba.algo3.modelo.juego.PuntuacionesAltas;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JLabel;
-import javax.swing.plaf.LabelUI;
 
 
 public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
@@ -35,7 +32,6 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         tituloDeMaximasPuntuaciones = new javax.swing.JLabel();
@@ -176,7 +172,7 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         
@@ -184,10 +180,8 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
-    }//GEN-LAST:event_botonAtrasActionPerformed
+    }
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel avisoPuntuacionesVacias;
     private javax.swing.JButton botonAtras;
     private javax.swing.JLabel jugadorMaximo1;
@@ -201,5 +195,5 @@ public class PantallaMaximasPuntuaciones extends javax.swing.JFrame {
     private javax.swing.JLabel puntajeMaximo4;
     private javax.swing.JLabel puntajeMaximo5;
     private javax.swing.JLabel tituloDeMaximasPuntuaciones;
-    // End of variables declaration//GEN-END:variables
+
 }

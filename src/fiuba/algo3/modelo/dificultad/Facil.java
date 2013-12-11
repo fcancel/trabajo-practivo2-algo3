@@ -10,8 +10,8 @@ public class Facil implements Dificultad{
 	private static int FILAS = 25;
 	private static int COLUMNAS = 25;
 	private static int MULTIPLICADOR = 1;
-	
-	
+
+
 	@Override
 	public int getFilas() {
 		return FILAS;
@@ -30,7 +30,7 @@ public class Facil implements Dificultad{
 	@Override
 	public int getMaximoDeMovimientos() {
 		return MOVIMIENTOS;
-		
+
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class Facil implements Dificultad{
 		String direccionDelMapa = this.MAPAFACIL+  Integer.toString(numeroDeMapa) +".XML"; 
 		return direccionDelMapa;
 	}
-        
-        @Override
-        public String toString(){     
-            return "Fácil";
-        }
+
+	@Override
+	public String toString(){     
+		return "Fácil";
+	}
 }
