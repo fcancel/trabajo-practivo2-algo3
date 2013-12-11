@@ -28,7 +28,8 @@ public class Ciudad {
 	public Ciudad(){
 
 	}
-
+	
+/*Este constructor solo es utilizado para las pruebas */
 	public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps) {
 		this.columnas = columnas;
 		this.filas = filas;
@@ -37,6 +38,32 @@ public class Ciudad {
 		this.cargarEscenario(filas, columnas);	
 		this.establecerMetayVehiculo(vehiculo, filas, columnas);
 		this.posicionarLosEfectos();
+	}
+	/*Este método solo se utiliza para las pruebas, es llamado en el constructor 
+	 * que anteriormente ya mencionamos que solo se utilizaba para las pruebas */
+	private void cargarEscenario(int filas, int columnas){
+
+		this.ciudad = new Calle[filas][columnas];
+		for (int i = 0; i<(filas); i++){
+
+			if((i%2) == 0){ //fila pares
+				for (int j = 0; j<(columnas); j++){
+					if ((j%2) == 0)
+						this.ciudad[i][j] = new Calle(false);
+					else
+						this.ciudad[i][j] = new Calle(i);
+				}
+			}
+			else{
+				for (int j = 0; j<(columnas); j++){
+					if ((j%2) == 0)
+						this.ciudad[i][j] = new Calle(i);
+					else
+						//Para que sea una esquina, sin obstaculos y sorpresas
+						this.ciudad[i][j] = new Calle(true);
+				}
+			}
+		}        
 	}
 
 	public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps, String archivo) throws JAXBException {
@@ -47,16 +74,6 @@ public class Ciudad {
 		this.ciudad = cargarMapaDesdeXML(archivo);
 		this.posicionarLosEfectos();
 		this.establecerMetayVehiculo(vehiculo, filas, columnas);
-	}
-
-	public Ciudad(int filas, int columnas , Vehiculo vehiculo, GPS gps, Calle[][] ciudad, Posicion posicionVehiculo, Posicion posicionMeta) throws JAXBException {
-		this.columnas = columnas;
-		this.filas = filas;
-		this.gps = gps;
-		this.vehiculo = vehiculo;        
-		this.ciudad = ciudad;
-		this.posicionarLosEfectos();
-		this.establecerMetayVehiculo(posicionVehiculo, posicionMeta);
 	}
 
 	public Calle[][] cargarMapaDesdeXML(String archivoDeCarga) throws JAXBException{
@@ -103,31 +120,6 @@ public class Ciudad {
 
 		return posicion;
 
-	}
-
-	private void cargarEscenario(int filas, int columnas){
-
-		this.ciudad = new Calle[filas][columnas];
-		for (int i = 0; i<(filas); i++){
-
-			if((i%2) == 0){ //fila pares
-				for (int j = 0; j<(columnas); j++){
-					if ((j%2) == 0)
-						this.ciudad[i][j] = new Calle(false);
-					else
-						this.ciudad[i][j] = new Calle(i);
-				}
-			}
-			else{
-				for (int j = 0; j<(columnas); j++){
-					if ((j%2) == 0)
-						this.ciudad[i][j] = new Calle(i);
-					else
-						//Para que sea una esquina, sin obstaculos y sorpresas
-						this.ciudad[i][j] = new Calle(true);
-				}
-			}
-		}        
 	}
 
 	private void verificarPosicion(Posicion posicion) throws MovimientoInvalido{
