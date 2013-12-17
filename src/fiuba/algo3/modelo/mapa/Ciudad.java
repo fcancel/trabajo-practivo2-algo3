@@ -39,7 +39,7 @@ public class Ciudad {
 		this.establecerMetayVehiculo(vehiculo, filas, columnas);
 		this.posicionarLosEfectos();
 	}
-	/*Este método solo se utiliza para las pruebas, es llamado en el constructor 
+	/*Este metodo solo se utiliza para las pruebas, es llamado en el constructor 
 	 * que anteriormente ya mencionamos que solo se utilizaba para las pruebas */
 	private void cargarEscenario(int filas, int columnas){
 

@@ -56,7 +56,7 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         });
 
         botonPuntuacionesAltas.setFont(new java.awt.Font("Tahoma", 1, 29)); // NOI18N
-        botonPuntuacionesAltas.setText("Máximas puntuaciones");
+        botonPuntuacionesAltas.setText("Maximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPuntuacionesAltasActionPerformed(evt);
@@ -112,24 +112,24 @@ public class PantallaDeInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-    private void botonCrearNuevoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearNuevoJugadorActionPerformed
+    private void botonCrearNuevoJugadorActionPerformed(java.awt.event.ActionEvent evt) {                                                       
         PantallaCrearJugador creoJugador = new PantallaCrearJugador();
         this.show(false);
         
     }
 
-    private void botonYaTengoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYaTengoUsuarioActionPerformed
+    private void botonYaTengoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {                                                    
 
         PantallaJugadorYaExistente pantallaJugadorExistente = new PantallaJugadorYaExistente();
         this.show(false);
                 
     }
 
-    private void botonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonExitActionPerformed
+    private void botonExitActionPerformed(java.awt.event.ActionEvent evt) {                                          
         System.exit(0);
     }
 
-    private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
+    private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {                                                       
         PantallaMaximasPuntuaciones pantallaMaximasPuntuaciones;
         try {
             pantallaMaximasPuntuaciones = new PantallaMaximasPuntuaciones();
