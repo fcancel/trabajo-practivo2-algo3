@@ -64,7 +64,7 @@ private final Jugador jugador;
             }
         });
 
-        botonPuntuacionesAltas.setText("Máximas puntuaciones");
+        botonPuntuacionesAltas.setText("Maximas puntuaciones");
         botonPuntuacionesAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPuntuacionesAltasActionPerformed(evt);
@@ -114,13 +114,13 @@ private final Jugador jugador;
         setLocationRelativeTo(null);
     }
 
-    private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
+    private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {                                           
         PantallaDeInicio inicio = new PantallaDeInicio();
         this.show(false);
         inicio.show();
     }
 
-    private void botonNuevaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaPartidaActionPerformed
+    private void botonNuevaPartidaActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         
         PantallaElegirComoEmpezar pantallaElegirComoEmpezar = new PantallaElegirComoEmpezar(this.jugador);
         this.show(false);       
@@ -128,7 +128,7 @@ private final Jugador jugador;
     }
 
     
-    private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntuacionesAltasActionPerformed
+    private void botonPuntuacionesAltasActionPerformed(java.awt.event.ActionEvent evt) {                                                       
             
         PantallaMaximasPuntuaciones pantallaMaximasPuntuaciones;
         try {
@@ -141,7 +141,7 @@ private final Jugador jugador;
 
     }
 
-    private void botonContinuarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonContinuarPartidaActionPerformed
+    private void botonContinuarPartidaActionPerformed(java.awt.event.ActionEvent evt) {                                                      
 
         PantallaDelJuego pantallaDelJuego = new PantallaDelJuego();
     	GPS gps = new GPS();

@@ -30,6 +30,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	
 	private static final long serialVersionUID = 1L;
 	
+        private GPS gps;
 	private JPanel jContentPane = null;
 	private Panel panel = null;
 	private VistaJuego vista = null;
@@ -56,7 +57,8 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
                 
 		this.vista.agregarControladorDelTeclado(panel);
 		this.vista.agregarObservadorDeMovimientos(this);
-		this.vista.comenzar();                
+		this.vista.comenzar();
+                this.gps = gps;
 	}
 
 	private Panel getSuperficieDeDibujo() {
@@ -81,6 +83,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 				thisClass.setVisible(true);
 				try {
 					thisClass.comenzar(vehiculoRecibido, dificultadRecibida, jugadorRecibido);
+                                       
 				} catch (JuegoNoIniciado e) {
 					e.printStackTrace();
 				} catch (JAXBException e) {
@@ -104,6 +107,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 				thisClass.setVisible(true);
 				try {
 					thisClass.comenzarJuegoGuardado(gps);
+                                      
 				} catch (JuegoNoIniciado e) {
 					e.printStackTrace();
 				} catch (JAXBException e) {
@@ -195,6 +199,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 			jPanelEstado.add(jLabelMovimientosActuales, gridBagConstraints2);
 			jPanelEstado.add(jBotonDeGuardarPartida, gridBagConstraints4);
 			
+                        
 
 			jBotonDeGuardarPartida.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +214,7 @@ public class PantallaDelJuego extends JFrame implements ContadorDeCantidadDeMovi
 	@Override
 	public void seActualizaronLosMovimientos(int movimientosTotales) {
 		this.jLabelMovimientosActuales.setText(String.valueOf(movimientosTotales));
+                
                 
 	}
 
