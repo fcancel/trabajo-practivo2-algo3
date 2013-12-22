@@ -58,8 +58,5 @@ public class Pozo implements Efecto {
 		return ((this.posicion.getY())*500)/25;
 	}
 	
-	@Override
-	public String getDirecionDeImagen() {
-		return this.direccionDeImagen;
-	}
+	
 }

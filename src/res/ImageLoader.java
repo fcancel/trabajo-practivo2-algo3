@@ -1,10 +1,9 @@
 package res;
 
-import fiuba.algo3.modelo.vehiculo.Auto;
-import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
-import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
-import fiuba.algo3.modelo.vehiculo.Moto;
-import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import fiuba.algo3.modelo.efectosYSorpresas.ControlPolicial;
+import fiuba.algo3.modelo.efectosYSorpresas.Piquete;
+import fiuba.algo3.modelo.efectosYSorpresas.Pozo;
+
 
 
 public class ImageLoader {
@@ -30,6 +29,16 @@ public class ImageLoader {
                             else return "/res/moto.png";
     }
     
+    public String imagenEfecto(Class clase){
+         if (clase.equals(Piquete.class))
+        return "/res/piquete.png";
+        else
+            if (clase.equals(ControlPolicial.class) )
+                    return "/res/policia.png";
+                        if (clase.equals(Pozo.class))
+                            return "/res/pozo.png";
+                                else return "/res/sorpresa.png";
+    }
     public String imagenPiquete(){
         return "/res/piquete.png";
     }

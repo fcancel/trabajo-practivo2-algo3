@@ -2,6 +2,7 @@ package fiuba.algo3.vista;
 
 import ar.uba.fi.algo3.titiritero.vista.Imagen;
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
+import res.ImageLoader;
 
 public class VistaDeEfecto extends Imagen{
 	
@@ -9,7 +10,9 @@ public class VistaDeEfecto extends Imagen{
 	
 	public VistaDeEfecto(Efecto efecto){
 		this.efecto = efecto;
-		this.setNombreArchivoImagen(this.efecto.getDirecionDeImagen());
+                ImageLoader setearEfecto = new ImageLoader();
+                
+		this.setNombreArchivoImagen(setearEfecto.imagenEfecto(efecto.getClass()));
 	}
 	
 }

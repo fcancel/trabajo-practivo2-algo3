@@ -63,11 +63,5 @@ public class SorpresaFavorable implements Efecto {
 		return ((this.posicion.getY())*500)/25;
 	}
 	
-	@Override
-	public String getDirecionDeImagen() {
-            ImageLoader setearImagen = new ImageLoader();
-            this.direccionDeImagen = setearImagen.imagenSorpresa();
-            
-            return this.direccionDeImagen;
-	}
+	
 }
