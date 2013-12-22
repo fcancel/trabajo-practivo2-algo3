@@ -21,6 +21,6 @@ public interface Efecto extends Posicionable{
 
 	void setPosicion(Posicion posicion);
 
-	String getDirecionDeImagen();
+	
 	
 }

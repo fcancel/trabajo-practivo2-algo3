@@ -3,17 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/vista/VistaDeVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/EstadoVehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/PantallaDeInicio.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/Moto.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/Efecto.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/ar/uba/fi/algo3/titiritero/vista/Imagen.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/ar/uba/fi/algo3/titiritero/ControladorJuego.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/Pozo.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/Piquete.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/SorpresaCambioDeVehiculo.java</file>
             <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/res/ImageLoader.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/Vehiculo.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/CuatroPorCuatro.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/interfazGrafica/VistaJuego.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/vehiculo/Auto.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/SorpresaDesfavorable.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/vista/VistaDeEfecto.java</file>
             <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/ControlPolicial.java</file>
-            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/vista/VistaDeMeta.java</file>
+            <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/modelo/efectosYSorpresas/SorpresaFavorable.java</file>
             <file>file:/C:/Users/Cancel/Desktop/Uba/75.07%20Algoritmos%20y%20Programación%20III/TP%202/trabajo-practivo2-algo3/src/fiuba/algo3/vista/VistaDeCiudad.java</file>
         </group>
     </open-files>
