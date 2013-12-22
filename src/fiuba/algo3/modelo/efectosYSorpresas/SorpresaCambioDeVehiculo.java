@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import res.ImageLoader;
 
 public class SorpresaCambioDeVehiculo implements Efecto {
 
@@ -16,7 +17,9 @@ public class SorpresaCambioDeVehiculo implements Efecto {
 	private Posicion posicion;
 	@XmlAttribute(name="direccionDeImagen")
 
-	private String direccionDeImagen="/res/sorpresa.png";
+	private String direccionDeImagen;
+        
+
 
 	@Override
 	public void realizarEfecto(Moto moto, Vehiculo vehiculo) {
@@ -56,7 +59,10 @@ public class SorpresaCambioDeVehiculo implements Efecto {
 	
 	@Override
 	public String getDirecionDeImagen() {
-		return this.direccionDeImagen;
+            ImageLoader setearImagen = new ImageLoader();
+            this.direccionDeImagen = setearImagen.imagenSorpresa();
+            
+            return this.direccionDeImagen;
 	}
 
 }

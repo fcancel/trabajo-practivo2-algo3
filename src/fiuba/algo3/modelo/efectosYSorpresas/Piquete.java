@@ -8,12 +8,15 @@ import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import res.ImageLoader;
 
 public class Piquete implements Efecto {
 	@XmlElement(name="posicion")
 	private Posicion posicion;
 	@XmlAttribute(name="direccionDeImagen")
-	private String direccionDeImagen="/res/piquete.png";
+	private String direccionDeImagen;
+        
+
 	
 	@Override
 	public void realizarEfecto(Moto moto, Vehiculo vehiculo) {
@@ -54,7 +57,10 @@ public class Piquete implements Efecto {
 	
 	@Override
 	public String getDirecionDeImagen() {
-		return this.direccionDeImagen;
+            ImageLoader setearImagen = new ImageLoader();
+            this.direccionDeImagen = setearImagen.imagenPiquete();
+            
+            return this.direccionDeImagen;
 	}
 	
 }

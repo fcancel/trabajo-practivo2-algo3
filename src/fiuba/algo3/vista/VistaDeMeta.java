@@ -3,13 +3,15 @@ package fiuba.algo3.vista;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import ar.uba.fi.algo3.titiritero.Posicionable;
 import ar.uba.fi.algo3.titiritero.vista.Imagen;
+import res.ImageLoader;
 
 public class VistaDeMeta extends Imagen implements Posicionable{
 	
 	private Posicion posicion;
 	
 	public VistaDeMeta(){
-		this.setNombreArchivoImagen("/res/meta.png");
+                ImageLoader setearImagen = new ImageLoader();
+		this.setNombreArchivoImagen(setearImagen.imagenMeta());
 	}
 
 	public void getPosicion(Posicion posicion){
