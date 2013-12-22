@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
 import fiuba.algo3.modelo.vehiculo.Moto;
 import fiuba.algo3.modelo.vehiculo.Posicion;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
+import res.ImageLoader;
 
 public class ControlPolicial implements Efecto {
 
@@ -16,9 +17,11 @@ public class ControlPolicial implements Efecto {
 	@XmlElement(name="posicion")
 	private Posicion posicion;
 	@XmlAttribute(name="direccionDeImagen")
-	private String direccionDeImagen="/res/policia.png";
+	private String direccionDeImagen;
 	
 	public ControlPolicial(){
+            ImageLoader setearImagen = new ImageLoader();
+            this.direccionDeImagen = setearImagen.imagenPolicia();
 	}
 	
 	public ControlPolicial(Probabilidad probabilidad) {

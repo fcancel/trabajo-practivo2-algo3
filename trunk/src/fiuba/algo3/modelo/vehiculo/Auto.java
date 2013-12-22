@@ -1,15 +1,17 @@
 package fiuba.algo3.modelo.vehiculo;
 
 import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
+import res.ImageLoader;
 
 
 
 public class Auto implements EstadoVehiculo{
 
-	private String imagen="/res/auto.png";
+	private String imagen;
 
 	public Auto (){
-
+            ImageLoader setearImagen = new ImageLoader();
+            this.imagen = setearImagen.imagenAuto();
 	}
 
 	@Override
