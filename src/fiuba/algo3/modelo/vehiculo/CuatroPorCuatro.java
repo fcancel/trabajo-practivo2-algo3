@@ -24,9 +24,5 @@ public class CuatroPorCuatro implements EstadoVehiculo{
 
 		return "4x4";
 	}
-        
-        @Override
-        public String miEstadoActualEs(){
-        return "CuatroPorCuatro";
-        }
+
 }

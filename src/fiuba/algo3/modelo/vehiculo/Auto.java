@@ -26,9 +26,5 @@ public class Auto implements EstadoVehiculo{
 
 		return "Auto";
 	}
-        
-        
-        public String miEstadoActualEs(){
-        return "Auto";
-        }
+
 }

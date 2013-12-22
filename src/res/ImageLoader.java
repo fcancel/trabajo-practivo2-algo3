@@ -1,8 +1,13 @@
 package res;
 
 import fiuba.algo3.modelo.efectosYSorpresas.ControlPolicial;
+import fiuba.algo3.modelo.efectosYSorpresas.Efecto;
 import fiuba.algo3.modelo.efectosYSorpresas.Piquete;
 import fiuba.algo3.modelo.efectosYSorpresas.Pozo;
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Moto;
 
 
 
@@ -20,24 +25,34 @@ public class ImageLoader {
         return "/res/Ciudad.png";
     }
     
-    public String imagenVehiculo(String nombreVehiculo){
-        if (nombreVehiculo == "CuatroPorCuatro")
-        return "/res/CxC.png";
-        else
-            if (nombreVehiculo == "Auto")
-                    return "/res/auto.png";
-                            else return "/res/moto.png";
+    public String imagenVehiculo(EstadoVehiculo vehiculo){
+    	
+    	String imagen="";
+		if(vehiculo.getClass().equals(Auto.class))
+			imagen = "/res/auto.png";
+		if(vehiculo.getClass().equals(Moto.class))
+			imagen = "/res/moto.png";
+		if(vehiculo.getClass().equals(CuatroPorCuatro.class))
+			imagen = "/res/CxC.png";
+		
+		return imagen;
     }
     
-    public String imagenEfecto(Class clase){
-         if (clase.equals(Piquete.class))
-        return "/res/piquete.png";
-        else
-            if (clase.equals(ControlPolicial.class) )
-                    return "/res/policia.png";
-                        if (clase.equals(Pozo.class))
-                            return "/res/pozo.png";
-                                else return "/res/sorpresa.png";
+    public String imagenEfecto(Efecto efecto){
+    	
+    	String imagen="";
+		if(efecto.getClass().equals(ControlPolicial.class)){
+			imagen = "/res/policia.png";
+		}else if(efecto.getClass().equals(Piquete.class)){
+			imagen = "/res/piquete.png";
+		}else if(efecto.getClass().equals(Pozo.class)){
+			imagen = "/res/pozo.png";
+		}else{
+			imagen = "/res/sorpresa.png";
+		}
+		
+		return imagen;
+
     }
     public String imagenPiquete(){
         return "/res/piquete.png";
