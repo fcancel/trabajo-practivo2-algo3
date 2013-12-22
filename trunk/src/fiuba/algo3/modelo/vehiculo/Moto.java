@@ -6,11 +6,10 @@ import res.ImageLoader;
 
 public class Moto implements EstadoVehiculo{
 
-	private String imagen;
+
 
 	public Moto(){
-            ImageLoader setearImagen = new ImageLoader();
-            this.imagen = setearImagen.imagenMoto();
+
 	}
         
 	@Override
@@ -21,14 +20,14 @@ public class Moto implements EstadoVehiculo{
 	}
 
 	@Override
-	public String getDirecionDeImagen() {
-
-		return imagen;
-	}
-
-	@Override
 	public String toString(){
 
 		return "Moto";
 	}   
+        
+        @Override
+        public String miEstadoActualEs(){
+        return "Moto";
+        }
+        
 }

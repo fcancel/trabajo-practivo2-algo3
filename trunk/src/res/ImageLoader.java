@@ -1,5 +1,11 @@
 package res;
 
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
+import fiuba.algo3.modelo.vehiculo.EstadoVehiculo;
+import fiuba.algo3.modelo.vehiculo.Moto;
+import fiuba.algo3.modelo.vehiculo.Vehiculo;
+
 
 public class ImageLoader {
     
@@ -15,16 +21,13 @@ public class ImageLoader {
         return "/res/Ciudad.png";
     }
     
-    public String imagenCuatroPorCuatro(){
+    public String imagenVehiculo(String nombreVehiculo){
+        if (nombreVehiculo == "CuatroPorCuatro")
         return "/res/CxC.png";
-    }
-    
-    public String imagenAuto(){
-        return "/res/auto.png";
-    }
-    
-    public String imagenMoto(){
-        return "/res/moto.png";
+        else
+            if (nombreVehiculo == "Auto")
+                    return "/res/auto.png";
+                            else return "/res/moto.png";
     }
     
     public String imagenPiquete(){

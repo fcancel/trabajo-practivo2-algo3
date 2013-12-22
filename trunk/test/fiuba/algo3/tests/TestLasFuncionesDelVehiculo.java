@@ -26,7 +26,7 @@ public class TestLasFuncionesDelVehiculo {
         EstadoVehiculo estado = new CuatroPorCuatro();
         Vehiculo vehiculo = new Vehiculo(estado);
         
-        Assert.assertEquals(estado, vehiculo.estadoActual());
+        Assert.assertEquals(estado, vehiculo.getEstado());
     }
     
     @Test
@@ -55,7 +55,7 @@ public class TestLasFuncionesDelVehiculo {
         
         vehiculo.cambiarDeEstado(estadoMoto);
         
-        Assert.assertEquals(estadoMoto, vehiculo.estadoActual());
+        Assert.assertEquals(estadoMoto, vehiculo.getEstado());
     }
     
     @Test

@@ -79,7 +79,7 @@ public class VistaJuego implements ObjetoVivo{
 		VistaDeCiudad vistaDeCiudad = new VistaDeCiudad(); 
 		vistaDeCiudad.setPosicionable(vistaDeCiudad);
 		
-		VistaDeMeta vistaDeMeta= new VistaDeMeta();
+		VistaDeMeta vistaDeMeta = new VistaDeMeta();
 		vistaDeMeta.getPosicion(gps.getCiudad().getPosicionMeta());
 		vistaDeMeta.setPosicionable(vistaDeMeta);
 		VistaCircuferenciaMeta vistaCircuferenciaMeta=new VistaCircuferenciaMeta();

@@ -65,9 +65,6 @@ public class Vehiculo implements Posicionable {
 
 	}
 
-	public EstadoVehiculo estadoActual() {
-		return this.estado;
-	}
 
 	public void sumarMovimiento( int numeroASumar ){
 		GPS Gps = getGPS();

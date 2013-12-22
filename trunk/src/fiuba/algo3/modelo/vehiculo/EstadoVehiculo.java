@@ -9,8 +9,7 @@ import fiuba.algo3.modelo.serializacion.AdaptadorDeInterfaces;
 @XmlJavaTypeAdapter(AdaptadorDeInterfaces.class)
 public interface EstadoVehiculo {
 
-	public String getDirecionDeImagen();
-
+        public String miEstadoActualEs();
 	public void aceptarEfecto(Vehiculo vehiculo, Efecto efecto);
 
 }
