@@ -10,9 +10,10 @@ public class VistaDeEfecto extends Imagen{
 	
 	public VistaDeEfecto(Efecto efecto){
 		this.efecto = efecto;
-                ImageLoader setearEfecto = new ImageLoader();
+        
+		ImageLoader setearEfecto = new ImageLoader();
                 
-		this.setNombreArchivoImagen(setearEfecto.imagenEfecto(efecto.getClass()));
+		this.setNombreArchivoImagen(setearEfecto.imagenEfecto(efecto));
 	}
 	
 }

@@ -24,10 +24,5 @@ public class Moto implements EstadoVehiculo{
 
 		return "Moto";
 	}   
-        
-        @Override
-        public String miEstadoActualEs(){
-        return "Moto";
-        }
-        
+
 }
