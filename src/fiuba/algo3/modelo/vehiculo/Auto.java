@@ -7,11 +7,10 @@ import res.ImageLoader;
 
 public class Auto implements EstadoVehiculo{
 
-	private String imagen;
+
 
 	public Auto (){
-            ImageLoader setearImagen = new ImageLoader();
-            this.imagen = setearImagen.imagenAuto();
+
 	}
 
 	@Override
@@ -23,13 +22,13 @@ public class Auto implements EstadoVehiculo{
 
 
 	@Override
-	public String getDirecionDeImagen() {
-		return imagen;
-	}
-
-	@Override
 	public String toString(){
 
 		return "Auto";
 	}
+        
+        
+        public String miEstadoActualEs(){
+        return "Auto";
+        }
 }

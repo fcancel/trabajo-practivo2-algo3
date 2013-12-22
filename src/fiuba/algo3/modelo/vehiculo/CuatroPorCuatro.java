@@ -6,11 +6,9 @@ import res.ImageLoader;
 
 public class CuatroPorCuatro implements EstadoVehiculo{
 
-	private String imagen;
 
 	public CuatroPorCuatro(){
-            ImageLoader setearImagen = new ImageLoader();
-            this.imagen = setearImagen.imagenCuatroPorCuatro();
+           
 	} 
         
 	@Override
@@ -20,14 +18,15 @@ public class CuatroPorCuatro implements EstadoVehiculo{
 
 	}
 
-	@Override
-	public String getDirecionDeImagen() {
-		return imagen;
-	}
 
 	@Override
 	public String toString(){
 
 		return "4x4";
 	}
+        
+        @Override
+        public String miEstadoActualEs(){
+        return "CuatroPorCuatro";
+        }
 }

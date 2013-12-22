@@ -8,14 +8,24 @@ import java.awt.image.BufferedImage;
 import fiuba.algo3.modelo.vehiculo.Vehiculo;
 import ar.uba.fi.algo3.titiritero.SuperficieDeDibujo;
 import ar.uba.fi.algo3.titiritero.vista.Imagen;
+import fiuba.algo3.modelo.vehiculo.Auto;
+import fiuba.algo3.modelo.vehiculo.CuatroPorCuatro;
+import fiuba.algo3.modelo.vehiculo.Moto;
+import res.ImageLoader;
 
 public class VistaDeVehiculo extends Imagen{
 	
 	private Vehiculo vehiculo;
+        private String esAuto = "Auto";
+        private String esMoto = "Moto";
+        private String esCuatroPorCuatro = "CuatroPorCuatro";
 	
 	
 	public void dibujar(SuperficieDeDibujo superficeDeDibujo) {
-		this.setNombreArchivoImagen(this.vehiculo.getEstado().getDirecionDeImagen());
+            
+                ImageLoader setearImagen = new ImageLoader();
+                
+		this.setNombreArchivoImagen(setearImagen.imagenVehiculo(this.vehiculo.getEstado().miEstadoActualEs()));
 		Graphics grafico = (Graphics)superficeDeDibujo.getBuffer();
 		grafico.drawImage(rotarImagen(this.getImagen()),posicionXCentral() , posicionYCentral(), null);
 	}
