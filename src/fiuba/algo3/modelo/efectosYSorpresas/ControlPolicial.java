@@ -16,12 +16,9 @@ public class ControlPolicial implements Efecto {
 	private Probabilidad probabilidad;
 	@XmlElement(name="posicion")
 	private Posicion posicion;
-	@XmlAttribute(name="direccionDeImagen")
-	private String direccionDeImagen;
+
 	
 	public ControlPolicial(){
-            ImageLoader setearImagen = new ImageLoader();
-            this.direccionDeImagen = setearImagen.imagenPolicia();
 	}
 	
 	public ControlPolicial(Probabilidad probabilidad) {
